@@ -1,0 +1,244 @@
+.footer
+  background-color: #080C0F
+  flex-shrink: 0
+  position: relative
+  padding-top: 100px
+  padding-bottom: 40px
+
+  @media(min-width: 768px)
+    padding-top: 60px
+
+  @media(min-width: 992px)
+    padding-top: 80px
+
+  &__inner
+    max-width: 1130px
+
+  &__top
+    margin-bottom: 40px
+
+    @media(min-width: 768px)
+      display: flex
+
+    @media(min-width: 992px)
+      margin-bottom: 80px
+
+  &__top-left
+    margin-bottom: 15px
+
+    @media(min-width: 768px)
+      margin-bottom: 0
+      width: 30%
+
+  &__top-center
+    display: flex
+    margin-bottom: 30px
+
+    @media(min-width: 768px)
+      flex-grow: 1
+      margin-bottom: 0
+
+    .footer-menu
+      padding-right: 40px
+
+      @media(min-width: 375px)
+        padding-right: 40px
+
+      @media(min-width: 992px)
+        width: 50%
+
+  &__top-right
+    @media(min-width: 768px)
+      width: 30%
+
+    @media(min-width: 1200px)
+      width: 21%
+
+  &__phone
+    font-family: $secondary_font
+    font-size: 28px
+    font-weight: 700
+    line-height: 43px
+    margin-bottom: 20px
+    white-space: nowrap
+
+    @media(min-width: 768px) and (max-width: 991px)
+      font-size: 24px
+
+    a
+      color: #fff
+      transition: color 0.3s
+      text-decoration: none
+
+      &:hover,
+      &:focus
+        color: $main_color
+
+  &__address
+    color: #B3BFCD
+    font-size: 16px
+    line-height: 22px
+
+    @media(min-width: 768px) and (max-width: 991px)
+      font-size: 13px
+
+    &:not(:last-child)
+      margin-bottom: 10px
+
+      @media(min-width: 992px)
+        margin-bottom: 20px
+
+  &__middle
+    align-items: center
+    display: flex
+    flex-wrap: wrap
+
+    @media(min-width: 992px)
+      margin-bottom: 45px
+
+  &__logo-block
+    @media(min-width: 768px)
+      width: 30%
+
+  &__logo
+    left: 15px
+    position: absolute
+    top: 35px
+    width: 208px
+
+    @media(min-width: 768px)
+      left: auto
+      margin-bottom: 20px
+      position: static
+      top: auto
+      width: 180px
+
+    @media(min-width: 992px)
+      width: 238px
+
+  &__payments
+    align-items: center
+    display: flex
+    margin-right: auto
+    margin-bottom: 20px
+
+    @media(min-width: 768px)
+      flex-grow: 1
+
+  &__email-block
+    margin-bottom: 20px
+
+    @media(min-width: 375px)
+      margin-right: 12px
+
+    @media(min-width: 768px)
+      margin-right: 0
+      width: 30%
+
+    @media(min-width: 1200px)
+      width: 21%
+
+    a
+      color: #fff
+      font-family: $secondary_font
+      font-size: 14px
+      font-weight: 700
+      text-decoration: none
+
+      &:hover,
+      &:focus
+        color: $main_color
+        text-decoration: none
+
+      @media(min-width: 768px)
+        font-size: 18px
+
+  &__bottom
+    color: #717F8F
+    font-size: 12px
+    line-height: 19px
+
+    @media(min-width: 768px)
+      display: flex
+
+  &__copyright
+    margin-bottom: 10px
+
+    @media(min-width: 768px)
+      margin-bottom: 0
+      min-width: 30%
+      padding-right: 15px
+      width: 30%
+
+  &__note
+    max-width: 660px
+    opacity: 0.5
+
+.footer-menu
+  color: #B3BFCD
+  font-size: 13px
+  line-height: 36px
+  margin: 0
+  padding: 0
+
+  @media(min-width: 375px)
+    font-size: 16px
+
+  @media(min-width: 768px) and (max-width: 991px)
+    font-size: 13px
+
+  &--big
+    font-family: $secondary_font
+    font-size: 16px
+    font-weight: 700
+    line-height: 36px
+
+    @media(min-width: 992px)
+      font-size: 20px
+
+    @media(min-width: 1200px)
+      font-size: 22px
+      line-height: 43px
+
+    .footer-menu__link
+      color: #fff
+
+      &:hover
+        color: $main_color
+        text-decoration: none
+
+  &__link
+    color: #B3BFCD
+    display: inline-block
+    transition: color 0.3s
+    text-decoration: none
+
+    &:hover
+      color: #fff
+
+.payment-system
+  align-items: center
+  border: 1px solid rgba(#717F8F, 0.2)
+  border-radius: 2px
+  display: flex
+  height: 26px
+  justify-content: center
+  width: 40px
+
+  &:not(:last-child)
+    margin-right: 10px
+
+  &__icon
+    fill: #fff
+
+    &--visa
+      height: 8px
+      width: 25px
+
+    &--ms
+      height: 12px
+      width: 20px
+
+    &--pp
+      height: 8px
+      width: 30px

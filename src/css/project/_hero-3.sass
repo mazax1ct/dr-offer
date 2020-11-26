@@ -1,0 +1,142 @@
+.hero-3
+  background-image: linear-gradient(#0C1117, #361A78)
+  background-color: #361A78
+  position: relative
+  padding-top: 145px
+  padding-bottom: 110px
+
+  &::before
+    border-top: 2px solid #D43C38
+    content: ''
+    height: 23px
+    left: 0
+    position: absolute
+    top: 0
+    width: 100%
+    z-index: 1
+
+    @media(min-width: 768px)
+      background-image: url("data:image/svg+xml,%3Csvg width='1915' height='23' viewBox='0 0 1915 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M633 21.5L600 1H1315.5L1284.5 21.5H633Z' fill='%23D43C38' fill-opacity='0.5'/%3E%3Cpath d='M0 1H600M600 1L633 21.5H1284.5L1315.5 1M600 1H1315.5M1315.5 1H1914.5' stroke='%23D43C38' stroke-width='2'/%3E%3C/svg%3E%0A")
+      background-position: 50% -2px
+      background-repeat: no-repeat
+      background-color: transparent
+      background-size: 1200px auto
+
+    @media(min-width: 1900px)
+      background-size: auto auto
+
+  &__container
+    max-width: 1360px
+    margin-left: auto
+    margin-right: auto
+    padding-left: 20px
+    padding-right: 20px
+
+    @media(min-width: 1900px)
+      max-width: 1540px
+
+  &__content
+    @media(min-width: 768px)
+      display: flex
+
+    &::after
+      @media(min-width: 768px)
+        content: ''
+        display: block
+        height: 0
+        padding-bottom: 42.43%
+
+      @media(min-width: 1200px)
+        padding-bottom: 44%
+
+      @media(min-width: 1900px)
+        padding-bottom: 53.54%
+
+  &__content-inner
+    min-width: 100%
+    position: relative
+    text-align: center
+
+    @media(min-width: 768px)
+      padding-left: 56%
+      text-align: left
+
+    @media(min-width: 1200px)
+      padding-left: 60%
+
+    @media(min-width: 1900px)
+      padding-left: 64%
+
+  &__title
+    color: transparent
+    filter: drop-shadow(0.6px 0.6px 3px #922AB8)
+    -webkit-text-stroke: 1px #fff
+    text-stroke: 1px #fff
+    font-size: 34px
+    font-weight: 900
+    line-height: 122%
+    margin-bottom: 1.38235em
+    text-transform: uppercase
+
+    @media(min-width: 768px)
+      position: relative
+      z-index: 1
+
+    @media(min-width: 1200px)
+      font-size: 48px
+      line-height: 98%
+      margin-bottom: 0.8em
+
+    @media(min-width: 1900px)
+      font-size: 60px
+
+    small
+      font-size: 88.23529%
+
+  &__image
+    margin-bottom: 10px
+    max-width: 1022px
+
+    @media(min-width: 768px)
+      left: 0
+      margin-bottom: 0
+      position: absolute
+      top: 0
+      width: 54%
+      z-index: 1
+
+    @media(min-width: 1200px)
+      width: 56%
+
+    @media(min-width: 1900px)
+      margin-left: -200px
+      width: 68.2%
+
+  &__text
+    color: #fff
+    font-size: 12px
+    line-height: 1.33333
+    margin-bottom: 1.5em
+    margin-left: auto
+    margin-right: auto
+    max-width: 370px
+
+    @media(min-width: 768px)
+      position: relative
+      margin-left: 0
+      margin-right: 0
+      z-index: 1
+
+    @media(min-width: 1200px)
+      font-size: 16px
+      line-height: 1.35416
+      margin-bottom: 3.04166em
+      max-width: 500px
+
+    @media(min-width: 1900px)
+      font-size: 24px
+      max-width: 594px
+
+    p
+      &:not(:last-child)
+        margin-bottom: 1.5em

@@ -1,0 +1,152 @@
+.hero
+  background-image: linear-gradient(135deg, rgba(60,61,91,1) 0%, rgba(29,32,47,1) 100%)
+  background-color: rgb(60, 61, 91)
+
+  &__inner
+    background: linear-gradient(rgba(0,0,0,0) 0%, rgba(212,60,56,0.1) 100%)
+    padding-top: 160px
+    padding-bottom: 150px
+
+    @media(min-width: 768px)
+      padding-top: 100px
+      padding-bottom: 90px
+
+    @media(min-width: 992px)
+      padding-top: 160px
+
+    @media(min-width: 1200px)
+      padding-top: 220px
+
+  &__container
+    max-width: 1360px
+    margin-left: auto
+    margin-right: auto
+    padding-left: 20px
+    padding-right: 20px
+
+    @media(min-width: 1900px)
+      max-width: 1740px
+      padding-left: 35px
+      padding-right: 35px
+
+  &__content
+    @media(min-width: 768px)
+      display: flex
+
+    &::after
+      @media(min-width: 768px)
+        content: ''
+        display: block
+        height: 0
+        padding-bottom: 53%
+
+      @media(min-width: 1900px)
+        padding-bottom: 46.4%
+
+  &__content-inner
+    min-width: 100%
+    position: relative
+    text-align: center
+
+    @media(min-width: 768px)
+      padding-right: 47%
+      padding-top: 40px
+      text-align: left
+
+  &__title
+    color: transparent
+    filter: drop-shadow(0.5px 0.5px 3px #FF1A00)
+    -webkit-text-stroke: 1px #E4341E
+    text-stroke: 1px #E4341E
+    font-size: 38px
+    font-weight: 900
+    line-height: 1.375
+    margin-bottom: 0.8125em
+
+    @media(min-width: 768px)
+      position: relative
+      z-index: 1
+
+    @media(min-width: 1200px)
+      font-size: 60px
+      line-height: 98%
+      margin-bottom: 0.69047em
+
+    @media(min-width: 1900px)
+      font-size: 84px
+
+  &__image
+    margin-bottom: 10px
+    max-width: 910px
+
+    @media(min-width: 768px)
+      left: auto
+      margin-bottom: 0
+      position: absolute
+      right: 0
+      top: 0
+      width: 62.2%
+      z-index: 1
+
+  &__text
+    color: #fff
+    font-size: 12px
+    line-height: 1.33333
+    margin-bottom: 1.5em
+    margin-left: auto
+    margin-right: auto
+    max-width: 370px
+
+    @media(min-width: 768px)
+      position: relative
+      margin-left: 0
+      margin-right: 0
+      z-index: 1
+
+    @media(min-width: 1200px)
+      font-size: 18px
+      line-height: 1.35416
+      margin-bottom: 3.04166em
+      max-width: 500px
+
+    @media(min-width: 1900px)
+      font-size: 24px
+      max-width: 720px
+
+    p
+      &:not(:last-child)
+        margin-bottom: 1.5em
+
+  &__button
+    align-items: center
+    border: 1px solid #D43C38
+    box-shadow: 0 0 22px 0 rgba(#D43C38, 0.5)
+    color: #D43C38
+    display: inline-flex
+    font-size: 20px
+    font-family: $secondary_font
+    font-weight: 800
+    height: 49px
+    justify-content: center
+    min-width: 197px
+    text-align: center
+    text-decoration: none
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, border-color 0.3s
+
+    @media(min-width: 768px)
+      position: relative
+      z-index: 1
+
+    @media(min-width: 1900px)
+      font-size: 34px
+      height: 85px
+      min-width: 230px
+
+    &:hover
+      background-color: rgba(#D43C38, 0.5)
+      box-shadow: 0 7px 7px 0 #0C1117
+      color: #fff
+
+    &:active
+      background-color: #D43C38
+      color: #fff

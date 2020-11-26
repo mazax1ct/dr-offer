@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42">
+<path d="M37.5,37.5h-33v-33h33V37.5z M5.5,36.5h31v-31h-31V36.5z"/>
+<path d="M27.5,27.5h-13v-13h13V27.5z M15.5,26.5h11v-11h-11V26.5z"/>
+<rect x="12.5" width="1" height="5"/>
+<rect x="8.5" width="1" height="5"/>
+<rect x="16.5" width="1" height="5"/>
+<rect x="20.5" width="1" height="5"/>
+<rect x="24.5" width="1" height="5"/>
+<rect x="28.5" width="1" height="5"/>
+<rect x="32.5" width="1" height="5"/>
+<rect x="12.5" y="37" width="1" height="5"/>
+<rect x="8.5" y="37" width="1" height="5"/>
+<rect x="16.5" y="37" width="1" height="5"/>
+<rect x="20.5" y="37" width="1" height="5"/>
+<rect x="24.5" y="37" width="1" height="5"/>
+<rect x="28.5" y="37" width="1" height="5"/>
+<rect x="32.5" y="37" width="1" height="5"/>
+<rect y="8.5" width="5" height="1"/>
+<rect y="12.5" width="5" height="1"/>
+<rect y="16.5" width="5" height="1"/>
+<rect y="20.5" width="5" height="1"/>
+<rect y="24.5" width="5" height="1"/>
+<rect y="28.5" width="5" height="1"/>
+<rect y="32.5" width="5" height="1"/>
+<rect x="37" y="8.5" width="5" height="1"/>
+<rect x="37" y="12.5" width="5" height="1"/>
+<rect x="37" y="16.5" width="5" height="1"/>
+<rect x="37" y="20.5" width="5" height="1"/>
+<rect x="37" y="24.5" width="5" height="1"/>
+<rect x="37" y="28.5" width="5" height="1"/>
+<rect x="37" y="32.5" width="5" height="1"/>
+</svg>

@@ -1,0 +1,169 @@
+.button
+  align-items: center
+  background-color: $main_color
+  border: 1px solid $main_color
+  color: #fff
+  cursor: pointer
+  display: inline-flex
+  font-family: $secondary_font
+  font-size: 16px
+  font-weight: 700
+  justify-content: center
+  line-height: 19px
+  min-height: 60px
+  min-width: 250px
+  overflow: hidden
+  padding: 15px 15px 16px
+  position: relative
+  text-decoration: none
+  text-transform: uppercase
+  transition: background-color 0.3s, border-color 0.3s
+  vertical-align: middle
+
+  &:hover,
+  &:focus
+    background-color: darken($main_color, 5%)
+    border-color: darken($main_color, 5%)
+    text-decoration: none
+
+  &__text
+    position: relative
+    z-index: 1
+
+  &--arrow
+    padding-left: 15px
+    padding-right: 77px
+
+    &:hover,
+    &:focus
+      background-color: $main_color
+
+      &::before
+        margin-left: -110%
+
+    &::after
+      background-image: url("data:image/svg+xml,%3Csvg width='23' height='10' viewBox='0 0 23 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.0858 4.00008L16.7929 1.70718L18.2071 0.292969L22.2071 4.29297L22.9142 5.00008L22.2071 5.70718L18.2071 9.70718L16.7929 8.29297L19.0858 6.00008H0V4.00008H19.0858Z' fill='%23fff'/%3E%3C/svg%3E%0A")
+      background-repeat: no-repeat
+      background-position: 27px 50%
+      content: ''
+      height: 60px
+      left: auto
+      position: absolute
+      right: 0
+      top: 0
+      width: 62px
+
+    &::before
+      background-color: $secondary_color
+      content: ''
+      height: 60px
+      left: 100%
+      margin-left: -48px
+      position: absolute
+      top: 0
+      transform: skewX(-23deg)
+      transition: margin-left 0.5s
+      width: 120%
+
+  &--arrow_down
+    &::after
+      background-position: 19px 40%
+      height: 60px
+      transform: rotate(90deg)
+      width: 60px
+
+  &--transparent
+    background-color: transparent
+    border-color: #fff
+
+  &--wide
+    width: 100%
+
+  &--buy,
+  &--config
+    background-color: transparent
+    border-color: #45515D
+    min-height: 40px
+    padding-top: 10px
+    padding-bottom: 10px
+    padding-left: 15px
+    padding-right: 65px
+
+    &:hover,
+    &:focus
+      border-color: #45515D
+      background-color: transparent
+      text-decoration: none
+
+      &::before
+        margin-left: -110%
+
+    &::after,
+    &::before
+      content: ''
+      height: 40px
+      position: absolute
+      top: 0
+
+    &::after
+      background-repeat: no-repeat
+      left: auto
+      right: 0
+      width: 51px
+
+    &::before
+      left: 100%
+      margin-left: -48px
+      transform: skewX(-23deg)
+      transition: margin-left 0.5s
+      width: 120%
+
+  &--buy
+    &::after
+      background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 23 23' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23fff' d='M23.0001 4.59999H4.71503L3.10501 0H0V2.30002H1.49498L7.24501 19.5501H19.5501V17.25H8.85503L8.16503 14.95H19.5501L23.0001 4.59999ZM9.20004 23C9.83516 23 10.35 22.4851 10.35 21.85C10.35 21.2149 9.83516 20.7 9.20004 20.7C8.56492 20.7 8.05005 21.2149 8.05005 21.85C8.05005 22.4851 8.56492 23 9.20004 23ZM18.4 21.85C18.4 22.4851 17.8851 23 17.25 23C16.6149 23 16.1 22.4851 16.1 21.85C16.1 21.2149 16.6149 20.7 17.25 20.7C17.8851 20.7 18.4 21.2149 18.4 21.85Z'/%3E%3C/svg%3E%0A")
+      background-position: 21px 50%
+
+    &::before
+      background-color: $secondary_color
+
+  &--config
+    &::after
+      background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.3998 9.60936L12.8212 8.28795C12.8614 8.01239 12.881 7.75329 12.881 7.49999C12.881 7.24669 12.8614 6.98758 12.8211 6.71202L14.3998 5.39061C14.5164 5.29326 14.546 5.12633 14.47 4.99481L13.0326 2.50517C12.9566 2.37395 12.7976 2.31597 12.6548 2.36783L10.724 3.07338C10.3111 2.75021 9.85241 2.48622 9.3565 2.28694L9.00128 0.258427C8.97503 0.108955 8.84504 0 8.69337 0H5.81862C5.66695 0 5.53693 0.108955 5.51071 0.258486L5.15548 2.287C4.65957 2.48627 4.2009 2.75027 3.78799 3.07344L1.85713 2.36786C1.71521 2.31506 1.55502 2.37366 1.47932 2.5052L0.0419259 4.99481C-0.0340701 5.12636 -0.00445098 5.29329 0.112121 5.39061L1.69078 6.71202C1.65053 6.98758 1.63099 7.24669 1.63099 7.49999C1.63099 7.75329 1.65053 8.01239 1.69081 8.28795L0.112121 9.60936C-0.00445098 9.70671 -0.0340701 9.87364 0.0419259 10.0052L1.47932 12.4948C1.55561 12.6263 1.71612 12.6843 1.85713 12.6321L3.78796 11.9266C4.20087 12.2497 4.65955 12.5137 5.15545 12.713L5.51068 14.7415C5.53693 14.891 5.66692 15 5.81859 15H8.69334C8.84501 15 8.97503 14.891 9.00125 14.7415L9.35647 12.713C9.85238 12.5137 10.3111 12.2497 10.724 11.9266L12.6548 12.6321C12.7967 12.6831 12.9566 12.6263 13.0326 12.4948L14.47 10.0052C14.546 9.87364 14.5164 9.70671 14.3998 9.60936ZM7.25598 10.625C5.53294 10.625 4.13097 9.22302 4.13097 7.49999C4.13097 5.77695 5.53294 4.37498 7.25598 4.37498C8.97901 4.37498 10.381 5.77698 10.381 7.49999C10.381 9.22299 8.97901 10.625 7.25598 10.625Z' fill='white'/%3E%3C/svg%3E%0A")
+      background-position: 21px 50%
+
+    &::before
+      background-color: #45515D
+
+  &--blue
+    background-color: $intel-color
+    border: 1px solid $intel-color
+
+    &:hover,
+    &:focus
+      background-color: darken($intel-color, 5%)
+      border-color: darken($intel-color, 5%)
+      text-decoration: none
+
+    &.button--arrow
+      &::before
+        background-color: darken($intel-color, 5%)
+
+  &.disabled,
+  &:disabled
+    cursor: default
+    opacity: 0.4
+    pointer-events: none
+
+  &--h50
+    min-height: 50px
+
+    &::after,
+    &::before
+      height: 50px
+
+  &--h60
+    min-height: 60px
+
+    &::after,
+    &::before
+      height: 60px

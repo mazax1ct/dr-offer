@@ -1,0 +1,105 @@
+.input,
+.textarea
+  border: 1px solid #474747
+  border-radius: 0
+  background-color: #292929
+  color: #fff
+  line-height: 19px
+  opacity: 1
+  padding: 15px 20px 16px
+  transition: border-color 0.3s
+  width: 100%
+
+  @media(min-width: 1200px)
+    font-size: 14px
+
+  @media(min-width: 1400px)
+    font-size: 16px
+
+  &:focus
+    border-color: #666666
+
+  &.error
+    border-color: $main_color
+    color: #fff
+
+    &:focus
+      border-color: $main_color
+      color: #fff
+
+input,
+textarea
+  &:focus
+    outline: 0
+
+.input
+  height: 50px
+  padding: 15px 20px 16px
+
+.textarea
+  height: 120px
+  padding: 15px 20px 16px
+  resize: none
+
+/*placeholder*/
+.input::-webkit-input-placeholder
+  color: rgba(#fff, 0.22)
+  opacity: 1
+
+.input::-moz-placeholder
+  color: rgba(#fff, 0.22)
+  opacity: 1
+
+.input:-ms-input-placeholder
+  color: rgba(#fff, 0.22)
+  opacity: 1
+
+.textarea::-webkit-input-placeholder
+  color: rgba(#fff, 0.22)
+  opacity: 1
+
+.textarea::-moz-placeholder
+  color: rgba(#fff, 0.22)
+  opacity: 1
+
+.textarea:-ms-input-placeholder
+  color: rgba(#fff, 0.22)
+  opacity: 1
+
+//error
+.input.error::-webkit-input-placeholder
+  color: rgba(#fff, 0.3)
+
+.input.error::-moz-placeholder
+  color: rgba(#fff, 0.3)
+
+.input.error:-ms-input-placeholder
+  color: rgba(#fff, 0.3)
+
+.textarea.error::-webkit-input-placeholder
+  color: rgba(#fff, 0.3)
+
+.textarea.error::-moz-placeholder
+  color: rgba(#fff, 0.3)
+
+.textarea.error:-ms-input-placeholder
+  color: rgba(#fff, 0.3)
+
+/*:focus placeholder*/
+.input:focus::-webkit-input-placeholder
+  color: rgba(#fff, 0.3)
+
+.input:focus::-moz-placeholder
+  color: rgba(#fff, 0.3)
+
+.input:focus:-ms-input-placeholder
+  color: rgba(#fff, 0.3)
+
+.textarea:focus::-webkit-input-placeholder
+  color: rgba(#fff, 0.3)
+
+.textarea:focus::-moz-placeholder
+  color: rgba(#fff, 0.3)
+
+.textarea:focus:-ms-input-placeholder
+  color: rgba(#fff, 0.3)

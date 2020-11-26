@@ -1,0 +1,209 @@
+.radio-label
+  cursor: pointer
+  display: block
+  font-weight: 600
+  line-height: 20px
+  margin-bottom: 15px
+  position: relative
+  padding-left: 30px
+
+  &__input
+    position: absolute
+    height: 1px
+    overflow: hidden
+    clip: rect(0 0 0 0)
+    width: 1px
+
+    &:checked + .radio-label__radio
+      background-color: $main_color
+      border-color: $main_color
+
+    &:checked + .radio-label__radio::after
+      background-color: #fff
+
+  &__radio
+    background-color: #292929
+    border-radius: 50%
+    border: 1px solid #474747
+    height: 20px
+    left: 0
+    position: absolute
+    top: 0
+    transition: background-color 0.3s, border-color 0.3s
+    width: 20px
+
+    &::after
+      background-color: transparent
+      border-radius: 50%
+      content: ''
+      height: 8px
+      left: 50%
+      position: absolute
+      top: 50%
+      transform: translate(-50%, -50%)
+      transition: background-color 0.3s
+      width: 8px
+
+.checkbox-label
+  cursor: pointer
+  display: block
+  margin-bottom: 15px
+  position: relative
+  padding-left: 34px
+
+  &:last-child
+    margin-bottom: 0
+
+  &__input
+    position: absolute
+    height: 1px
+    overflow: hidden
+    clip: rect(0 0 0 0)
+    width: 1px
+
+    &:checked + .checkbox-label__icon
+      background-color: $main_color
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='10' viewBox='0 0 12 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='none' d='M1 5L4.33333 8.5L11 1.5' stroke='white' stroke-width='2'/%3E%3C/svg%3E%0A")
+      background-position: 50% 50%
+      background-repeat: no-repeat
+      border-color: $main_color
+
+  &__icon
+    border: 1px solid #474747
+    background-color: #292929
+    color: #fff
+    cursor: pointer
+    font-size: 14px
+    height: 20px
+    line-height: 18px
+    left: 0
+    position: absolute
+    top: 0
+    text-align: center
+    width: 20px
+
+.radio-label,
+.checkbox-label,
+.radio-label2,
+.checkbox-label2
+  a
+    color: $main_color
+
+.radio-label2
+  cursor: pointer
+  display: block
+  font-size: 13px
+  line-height: 22px
+  margin-bottom: 45px
+  position: relative
+  padding-left: 40px
+  text-transform: uppercase
+
+  &:last-child
+    margin-bottom: 0
+
+  &__input
+    position: absolute
+    height: 1px
+    overflow: hidden
+    clip: rect(0 0 0 0)
+    width: 1px
+
+    &:checked + .radio-label2__radio::after
+      background-color: $main_color
+
+  &__radio
+    border: 1px solid rgba(#6d7986, 0.3)
+    height: 22px
+    left: 0
+    position: absolute
+    top: 0
+    transition: background-color 0.3s, border-color 0.3s
+    width: 22px
+
+    &::after
+      background-color: transparent
+      content: ''
+      height: 10px
+      left: 50%
+      position: absolute
+      top: 50%
+      transform: translate(-50%, -50%)
+      transition: background-color 0.3s
+      width: 10px
+
+.checkbox-label2
+  color: #667180
+  cursor: pointer
+  display: block
+  line-height: 22px
+  margin-bottom: 35px
+  position: relative
+  padding-left: 40px
+
+  &:last-child
+    margin-bottom: 0
+
+  &__input
+    position: absolute
+    height: 1px
+    overflow: hidden
+    clip: rect(0 0 0 0)
+    width: 1px
+
+    &:checked + .checkbox-label2__icon
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='10' viewBox='0 0 12 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='none' d='M1 5L4.33333 8.5L11 1.5' stroke='red' stroke-width='2'/%3E%3C/svg%3E%0A")
+      background-position: 50% 50%
+      background-repeat: no-repeat
+
+  &__icon
+    border: 1px solid rgba(#6d7986, 0.3)
+    cursor: pointer
+    height: 22px
+    left: 0
+    position: absolute
+    top: 0
+    text-align: center
+    width: 22px
+
+.checkbox-label3
+  color: #667180
+  cursor: pointer
+  display: block
+  line-height: 22px
+  margin-bottom: 35px
+  position: relative
+  padding-left: 40px
+
+  &:last-child
+    margin-bottom: 0
+
+  &__input
+    position: absolute
+    height: 1px
+    overflow: hidden
+    clip: rect(0 0 0 0)
+    width: 1px
+
+    &:checked + .checkbox-label3__icon
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='10' viewBox='0 0 12 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='none' d='M1 5L4.33333 8.5L11 1.5' stroke='red' stroke-width='2'/%3E%3C/svg%3E%0A")
+      background-position: 50% 50%
+      background-repeat: no-repeat
+
+  &__icon
+    border: 1px solid #32455A
+    background-color: #171F29
+    cursor: pointer
+    height: 22px
+    left: 0
+    position: absolute
+    top: 0
+    text-align: center
+    width: 22px
+
+  a
+    color: #fff
+    text-decoration: none
+
+    &:hover
+      text-decoration: underline
