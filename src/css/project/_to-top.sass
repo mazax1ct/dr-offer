@@ -1,0 +1,59 @@
+.to-top
+  bottom: 135px
+  display: none
+  height: 0
+  max-width: 1360px
+  margin-left: auto
+  margin-right: auto
+  padding-left: 15px
+  padding-right: 15px
+  left: 50%
+  position: fixed
+  top: auto
+  transform: translateX(-50%)
+  width: 100%
+  z-index: 1
+
+  @media(min-width: 1900px)
+    bottom: 122px
+    max-width: 1740px
+
+  &__button
+    backdrop-filter: blur(60px)
+    border-radius: 50%
+    display: block
+    height: 44px
+    transform: translateY(-100%)
+    width: 44px
+
+    @media(min-width: 768px)
+      height: 48px
+      width: 48px
+
+  &.is-active
+    display: block
+
+  &:hover
+    .to-top__image
+      filter: none
+
+    .to-top__circle
+      fill: #fff
+
+    .to-top__arrow
+      stroke: #0C1117
+
+  &__image
+    filter: drop-shadow(0 0 6px #EA1C24)
+    fill: transparent
+    transition: filter 0.3s
+
+  &__arrow
+    fill: transparent
+    stroke: #fff
+    transition: stroke 0.3s
+
+  &__circle
+    fill: transparent
+    stroke: #fff
+    transition: fill 0.3s

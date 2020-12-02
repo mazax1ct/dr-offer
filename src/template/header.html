@@ -84,11 +84,11 @@
     </div>
     <div class="header__bottom">
       <a class="header__logo" href="main.html"><img src="images/logo.svg" alt="DIGITAL RAZOR"></a>
-      <button class="js-peronal-toggler personal-toggler" type="button" title="Личный кабинет">
+      <button class="js-personal-toggler personal-toggler" type="button" title="Личный кабинет">
         <svg class="personal-toggler__personal" aria-hidden="true">
           <use xlink:href="#personal" />
         </svg>
-        <svg class="menu-toggler__close" aria-hidden="true">
+        <svg class="personal-toggler__close" aria-hidden="true">
           <use xlink:href="#menu_close" />
         </svg>
       </button>
@@ -109,21 +109,127 @@
               </a>
               <div class="main-menu__dropdown">
                 <p class="main-menu__dropdown-title">ИГРОВЫЕ СЕРИИ</p>
-                <a class="main-menu__dropdown-link" href="#">ProGaming - серия</a>
-                <a class="main-menu__dropdown-link" href="#">Performance - серия</a>
-                <a class="main-menu__dropdown-link" href="#">Performance X - серия</a>
-                <p class="main-menu__dropdown-title">СПЕЦИАЛЬНЫЕ СЕРИИ</p>
-                <a class="main-menu__dropdown-link" href="#">Powered by ASUS</a>
-                <a class="main-menu__dropdown-link" href="#">Powered by AMD</a>
+                <a class="main-menu__dropdown-link" href="#">
+                  <svg class="main-menu__dropdown-icon" aria-hidden="true">
+                    <use xlink:href="#m_pro" />
+                  </svg>
+                  ProGaming - серия
+                </a>
+                <a class="main-menu__dropdown-link" href="#">
+                  <svg class="main-menu__dropdown-icon" aria-hidden="true">
+                    <use xlink:href="#m_perf" />
+                  </svg>
+                  Performance - серия
+                </a>
+                <a class="main-menu__dropdown-link" href="#">
+                  <svg class="main-menu__dropdown-icon" aria-hidden="true">
+                    <use xlink:href="#m_shift" />
+                  </svg>
+                  Performance X - серия
+                </a>
               </div>
             </li>
             <li class="main-menu__item">
-              <a class="main-menu__link is-active" href="#"><span class="main-menu__link-text">Рабочие станции</span></a>
+              <a class="main-menu__link is-active" href="#">
+                <svg class="main-menu__link-icon" aria-hidden="true">
+                  <use xlink:href="#m_ws" />
+                </svg>
+                <span class="main-menu__link-text">Рабочие станции</span>
+              </a>
             </li>
             <li class="main-menu__item">
-              <a class="main-menu__link" href="#"><span class="main-menu__link-text">Моноблоки</span></a>
+              <a class="main-menu__link" href="#">
+                <svg class="main-menu__link-icon" aria-hidden="true">
+                  <use xlink:href="#m_mono" />
+                </svg>
+                <span class="main-menu__link-text">Моноблоки</span>
+              </a>
+            </li>
+            <li class="main-menu__item main-menu__item--mobile">
+              <a class="main-menu__link" href="#">
+                <svg class="main-menu__link-icon" aria-hidden="true">
+                  <use xlink:href="#m_contacts" />
+                </svg>
+                <span class="main-menu__link-text">Контакты</span>
+              </a>
+            </li>
+            <li class="main-menu__item main-menu__item--mobile">
+              <a class="main-menu__link" href="#">
+                <svg class="main-menu__link-icon" aria-hidden="true">
+                  <use xlink:href="#m_actions" />
+                </svg>
+                <span class="main-menu__link-text">Акции</span>
+              </a>
             </li>
           </ul>
+          <ul class="personal-menu">
+            <li class="personal-menu__item">
+              <a class="personal-menu__link" href="#">
+                <svg class="personal-menu__icon" aria-hidden="true">
+                  <use xlink:href="#m_pro" />
+                </svg>
+                МОИ ЗАКАЗЫ
+              </a>
+            </li>
+            <li class="personal-menu__item">
+              <a class="personal-menu__link" href="#">
+                <svg class="personal-menu__icon" aria-hidden="true">
+                  <use xlink:href="#m_pro" />
+                </svg>
+                СОХРАНЕННЫЕ ДИЗАЙНЫ
+              </a>
+            </li>
+            <li class="personal-menu__item">
+              <a class="personal-menu__link" href="#">
+                <svg class="personal-menu__icon" aria-hidden="true">
+                  <use xlink:href="#m_pro" />
+                </svg>
+                СОХРАНЕННЫЕ КОНФИГУРАЦИИ
+              </a>
+            </li>
+            <li class="personal-menu__item">
+              <a class="personal-menu__link" href="#">
+                <svg class="personal-menu__icon" aria-hidden="true">
+                  <use xlink:href="#m_pro" />
+                </svg>
+                ПАРТНЕРСКИЙ КАБИНЕТ
+              </a>
+            </li>
+            <li class="personal-menu__item">
+              <a class="personal-menu__link" href="#">
+                <svg class="personal-menu__icon" aria-hidden="true">
+                  <use xlink:href="#m_pro" />
+                </svg>
+                ОПЛАТА
+              </a>
+            </li>
+            <li class="personal-menu__item">
+              <a class="personal-menu__link" href="#">
+                <svg class="personal-menu__icon" aria-hidden="true">
+                  <use xlink:href="#m_pro" />
+                </svg>
+                ДОСТАВКА
+              </a>
+            </li>
+            <li class="personal-menu__item">
+              <a class="personal-menu__link" href="#">
+                <svg class="personal-menu__icon" aria-hidden="true">
+                  <use xlink:href="#m_pro" />
+                </svg>
+                ПОДДЕРЖКА
+              </a>
+            </li>
+            <li class="personal-menu__item">
+              <a class="personal-menu__link" href="#">
+                <svg class="personal-menu__icon" aria-hidden="true">
+                  <use xlink:href="#m_pro" />
+                </svg>
+                FAQ
+              </a>
+            </li>
+          </ul>
+          <div class="menu-block__phone-block"><a class="menu-block__phone" href="tel:+78124261409">+7 (812) 426-14-09</a></div>
+          <div class="menu-block__closer-block"><button class="js-menu-closer menu-block__closer" type="button">CLOSE</button></div>
         </div>
         <a class="header__design-button" href="#" title="Создать свой дизайн">
           <svg class="design-button__icon" aria-hidden="true">

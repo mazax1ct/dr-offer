@@ -5,7 +5,6 @@
   border: none
   cursor: pointer
   display: flex
-
   height: 48px
   justify-content: center
   padding: 0
@@ -22,7 +21,8 @@
   &.is-active
     z-index: 100
 
-    .menu-toggler__close
+    .menu-toggler__close,
+    .personal-toggler__close,
       display: block
 
   svg
@@ -38,7 +38,7 @@
   left: 20px
 
   &.is-active
-    .menu-toggler__personal
+    .personal-toggler__personal
       display: none
 
   &__personal
@@ -64,13 +64,12 @@
     flex-grow: 1
 
   &.is-open
-    //&::before
-      @media(min-width: 768px) and (max-width: 991px)
-        background-color: #3e3e3e
+    &::before
+      @media(max-width: 991px)
+        background-color: rgba(#000, 0.3)
         bottom: 0
         content: ''
-        left: auto
-        max-width: 320px
+        left: 0
         position: fixed
         right: 0
         top: 0
@@ -90,14 +89,32 @@
     &.is-open
       background-color: rgba(#fff, 0.1)
       backdrop-filter: blur(60px)
-      display: block
-      width: 294px
+      border-radius: 13px
+      display: flex
+      flex-direction: column
+      height: calc(100% - 110px)
+      left: 0
+      max-width: 294px
+      margin-left: 10px
+      margin-right: 10px
+      padding-top: 27px
+      top: 100px
+      width: 100%
 
       @media(min-width: 992px)
         background: none
         backdrop-filter: none
+        border-radius: 0
+        display: block
+        height: auto
+        left: auto
+        max-width: 100%
+        margin-left: 40px
+        margin-right: auto
         min-height: auto
         padding-top: 0
+        top: auto
+        transform: none
         width: auto
 
     @media(min-width: 992px)
@@ -112,29 +129,72 @@
       width: auto
       z-index: 2
 
+  &__phone-block,
+  &__closer-block
+    text-align: center
+
+    @media(min-width: 992px)
+      display: none
+
+  &__phone-block
+    margin-top: auto
+    margin-bottom: 15px
+
+  &__closer-block
+    padding-bottom: 40px
+
+  &__phone
+    color: #fff
+    font-size: 18px
+    font-weight: 900
+    line-height: 26px
+    text-decoration: none
+
+  &__closer
+    border: none
+    background-color: #D43C38
+    border-radius: 24px
+    color: #fff
+    cursor: pointer
+    font-size: 14px
+    font-weight: 700
+    height: 40px
+    width: 182px
+
 .main-menu
-  align-items: stretch
+  display: none
   font-family: $secondary_font
   font-size: 14px
   font-weight: 700
   line-height: 16px
+  text-transform: uppercase
+
+  &.is-open
+    display: block
+
+    @media(min-width: 992px)
+      display: flex
 
   @media(min-width: 992px)
+    align-items: stretch
     display: flex
     font-family: $main_font
     font-size: 14px
     font-weight: 400
+    margin-bottom: 0
+    text-transform: none
 
   @media(min-width: 1200px)
     font-size: 16px
 
   &__item
-    margin-bottom: 0
+    margin-bottom: 45px
     position: relative
 
     @media(min-width: 992px)
       align-items: stretch
       display: flex
+      margin-bottom: 0
 
     &:not(:last-child)
       @media(min-width: 992px)
@@ -158,17 +218,20 @@
       .main-menu__link-text
         border-bottom-color: transparent
 
+    &--mobile
+      @media(min-width: 992px)
+        display: none
+
   &__link
+    align-items: center
     color: #fff
-    display: block
+    display: flex
     padding-left: 20px
     padding-right: 20px
     transition: color 0.3s
     text-decoration: none
 
     @media(min-width: 992px)
-      align-items: center
-      display: flex
       padding: 0
 
     &:hover
@@ -183,8 +246,6 @@
           border-bottom-color: $main_color
 
     &.is-active
-      color: $main_color
-
       @media(min-width: 992px)
         color: #fff
 
@@ -193,6 +254,16 @@
       border-bottom: 2px solid transparent
       display: block
       transition: border-color 0.3s
+
+  &__link-icon
+    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.25))
+    fill: #fff
+    height: 30px
+    margin-right: 11px
+    width: 30px
+
+    @media(min-width: 992px)
+      display: none
 
   &__dropdown
     @media(max-width: 991px)
@@ -230,16 +301,71 @@
       padding: 10px 28px
 
   &__dropdown-link
+    align-items: center
     color: #fff
-    display: block
-    padding-left: 16px
-    padding-right: 16px
+    display: flex
+    padding-left: 20px
+    padding-right: 20px
     transition: color 0.3s
     text-decoration: none
 
     @media(min-width: 992px)
+      display: block
       padding: 10px 28px
 
     &:hover
       color: $main_color
       text-decoration: none
+
+    &:not(:last-child)
+      margin-bottom: 45px
+
+      @media(min-width: 992px)
+        margin-bottom: 0
+
+  &__dropdown-icon
+    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.25))
+    fill: #fff
+    height: 30px
+    margin-right: 11px
+    width: 30px
+
+    @media(min-width: 992px)
+      display: none
+
+.personal-menu
+  display: none
+  font-family: $secondary_font
+  font-size: 14px
+  font-weight: 700
+  line-height: 16px
+  text-transform: uppercase
+
+  &.is-open
+    display: block
+
+    @media(min-width: 992px)
+      display: none
+
+  &__item
+    margin-bottom: 45px
+
+  &__link
+    align-items: center
+    color: #fff
+    display: flex
+    padding-left: 20px
+    padding-right: 20px
+    transition: color 0.3s
+    text-decoration: none
+
+    &:hover
+      color: $main_color
+      text-decoration: none
+
+  &__icon
+    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.25))
+    fill: #fff
+    height: 30px
+    margin-right: 11px
+    width: 30px
