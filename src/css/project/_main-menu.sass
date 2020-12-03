@@ -148,11 +148,15 @@
     font-size: 18px
     font-weight: 900
     line-height: 26px
+    transition: color 0.3s
     text-decoration: none
+
+    &:hover
+      color: $main_color
 
   &__closer
     border: none
-    background-color: #D43C38
+    background-color: $main_color
     border-radius: 24px
     color: #fff
     cursor: pointer
@@ -260,6 +264,7 @@
     fill: #fff
     height: 30px
     margin-right: 11px
+    min-width: 30px
     width: 30px
 
     @media(min-width: 992px)
@@ -328,6 +333,7 @@
     fill: #fff
     height: 30px
     margin-right: 11px
+    min-width: 30px
     width: 30px
 
     @media(min-width: 992px)
@@ -368,4 +374,5 @@
     fill: #fff
     height: 30px
     margin-right: 11px
+    min-width: 30px
     width: 30px

@@ -135,7 +135,7 @@ $(document).on('click', '.js-personal-toggler', function () {
 
 function closeMenu(evt) {
   if (!$('.menu-block__inner').is(evt.target) && $('.menu-block__inner').has(evt.target).length === 0) {
-    $('.js-menu-toggler').removeClass("is-active");
+    $('.js-menu-toggler, .js-personal-toggler').removeClass("is-active");
     $(".menu-block").removeClass("is-open");
     $(".menu-block__inner").removeClass("is-open");
     $(".main-menu, .personal-menu").removeClass("is-open");
