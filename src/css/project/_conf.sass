@@ -1,0 +1,406 @@
+.conf
+  padding-top: 120px
+  padding-bottom: 100px
+
+  &__title-block
+    margin-bottom: 35px
+    position: relative
+
+  &__title
+    color: transparent
+    filter: drop-shadow(0 0 3.5px #EA1C24)
+    -webkit-text-stroke: 1px $main_color
+    text-stroke: 1px $main_color
+    font-family: $secondary_font
+    font-size: 28px
+    font-weight: 700
+    line-height: 99%
+    margin-bottom: 13px
+    text-align: center
+    text-transform: uppercase
+
+    @media(min-width: 992px)
+      font-size: 38px
+      line-height: 84%
+      left: 0
+      position: absolute
+      text-align: left
+
+    @media(min-width: 1200px)
+      font-size: 48px
+
+    small
+      font-size: 24px
+
+      @media(min-width: 992px)
+        font-size: 33px
+
+      @media(min-width: 1200px)
+        font-size: 42px
+
+  &__step
+    text-align: center
+
+  &__step-number
+    align-items: center
+    border: 1px solid $main_color
+    border-radius: 50%
+    color: transparent
+    filter: drop-shadow(0 0 3.5px #EA1C24)
+    -webkit-text-stroke: 1px $main_color
+    text-stroke: 1px $main_color
+    display: flex
+    font-family: $secondary_font
+    font-size: 40px
+    font-weight: 900
+    height: 64px
+    justify-content: center
+    line-height: 1
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 14px
+    width: 64px
+
+    @media(min-width: 992px)
+      font-size: 52px
+      height: 82px
+      width: 82px
+
+    @media(min-width: 1200px)
+      font-size: 64px
+      height: 100px
+      width: 100px
+
+  &__step-title
+    color: #fff
+    filter: drop-shadow(1px 1px 5px #fff)
+    font-family: $secondary_font
+    font-size: 24px
+    text-transform: uppercase
+
+    span
+      font-weight: 700
+
+  &__list
+    display: flex
+    margin-bottom: 65px
+    margin-left: auto
+    margin-right: auto
+    max-width: 660px
+    overflow-x: auto
+
+    @media(min-width: 1024px)
+      max-width: 1320px
+
+    &.slick-initialized
+      overflow: visible
+
+    .slick-list
+      width: 100%
+
+  &__list-item
+    padding: 18px
+
+    @media(min-width: 1024px)
+      width: 25%
+
+    &.slick-current
+      .conf-item
+        border-color: $main_color
+
+  &__list-button
+    border: 2px solid $main_color
+    background-color: transparent
+    border-radius: 50%
+    cursor: pointer
+    filter: drop-shadow(0 0 6px #EA1C24)
+    height: 40px
+    position: absolute
+    padding: 0
+    top: 180px
+    width: 40px
+    z-index: 1
+
+    &.slick-disabled
+      display: none !important
+
+    &--prev
+      left: 0
+
+      @media(min-width: 768px)
+        left: -40px
+
+    &--next
+      left: auto
+      right: 0
+
+      @media(min-width: 768px)
+        right: -40px
+
+  &__list-button-icon
+    fill: $main_color
+    height: 36px
+    width: 36px
+
+  &__nav
+    align-items: center
+    display: flex
+    padding-left: 36px
+
+    @media(min-width: 768px)
+      padding-left: 48px
+
+  &__continue
+    align-items: center
+    background-color: transparent
+    border: none
+    cursor: pointer
+    filter: drop-shadow(0 0 4px $main_color)
+    display: inline-flex
+    color: #fff
+    font-family: $secondary_font
+    font-size: 12px
+    font-weight: 500
+    height: 44px
+    margin-left: auto
+    margin-right: auto
+    padding: 0
+    transition: color 0.3s
+    text-transform: uppercase
+
+    @media(min-width: 768px)
+      font-size: 21px
+      height: 70px
+
+    &:hover
+      color: $main_color
+
+      .conf__continue-icon
+        fill: $main_color
+
+  &__continue-icon
+    fill: #fff
+    height: 4px
+    margin-left: 12px
+    transition: fill 0.3s
+    width: 30px
+
+    @media(min-width: 768px)
+      width: 45px
+
+  &__next
+    background-color: transparent
+    border: none
+    border-radius: 50%
+    cursor: pointer
+    display: block
+    filter: drop-shadow(0 0 4px $main_color)
+    height: 36px
+    padding: 0
+    width: 36px
+
+    @media(min-width: 768px)
+      height: 48px
+      width: 48px
+
+    &:hover
+      .conf__next-image
+        filter: none
+
+      .conf__next-circle
+        fill: #fff
+
+      .conf__next-arrow
+        stroke: #0C1117
+
+  &__next-image
+    filter: drop-shadow(0 0 6px #EA1C24)
+    fill: transparent
+    height: 36px
+    transition: filter 0.3s
+    transform: rotate(90deg)
+    width: 36px
+
+    @media(min-width: 768px)
+      height: 48px
+      width: 48px
+
+  &__next-arrow
+    fill: transparent
+    stroke: #fff
+    transition: stroke 0.3s
+
+  &__next-circle
+    fill: transparent
+    stroke: #fff
+    transition: fill 0.3s
+
+.conf-item
+  border-radius: 4px
+  border: 3px solid #0C1117
+  background-color: #0C1117
+  box-shadow: 0 4px 18px 0 rgba($main_color, 0.5)
+  margin-left: auto
+  margin-right: auto
+  max-width: 224px
+  padding: 9px
+
+  @media(min-width: 414px) and (max-width: 1023px)
+    max-width: 280px
+    padding: 15px
+
+  @media(min-width: 1024px) and (max-width: 1199px)
+    padding: 9px
+
+  @media(min-width: 1200px)
+    padding: 15px
+    max-width: 280px
+
+  &.is-active
+    border-color: $main_color
+
+  &__image-block
+    margin-bottom: 14px
+    position: relative
+
+    &::after
+      bottom: 0
+      border-radius: 18px
+      background-image: radial-gradient(51.84% 58.28% at 42.63% 71.6%,#3a3c59 0%,#0c1117 100%)
+      content: ''
+      left: 0
+      position: absolute
+      right: 0
+      top: 0
+      z-index: 1
+
+  &__image
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    background-size: 100% auto
+    position: relative
+    text-align: center
+    z-index: 2
+
+    &--x
+      background-image: url('../images/backgrounds/conf_sizes/X.png')
+
+    &--s
+      background-image: url('../images/backgrounds/conf_sizes/S.png')
+
+    &--m
+      background-image: url('../images/backgrounds/conf_sizes/M.png')
+
+    &--l
+      background-image: url('../images/backgrounds/conf_sizes/L.png')
+
+    img
+      position: relative
+      z-index: 2
+
+  &__size
+    color: #fff
+    font-family: $secondary_font
+    font-size: 12px
+    font-weight: 700
+    line-height: 106%
+    position: relative
+    padding-bottom: 10px
+    text-transform: uppercase
+    text-align: center
+    z-index: 2
+
+    @media(min-width: 768px)
+      font-size: 17px
+
+  &__perf-title
+    color: #fff
+    font-family: $secondary_font
+    font-size: 10px
+    font-weight: 700
+    line-height: 1.3
+    margin-bottom: 5px
+    text-transform: uppercase
+    text-align: center
+
+    @media(min-width: 768px)
+      font-size: 13px
+      line-height: 1.23076
+
+  &__perf
+    align-items: center
+    border-radius: 8px
+    background-color: rgba(#fff, 0.2)
+    display: flex
+    justify-content: space-between
+    max-width: 154px
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 15px
+    padding: 2px 5px
+
+  &__perf-item
+    background-color: rgba(#fff, 0.3)
+    border-radius: 4px
+    height: 6px
+    width: 22px
+
+    &.is-active
+      background-color: rgba(#fff, 0.7)
+
+  &__config-block
+    text-align: center
+
+  &__config-inner
+    display: none
+    text-align: left
+
+  &__config-button
+    background-color: transparent
+    border: none
+    cursor: pointer
+    height: 23px
+    padding: 0
+    transition: transform 0.3s
+    vertical-align: top
+    width: 23px
+
+    @media(min-width: 768px)
+      height: 28px
+      width: 28px
+
+    &.is-active
+      transform: rotate(180deg)
+
+  &__config-button-icon
+    fill: rgba(#fff, 0.5)
+    height: 23px
+    width: 23px
+
+    @media(min-width: 768px)
+      height: 28px
+      width: 28px
+
+.part
+  align-items: center
+  color: #fff
+  display: flex
+  min-height: 57px
+
+  &__icon
+    fill: #fff
+    height: 28px
+    min-width: 28px
+    margin-right: 6px
+    width: 28px
+
+  &__title
+    font-family: $secondary_font
+    font-size: 14px
+    font-weight: 700
+    line-height: 1
+    margin-bottom: 0
+
+  &__description
+    font-size: 10px
+    line-height: 1.3
