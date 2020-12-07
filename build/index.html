@@ -316,6 +316,12 @@
     <symbol id="slider_arrow_prev" viewBox="0 0 52 52">
       <path d="M21.2,25.5L20.8,26l0.4,0.5l8.8,10c0.3,0.3,0.7,0.3,1,0.1c0.3-0.3,0.3-0.7,0.1-1L22.6,26l8.4-9.5c0.3-0.3,0.2-0.7-0.1-1c-0.3-0.3-0.7-0.2-1,0.1L21.2,25.5z"/>
     </symbol>
+    <symbol id="arrow_back" viewBox="0 0 43 43">
+      <path d="M38.1974 23.0714V31.5718C36.2643 28.5494 32.2371 27.479 30.7873 27.479H16.7726V33.6181L4.69092 21.6547L16.7726 10.1636V15.0434H30.7873C33.5258 15.0434 38.1974 18.6639 38.1974 23.0714Z"/>
+    </symbol>
+    <symbol id="upload_icon" viewBox="0 0 64 77">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M2.32727 6.98182V69.2364C2.32727 71.807 4.41118 73.8909 6.98182 73.8909H57.0182C59.5888 73.8909 61.6727 71.807 61.6727 69.2364V15.3194C61.6727 14.172 61.249 13.0652 60.4828 12.2112L53.0031 3.87361C52.1202 2.8895 50.8605 2.32727 49.5384 2.32727H6.98182C4.41118 2.32727 2.32727 4.41118 2.32727 6.98182ZM0 69.2364V6.98182C0 3.12587 3.12587 0 6.98182 0H49.5384C51.5216 0 53.4111 0.843347 54.7354 2.31951L62.2152 10.6571C63.3644 11.9381 64 13.5984 64 15.3194V69.2364C64 73.0923 60.8741 76.2182 57.0182 76.2182H6.98182C3.12587 76.2182 0 73.0923 0 69.2364ZM9.30886 36.0729C9.30886 34.7876 10.3508 33.7456 11.6361 33.7456H52.3634C53.6487 33.7456 54.6907 34.7876 54.6907 36.0729V59.3456C54.6907 60.631 53.6487 61.6729 52.3634 61.6729H11.6361C10.3508 61.6729 9.30886 60.631 9.30886 59.3456V36.0729ZM19.7272 43.3383H21.7066V51.891H19.7272V43.3383ZM32.2524 51.891L32.2402 46.7594L29.7232 50.9869H28.8313L26.3266 46.8694V51.891H24.4694V43.3383H26.1066L29.3078 48.6532L32.4601 43.3383H34.0851L34.1096 51.891H32.2524ZM42.651 47.4803H44.4593V50.9502C43.995 51.3005 43.4574 51.5693 42.8465 51.7566C42.2356 51.944 41.6206 52.0376 41.0016 52.0376C40.1137 52.0376 39.3155 51.8503 38.6068 51.4756C37.8981 51.0928 37.3402 50.5674 36.9329 49.8995C36.5338 49.2234 36.3342 48.4618 36.3342 47.6147C36.3342 46.7675 36.5338 46.01 36.9329 45.3421C37.3402 44.666 37.9022 44.1406 38.619 43.7659C39.3358 43.3831 40.1422 43.1917 41.0382 43.1917C41.7876 43.1917 42.4677 43.3179 43.0787 43.5704C43.6896 43.8229 44.2027 44.1895 44.6181 44.6701L43.3475 45.843C42.7365 45.1995 41.9994 44.8778 41.136 44.8778C40.5902 44.8778 40.1056 44.9918 39.682 45.2199C39.2584 45.448 38.9285 45.7697 38.6923 46.1851C38.4561 46.6005 38.338 47.0771 38.338 47.6147C38.338 48.1441 38.4561 48.6166 38.6923 49.032C38.9285 49.4474 39.2544 49.7732 39.6698 50.0094C40.0933 50.2375 40.5739 50.3515 41.1115 50.3515C41.6817 50.3515 42.1949 50.2293 42.651 49.985V47.4803Z"/>
+    </symbol>
   </svg>
 
   <div class="wrapper">
@@ -659,298 +665,458 @@
     </div>
 
     <div class="conf">
-      <div class="container">
-        <div class="conf__title-block">
-          <h2 class="conf__title">Выбери свою<br> <small>конфигурацию</small></h2>
-          <p class="conf__step">
-            <span class="conf__step-number">1</span>
-            <span class="conf__step-title">Размер: <span class="js-conf-size">S</span></span>
-          </p>
+      <div class="conf__section is-active">
+        <div class="conf__section-inner container">
+          <div class="conf__title-block">
+            <h2 class="conf__title"><span>Выбери свою<br> <small>конфигурацию</small></span></h2>
+            <p class="conf__step">
+              <span class="conf__step-number">1</span>
+              <span class="conf__step-title">Размер: <span class="js-conf-size">S</span></span>
+            </p>
+          </div>
+        
+          <div class="js-configs-list conf__list">
+            <div class="conf__list-item slick-current" data-size="s">
+              <div class="conf-item">
+                <div class="conf-item__image-block">
+                  <div class="conf-item__image conf-item__image--s"><img width="220" height="220" src="images/content/conf/img_1.png" alt="alt"></div>
+                  <p class="conf-item__size">SMALL</p>
+                </div>
+                <p class="conf-item__perf-title">Производительность</p>
+                <div class="conf-item__perf">
+                  <div class="conf-item__perf-item is-active"></div>
+                  <div class="conf-item__perf-item is-active"></div>
+                  <div class="conf-item__perf-item is-active"></div>
+                  <div class="conf-item__perf-item"></div>
+                  <div class="conf-item__perf-item"></div>
+                </div>
+                <div class="conf-item__config-block">
+                  <div class="conf-item__config-inner">
+                    <div class="part">
+                      <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_guarantee" /></svg>
+                      <div class="part__info">
+                        <p class="part__title">Гарантия</p>
+                        <p class="part__description">24 месяца</p>
+                      </div>
+                    </div>
+                    <div class="part">
+                      <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_cpu" /></svg>
+                      <div class="part__info">
+                        <p class="part__title">Процессор</p>
+                        <p class="part__description">AMD Ryzen R5 3600 6-и ядерный 3.6 GHz</p>
+                      </div>
+                    </div>
+                    <div class="part">
+                      <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_gpu" /></svg>
+                      <div class="part__info">
+                        <p class="part__title">Видеокарта</p>
+                        <p class="part__description">AMD Radeon 5500XT 8GB</p>
+                      </div>
+                    </div>
+                    <div class="part">
+                      <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_mother" /></svg>
+                      <div class="part__info">
+                        <p class="part__title">Системная плата</p>
+                        <p class="part__description">ROG STRIX B550 mITX 2xDDR4 2xM.2 / 1xPCI-E x16 / Sound 7.1</p>
+                      </div>
+                    </div>
+                    <div class="part">
+                      <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_ram" /></svg>
+                      <div class="part__info">
+                        <p class="part__title">Оперативная память</p>
+                        <p class="part__description">32GB 3000Mhz 2 x 16Gb DDR4 Black</p>
+                      </div>
+                    </div>
+                    <div class="part">
+                      <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_ssd" /></svg>
+                      <div class="part__info">
+                        <p class="part__title">Системный SSD</p>
+                        <p class="part__description">240Gb M.2 Скорость W/R: 350/500 Мб/с</p>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="js-conf-open conf-item__config-button" type="button">
+                    <svg class="conf-item__config-button-icon" aria-hidden="true">
+                      <use xlink:href="#arrow_down" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="conf__list-item" data-size="m">
+              <div class="conf-item">
+                <div class="conf-item__image-block">
+                  <div class="conf-item__image conf-item__image--m"><img width="220" height="220" src="images/content/conf/img_2.png" alt="alt"></div>
+                  <p class="conf-item__size">MEDIUM</p>
+                </div>
+                <p class="conf-item__perf-title">Производительность</p>
+                <div class="conf-item__perf">
+                  <div class="conf-item__perf-item is-active"></div>
+                  <div class="conf-item__perf-item is-active"></div>
+                  <div class="conf-item__perf-item is-active"></div>
+                  <div class="conf-item__perf-item"></div>
+                  <div class="conf-item__perf-item"></div>
+                </div>
+                <div class="conf-item__config-block">
+                  <div class="conf-item__config-inner">
+                    <div class="part">
+                      <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_guarantee" /></svg>
+                      <div class="part__info">
+                        <p class="part__title">Гарантия</p>
+                        <p class="part__description">24 месяца</p>
+                      </div>
+                    </div>
+                    <div class="part">
+                      <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_cpu" /></svg>
+                      <div class="part__info">
+                        <p class="part__title">Процессор</p>
+                        <p class="part__description">AMD Ryzen R5 3600 6-и ядерный 3.6 GHz</p>
+                      </div>
+                    </div>
+                    <div class="part">
+                      <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_gpu" /></svg>
+                      <div class="part__info">
+                        <p class="part__title">Видеокарта</p>
+                        <p class="part__description">AMD Radeon 5500XT 8GB</p>
+                      </div>
+                    </div>
+                    <div class="part">
+                      <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_mother" /></svg>
+                      <div class="part__info">
+                        <p class="part__title">Системная плата</p>
+                        <p class="part__description">ROG STRIX B550 mITX 2xDDR4 2xM.2 / 1xPCI-E x16 / Sound 7.1</p>
+                      </div>
+                    </div>
+                    <div class="part">
+                      <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_ram" /></svg>
+                      <div class="part__info">
+                        <p class="part__title">Оперативная память</p>
+                        <p class="part__description">32GB 3000Mhz 2 x 16Gb DDR4 Black</p>
+                      </div>
+                    </div>
+                    <div class="part">
+                      <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_ssd" /></svg>
+                      <div class="part__info">
+                        <p class="part__title">Системный SSD</p>
+                        <p class="part__description">240Gb M.2 Скорость W/R: 350/500 Мб/с</p>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="js-conf-open conf-item__config-button" type="button">
+                    <svg class="conf-item__config-button-icon" aria-hidden="true">
+                      <use xlink:href="#arrow_down" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="conf__list-item" data-size="l">
+              <div class="conf-item">
+                <div class="conf-item__image-block">
+                  <div class="conf-item__image conf-item__image--l"><img width="220" height="220" src="images/content/conf/img_3.png" alt="alt"></div>
+                  <p class="conf-item__size">LARGE</p>
+                </div>
+                <p class="conf-item__perf-title">Производительность</p>
+                <div class="conf-item__perf">
+                  <div class="conf-item__perf-item is-active"></div>
+                  <div class="conf-item__perf-item is-active"></div>
+                  <div class="conf-item__perf-item is-active"></div>
+                  <div class="conf-item__perf-item"></div>
+                  <div class="conf-item__perf-item"></div>
+                </div>
+                <div class="conf-item__config-block">
+                  <div class="conf-item__config-inner">
+                    <div class="part">
+                      <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_guarantee" /></svg>
+                      <div class="part__info">
+                        <p class="part__title">Гарантия</p>
+                        <p class="part__description">24 месяца</p>
+                      </div>
+                    </div>
+                    <div class="part">
+                      <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_cpu" /></svg>
+                      <div class="part__info">
+                        <p class="part__title">Процессор</p>
+                        <p class="part__description">AMD Ryzen R5 3600 6-и ядерный 3.6 GHz</p>
+                      </div>
+                    </div>
+                    <div class="part">
+                      <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_gpu" /></svg>
+                      <div class="part__info">
+                        <p class="part__title">Видеокарта</p>
+                        <p class="part__description">AMD Radeon 5500XT 8GB</p>
+                      </div>
+                    </div>
+                    <div class="part">
+                      <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_mother" /></svg>
+                      <div class="part__info">
+                        <p class="part__title">Системная плата</p>
+                        <p class="part__description">ROG STRIX B550 mITX 2xDDR4 2xM.2 / 1xPCI-E x16 / Sound 7.1</p>
+                      </div>
+                    </div>
+                    <div class="part">
+                      <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_ram" /></svg>
+                      <div class="part__info">
+                        <p class="part__title">Оперативная память</p>
+                        <p class="part__description">32GB 3000Mhz 2 x 16Gb DDR4 Black</p>
+                      </div>
+                    </div>
+                    <div class="part">
+                      <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_ssd" /></svg>
+                      <div class="part__info">
+                        <p class="part__title">Системный SSD</p>
+                        <p class="part__description">240Gb M.2 Скорость W/R: 350/500 Мб/с</p>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="js-conf-open conf-item__config-button" type="button">
+                    <svg class="conf-item__config-button-icon" aria-hidden="true">
+                      <use xlink:href="#arrow_down" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="conf__list-item" data-size="x">
+              <div class="conf-item">
+                <div class="conf-item__image-block">
+                  <div class="conf-item__image conf-item__image--x"><img width="220" height="220" src="images/content/conf/img_4.png" alt="alt"></div>
+                  <p class="conf-item__size">EXTRA</p>
+                </div>
+                <p class="conf-item__perf-title">Производительность</p>
+                <div class="conf-item__perf">
+                  <div class="conf-item__perf-item is-active"></div>
+                  <div class="conf-item__perf-item is-active"></div>
+                  <div class="conf-item__perf-item is-active"></div>
+                  <div class="conf-item__perf-item"></div>
+                  <div class="conf-item__perf-item"></div>
+                </div>
+                <div class="conf-item__config-block">
+                  <div class="conf-item__config-inner">
+                    <div class="part">
+                      <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_guarantee" /></svg>
+                      <div class="part__info">
+                        <p class="part__title">Гарантия</p>
+                        <p class="part__description">24 месяца</p>
+                      </div>
+                    </div>
+                    <div class="part">
+                      <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_cpu" /></svg>
+                      <div class="part__info">
+                        <p class="part__title">Процессор</p>
+                        <p class="part__description">AMD Ryzen R5 3600 6-и ядерный 3.6 GHz</p>
+                      </div>
+                    </div>
+                    <div class="part">
+                      <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_gpu" /></svg>
+                      <div class="part__info">
+                        <p class="part__title">Видеокарта</p>
+                        <p class="part__description">AMD Radeon 5500XT 8GB</p>
+                      </div>
+                    </div>
+                    <div class="part">
+                      <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_mother" /></svg>
+                      <div class="part__info">
+                        <p class="part__title">Системная плата</p>
+                        <p class="part__description">ROG STRIX B550 mITX 2xDDR4 2xM.2 / 1xPCI-E x16 / Sound 7.1</p>
+                      </div>
+                    </div>
+                    <div class="part">
+                      <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_ram" /></svg>
+                      <div class="part__info">
+                        <p class="part__title">Оперативная память</p>
+                        <p class="part__description">32GB 3000Mhz 2 x 16Gb DDR4 Black</p>
+                      </div>
+                    </div>
+                    <div class="part">
+                      <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_ssd" /></svg>
+                      <div class="part__info">
+                        <p class="part__title">Системный SSD</p>
+                        <p class="part__description">240Gb M.2 Скорость W/R: 350/500 Мб/с</p>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="js-conf-open conf-item__config-button" type="button">
+                    <svg class="conf-item__config-button-icon" aria-hidden="true">
+                      <use xlink:href="#arrow_down" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="conf__nav">
+            <button class="js-conf-next conf__continue" type="button">
+              ПРОДОЛЖИТЬ
+              <svg class="conf__continue-icon" aria-hidden="true"><use xlink:href="#continue" /></svg>
+            </button>
+            <button class="js-conf-next conf__next" type="button" title="Дальше">
+              <svg class="conf__next-image" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <circle class="conf__next-circle" cx="24" cy="24" r="23.4" stroke-width="1.2"/>
+                <path class="conf__next-arrow" d="M36 26.7882L24 16.2L12 26.7882" stroke-width="1.4691" stroke-linecap="round"/>
+                <path class="conf__next-arrow" d="M36 32.1883L24 21.6L12 32.1883" stroke-width="1.4691" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </div>
         </div>
+      </div>
 
-        <div class="js-configs-list conf__list">
-          <div class="conf__list-item">
-            <div class="conf-item">
-              <div class="conf-item__image-block">
-                <div class="conf-item__image conf-item__image--s"><img src="images/content/conf/img_1.png" alt="alt"></div>
-                <p class="conf-item__size">SMALL</p>
-              </div>
-              <p class="conf-item__perf-title">Производительность</p>
-              <div class="conf-item__perf">
-                <div class="conf-item__perf-item is-active"></div>
-                <div class="conf-item__perf-item is-active"></div>
-                <div class="conf-item__perf-item is-active"></div>
-                <div class="conf-item__perf-item"></div>
-                <div class="conf-item__perf-item"></div>
-              </div>
-              <div class="conf-item__config-block">
-                <div class="conf-item__config-inner">
-                  <div class="part">
-                    <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_guarantee" /></svg>
-                    <div class="part__info">
-                      <p class="part__title">Гарантия</p>
-                      <p class="part__description">24 месяца</p>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_cpu" /></svg>
-                    <div class="part__info">
-                      <p class="part__title">Процессор</p>
-                      <p class="part__description">AMD Ryzen R5 3600 6-и ядерный 3.6 GHz</p>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_gpu" /></svg>
-                    <div class="part__info">
-                      <p class="part__title">Видеокарта</p>
-                      <p class="part__description">AMD Radeon 5500XT 8GB</p>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_mother" /></svg>
-                    <div class="part__info">
-                      <p class="part__title">Системная плата</p>
-                      <p class="part__description">ROG STRIX B550 mITX 2xDDR4 2xM.2 / 1xPCI-E x16 / Sound 7.1</p>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_ram" /></svg>
-                    <div class="part__info">
-                      <p class="part__title">Оперативная память</p>
-                      <p class="part__description">32GB 3000Mhz 2 x 16Gb DDR4 Black</p>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_ssd" /></svg>
-                    <div class="part__info">
-                      <p class="part__title">Системный SSD</p>
-                      <p class="part__description">240Gb M.2 Скорость W/R: 350/500 Мб/с</p>
-                    </div>
-                  </div>
+      <div class="conf__section">
+        <div class="conf__section-inner container">
+          <div class="conf__title-block">
+            <h2 class="conf__title conf__title--with_button">
+              <button class="js-conf-back conf__back" type="button" title="Назад">
+                <svg class="conf__back-icon" aria-hidden="true">
+                  <use xlink:href="#arrow_back" />
+                </svg>
+              </button>
+              <span>Выбери свой<br> <small>дизайн</small></span>
+            </h2>
+            <p class="conf__step">
+              <span class="conf__step-number">2</span>
+              <span class="conf__step-title">Дизайн</span>
+            </p>
+          </div>
+        
+          <div class="conf__design design">
+            <div class="design__block">
+              <div class="design__image"><img class="js-design-image" width="318" height="318" src="images/content/conf/img_5.png" alt=""></div>
+            </div>
+            <div class="design__block">
+              <div class="design__list">
+                <div class="design__list-item">
+                  <input id="design_1" class="design__radio" name="design" type="radio" value="1" checked>
+                  <label class="js-design-item design__item" for="design_1" data-src="images/content/conf/img_5.png">
+                    <span><img width="140" height="70" src="images/content/conf/img_6.jpg" alt="alt"></span>
+                  </label>
                 </div>
-                <button class="js-conf-open conf-item__config-button" type="button">
-                  <svg class="conf-item__config-button-icon" aria-hidden="true">
-                    <use xlink:href="#arrow_down" />
+                <div class="design__list-item">
+                  <input id="design_2" class="design__radio" name="design" type="radio" value="2">
+                  <label class="js-design-item design__item" for="design_2" data-src="images/content/conf/img_1.png">
+                    <span><img width="140" height="70" src="images/content/conf/img_7.jpg" alt="alt"></span>
+                  </label>
+                </div>
+                <div class="design__list-item">
+                  <input id="design_3" class="design__radio" name="design" type="radio" value="3">
+                  <label class="js-design-item design__item" for="design_3" data-src="images/content/conf/img_2.png">
+                    <span><img width="140" height="70" src="images/content/conf/img_8.jpg" alt="alt"></span>
+                  </label>
+                </div>
+                <div class="design__list-item">
+                  <input id="design_4" class="design__radio" name="design" type="radio" value="4">
+                  <label class="js-design-item design__item" for="design_4" data-src="images/content/conf/img_3.png">
+                    <span><img width="140" height="70" src="images/content/conf/img_9.jpg" alt="alt"></span>
+                  </label>
+                </div>
+                <div class="design__list-item">
+                  <input id="design_5" class="design__radio" name="design" type="radio" value="5">
+                  <label class="js-design-item design__item" for="design_5" data-src="images/content/conf/img_4.png">
+                    <span><img width="140" height="70" src="images/content/conf/img_10.jpg" alt="alt"></span>
+                  </label>
+                </div>
+                <div class="design__list-item">
+                  <input id="design_6" class="design__radio" name="design" type="radio" value="6">
+                  <label class="js-design-item design__item" for="design_6" data-src="images/content/conf/img_1.png">
+                    <span><img width="140" height="70" src="images/content/conf/img_11.jpg" alt="alt"></span>
+                  </label>
+                </div>
+                <div class="design__list-item">
+                  <input id="design_7" class="design__radio" name="design" type="radio" value="7">
+                  <label class="js-design-item design__item" for="design_7" data-src="images/content/conf/img_2.png">
+                    <span><img width="140" height="70" src="images/content/conf/img_12.jpg" alt="alt"></span>
+                  </label>
+                </div>
+                <div class="design__list-item">
+                  <input id="design_8" class="design__radio" name="design" type="radio" value="8">
+                  <label class="js-design-item design__item" for="design_8" data-src="images/content/conf/img_3.png">
+                    <span><img width="140" height="70" src="images/content/conf/img_13.jpg" alt="alt"></span>
+                  </label>
+                </div>
+                <div class="design__list-item">
+                  <input id="design_9" class="design__radio" name="design" type="radio" value="9">
+                  <label class="js-design-item design__item" for="design_9" data-src="images/content/conf/img_4.png">
+                    <span><img width="140" height="70" src="images/content/conf/img_14.jpg" alt="alt"></span>
+                  </label>
+                </div>
+                <div class="design__list-item">
+                  <input id="design_10" class="design__radio" name="design" type="radio" value="10">
+                  <label class="js-design-item design__item" for="design_10" data-src="images/content/conf/img_1.png">
+                    <span><img width="140" height="70" src="images/content/conf/img_15.jpg" alt="alt"></span>
+                  </label>
+                </div>
+                <div class="design__list-item">
+                  <input id="design_11" class="design__radio" name="design" type="radio" value="11">
+                  <label class="js-design-item design__item" for="design_11" data-src="images/content/conf/img_2.png">
+                    <span><img width="140" height="70" src="images/content/conf/img_16.jpg" alt="alt"></span>
+                  </label>
+                </div>
+                <div class="design__list-item">
+                  <input id="design_12" class="design__radio" name="design" type="radio" value="12">
+                  <label class="js-design-item design__item" for="design_12" data-src="images/content/conf/img_3.png">
+                    <span><img width="140" height="70" src="images/content/conf/img_17.jpg" alt="alt"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="design__block">
+              <div id="dropbox" class="upload">
+                <button class="js-clear-upload upload__clear" type="button" title="Удалить изображение">
+                  <svg class="upload__clear-icon" aria-hidden="true">
+                    <use xlink:href="#menu_close" />
                   </svg>
                 </button>
+                <label class="upload__label" for="upload_zone">
+                  <input id="upload_zone" class="upload__input-file" type="file">
+                  <span class="upload__mobile-text">Загрузить</span>
+                  <span class="upload__desktop-note">Одно изображение<br> в высоком разрешении<br> (Ultra 4K | 3840 : 2400)</span>
+                  <span class="upload__desktop-text">
+                    <svg class="upload__icon" aria-hidden="true">
+                      <use xlink:href="#upload_icon" />
+                    </svg><br>
+                    <span>перетащи сюда файл</span><br>
+                    <small>или <span>загрузи</span> с компьютера</small>
+                  </span>
+                </label>
               </div>
+        
             </div>
           </div>
-          <div class="conf__list-item">
-            <div class="conf-item">
-              <div class="conf-item__image-block">
-                <div class="conf-item__image conf-item__image--m"><img src="images/content/conf/img_2.png" alt="alt"></div>
-                <p class="conf-item__size">MEDIUM</p>
-              </div>
-              <p class="conf-item__perf-title">Производительность</p>
-              <div class="conf-item__perf">
-                <div class="conf-item__perf-item is-active"></div>
-                <div class="conf-item__perf-item is-active"></div>
-                <div class="conf-item__perf-item is-active"></div>
-                <div class="conf-item__perf-item"></div>
-                <div class="conf-item__perf-item"></div>
-              </div>
-              <div class="conf-item__config-block">
-                <div class="conf-item__config-inner">
-                  <div class="part">
-                    <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_guarantee" /></svg>
-                    <div class="part__info">
-                      <p class="part__title">Гарантия</p>
-                      <p class="part__description">24 месяца</p>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_cpu" /></svg>
-                    <div class="part__info">
-                      <p class="part__title">Процессор</p>
-                      <p class="part__description">AMD Ryzen R5 3600 6-и ядерный 3.6 GHz</p>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_gpu" /></svg>
-                    <div class="part__info">
-                      <p class="part__title">Видеокарта</p>
-                      <p class="part__description">AMD Radeon 5500XT 8GB</p>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_mother" /></svg>
-                    <div class="part__info">
-                      <p class="part__title">Системная плата</p>
-                      <p class="part__description">ROG STRIX B550 mITX 2xDDR4 2xM.2 / 1xPCI-E x16 / Sound 7.1</p>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_ram" /></svg>
-                    <div class="part__info">
-                      <p class="part__title">Оперативная память</p>
-                      <p class="part__description">32GB 3000Mhz 2 x 16Gb DDR4 Black</p>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_ssd" /></svg>
-                    <div class="part__info">
-                      <p class="part__title">Системный SSD</p>
-                      <p class="part__description">240Gb M.2 Скорость W/R: 350/500 Мб/с</p>
-                    </div>
-                  </div>
-                </div>
-                <button class="js-conf-open conf-item__config-button" type="button">
-                  <svg class="conf-item__config-button-icon" aria-hidden="true">
-                    <use xlink:href="#arrow_down" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="conf__list-item">
-            <div class="conf-item">
-              <div class="conf-item__image-block">
-                <div class="conf-item__image conf-item__image--l"><img src="images/content/conf/img_3.png" alt="alt"></div>
-                <p class="conf-item__size">LARGE</p>
-              </div>
-              <p class="conf-item__perf-title">Производительность</p>
-              <div class="conf-item__perf">
-                <div class="conf-item__perf-item is-active"></div>
-                <div class="conf-item__perf-item is-active"></div>
-                <div class="conf-item__perf-item is-active"></div>
-                <div class="conf-item__perf-item"></div>
-                <div class="conf-item__perf-item"></div>
-              </div>
-              <div class="conf-item__config-block">
-                <div class="conf-item__config-inner">
-                  <div class="part">
-                    <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_guarantee" /></svg>
-                    <div class="part__info">
-                      <p class="part__title">Гарантия</p>
-                      <p class="part__description">24 месяца</p>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_cpu" /></svg>
-                    <div class="part__info">
-                      <p class="part__title">Процессор</p>
-                      <p class="part__description">AMD Ryzen R5 3600 6-и ядерный 3.6 GHz</p>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_gpu" /></svg>
-                    <div class="part__info">
-                      <p class="part__title">Видеокарта</p>
-                      <p class="part__description">AMD Radeon 5500XT 8GB</p>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_mother" /></svg>
-                    <div class="part__info">
-                      <p class="part__title">Системная плата</p>
-                      <p class="part__description">ROG STRIX B550 mITX 2xDDR4 2xM.2 / 1xPCI-E x16 / Sound 7.1</p>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_ram" /></svg>
-                    <div class="part__info">
-                      <p class="part__title">Оперативная память</p>
-                      <p class="part__description">32GB 3000Mhz 2 x 16Gb DDR4 Black</p>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_ssd" /></svg>
-                    <div class="part__info">
-                      <p class="part__title">Системный SSD</p>
-                      <p class="part__description">240Gb M.2 Скорость W/R: 350/500 Мб/с</p>
-                    </div>
-                  </div>
-                </div>
-                <button class="js-conf-open conf-item__config-button" type="button">
-                  <svg class="conf-item__config-button-icon" aria-hidden="true">
-                    <use xlink:href="#arrow_down" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="conf__list-item">
-            <div class="conf-item">
-              <div class="conf-item__image-block">
-                <div class="conf-item__image conf-item__image--x"><img src="images/content/conf/img_4.png" alt="alt"></div>
-                <p class="conf-item__size">EXTRA</p>
-              </div>
-              <p class="conf-item__perf-title">Производительность</p>
-              <div class="conf-item__perf">
-                <div class="conf-item__perf-item is-active"></div>
-                <div class="conf-item__perf-item is-active"></div>
-                <div class="conf-item__perf-item is-active"></div>
-                <div class="conf-item__perf-item"></div>
-                <div class="conf-item__perf-item"></div>
-              </div>
-              <div class="conf-item__config-block">
-                <div class="conf-item__config-inner">
-                  <div class="part">
-                    <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_guarantee" /></svg>
-                    <div class="part__info">
-                      <p class="part__title">Гарантия</p>
-                      <p class="part__description">24 месяца</p>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_cpu" /></svg>
-                    <div class="part__info">
-                      <p class="part__title">Процессор</p>
-                      <p class="part__description">AMD Ryzen R5 3600 6-и ядерный 3.6 GHz</p>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_gpu" /></svg>
-                    <div class="part__info">
-                      <p class="part__title">Видеокарта</p>
-                      <p class="part__description">AMD Radeon 5500XT 8GB</p>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_mother" /></svg>
-                    <div class="part__info">
-                      <p class="part__title">Системная плата</p>
-                      <p class="part__description">ROG STRIX B550 mITX 2xDDR4 2xM.2 / 1xPCI-E x16 / Sound 7.1</p>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_ram" /></svg>
-                    <div class="part__info">
-                      <p class="part__title">Оперативная память</p>
-                      <p class="part__description">32GB 3000Mhz 2 x 16Gb DDR4 Black</p>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_ssd" /></svg>
-                    <div class="part__info">
-                      <p class="part__title">Системный SSD</p>
-                      <p class="part__description">240Gb M.2 Скорость W/R: 350/500 Мб/с</p>
-                    </div>
-                  </div>
-                </div>
-                <button class="js-conf-open conf-item__config-button" type="button">
-                  <svg class="conf-item__config-button-icon" aria-hidden="true">
-                    <use xlink:href="#arrow_down" />
-                  </svg>
-                </button>
-              </div>
-            </div>
+        
+          <div class="conf__nav">
+            <button class="js-conf-next conf__continue" type="button">
+              ПРОДОЛЖИТЬ
+              <svg class="conf__continue-icon" aria-hidden="true"><use xlink:href="#continue" /></svg>
+            </button>
+            <button class="js-conf-next conf__next" type="button" title="Дальше">
+              <svg class="conf__next-image" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <circle class="conf__next-circle" cx="24" cy="24" r="23.4" stroke-width="1.2"/>
+                <path class="conf__next-arrow" d="M36 26.7882L24 16.2L12 26.7882" stroke-width="1.4691" stroke-linecap="round"/>
+                <path class="conf__next-arrow" d="M36 32.1883L24 21.6L12 32.1883" stroke-width="1.4691" stroke-linecap="round"/>
+              </svg>
+            </button>
           </div>
         </div>
+      </div>
 
-        <div class="conf__nav">
-          <button class="conf__continue" type="button">
-            ПРОДОЛЖИТЬ
-            <svg class="conf__continue-icon" aria-hidden="true"><use xlink:href="#continue" /></svg>
-          </button>
-          <button class="conf__next" type="button" title="Дальше">
-            <svg class="conf__next-image" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-              <circle class="conf__next-circle" cx="24" cy="24" r="23.4" stroke-width="1.2"/>
-              <path class="conf__next-arrow" d="M36 26.7882L24 16.2L12 26.7882" stroke-width="1.4691" stroke-linecap="round"/>
-              <path class="conf__next-arrow" d="M36 32.1883L24 21.6L12 32.1883" stroke-width="1.4691" stroke-linecap="round"/>
-            </svg>
-          </button>
+      <div class="conf__section">
+        <div class="conf__section-inner container">
+          <div class="conf__title-block">
+            <h2 class="conf__title conf__title--with_button">
+              <button class="js-conf-back conf__back" type="button" title="Назад">
+                <svg class="conf__back-icon" aria-hidden="true">
+                  <use xlink:href="#arrow_back" />
+                </svg>
+              </button>
+              <span>Выбери свою<br> <small>конфигурацию</small></span>
+            </h2>
+            <p class="conf__step">
+              <span class="conf__step-number">3</span>
+              <span class="conf__step-title">Твой пк</span>
+            </p>
+          </div>
+        
+          Результат
         </div>
       </div>
     </div>
