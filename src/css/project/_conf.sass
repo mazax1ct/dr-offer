@@ -48,9 +48,13 @@
       line-height: 106%
 
     &--with_button
-      padding-left: 60px
-      padding-right: 60px
+      padding-left: 43px
+      //padding-right: 60px
       position: relative
+
+      @media(min-width: 414px)
+        padding-left: 60px
+        padding-right: 60px
 
       @media(min-width: 768px)
         padding-right: 0
@@ -150,6 +154,9 @@
 
     .slick-list
       width: 100%
+
+    .slick-track
+      min-width: 100%
 
   &__list-item
     padding: 18px
@@ -311,7 +318,7 @@
   padding: 9px
   transition: border-color 0.3s
 
-  @media(min-width: 414px) and (max-width: 1023px)
+  @media(min-width: 375px) and (max-width: 1023px)
     max-width: 280px
     padding: 15px
 
@@ -468,6 +475,30 @@
   display: flex
   min-height: 57px
 
+  &--button
+    cursor: pointer
+    position: relative
+    padding-right: 40px
+
+    &::after
+      content: ''
+      position: absolute
+      top: 50%
+      width: 10px
+      height: 10px
+      border-bottom: 2px solid #fff
+      border-left: 2px solid #fff
+      transition: .3s
+      width: 11px
+      height: 11px
+      top: 12px
+      right: 16px
+      transform: rotateZ(-45deg)
+
+    &.is-active
+      &::after
+        transform: translateY(50%) rotateZ(135deg)
+
   &__icon
     fill: #fff
     height: 28px
@@ -480,11 +511,256 @@
     font-size: 14px
     font-weight: 700
     line-height: 1
-    margin-bottom: 0
+    margin-bottom: 3px
 
   &__description
     font-size: 10px
     line-height: 1.3
+
+.parts-dropdown
+  display: none
+
+  &__controls
+    margin-bottom: 15px
+
+  &__controls-wrap
+    display: flex
+    justify-content: center
+    overflow-x: scroll
+    scrollbar-width: none
+
+  &__controls-button
+    color: #fff
+    margin-right: 10px
+    padding: 12px 18px
+    font-weight: 800
+    font-size: 14px
+    line-height: 17px
+    background-color: transparent
+    border-radius: 20px
+    text-align: center
+    border: none
+    cursor: pointer
+
+    &:not(:last-child)
+      margin-right: 15px
+
+    &.is-active
+      background-color: rgba(#fff, 0.2)
+
+  &__tab
+    display: none
+
+    &.is-active
+      display: block
+
+.products-list
+  list-style: none
+  margin: 0
+  padding: 0
+
+  &--tile
+    display: flex
+    flex-wrap: wrap
+    margin-left: -5px
+    margin-right: -5px
+    margin-bottom: -24px
+
+    .products-list__item
+      display: flex
+      padding-left: 5px
+      padding-right: 5px
+      margin-bottom: 24px
+      width: 50%
+
+      &:not(:last-child)
+        margin-bottom: 24px
+
+      &:nth-child(odd)
+        .product-card__tooltip
+          left: 50%
+          margin-left: 20px
+          right: auto
+          transform: translateX(-50%)
+
+          &::after
+            left: 120px
+            right: auto
+
+    .product-card
+      display: flex
+      width: 100%
+
+    .product-card__wrap
+      flex-direction: column
+      padding-bottom: 40px
+      position: relative
+      width: 100%
+
+    .product-card__img-wrap
+      margin-bottom: 9px
+      margin-right: 0
+
+    .product-card__description
+      flex-grow: 0
+
+    .product-card__title
+      font-size: 10px
+      font-weight: 500
+      margin-bottom: 0
+
+    .product-card__aside
+      position: static
+
+    .product-card__tooltip-btn
+      left: auto
+      position: absolute
+      right: 5px
+      top: 5px
+
+    .product-card__radio-icon
+      bottom: 10px
+      left: auto
+      position: absolute
+      right: 5px
+      top: auto
+
+  &__item
+    &:not(:last-child)
+      margin-bottom: 5px
+
+.product-card
+  display: block
+
+  &__radio
+    position: absolute
+    width: 1px
+    height: 1px
+    margin: -1px
+    border: 0
+    clip: rect(0 0 0 0)
+    overflow: hidden
+
+    &:checked + .product-card__wrap
+      border-color: rgba(#EA1C24, 0.2)
+
+    &:checked + .product-card__wrap .product-card__radio-icon
+      background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='20' height='20' rx='10' fill='%23EA1C24' fill-opacity='0.1'/%3E%3Crect x='0.742115' y='0.742115' width='18.5158' height='18.5158' rx='9.25788' stroke='%23EA1C24' stroke-opacity='0.2' stroke-width='1.48423'/%3E%3Ccircle cx='10' cy='10' r='7' fill='%23EA1C24' fill-opacity='0.8'/%3E%3C/svg%3E%0A")
+
+  &__wrap
+    border-radius: 5px
+    border: 2px solid transparent
+    display: flex
+    padding: 7px
+    transition: border-color 0.3s
+
+  &__img-wrap
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-shrink: 0
+    margin-right: 9px
+    width: 50px
+    height: 50px
+
+  &__description
+    flex-grow: 1
+    display: flex
+    flex-direction: column
+    justify-content: center
+    max-width: 170px
+
+  &__title
+    color: #EAEAEA
+    margin-bottom: 4px
+    font-family: $secondary_font
+    font-size: 12px
+    line-height: 15px
+    font-weight: 600
+
+  &__prop
+    font-size: 10px
+    line-height: 12px
+    font-weight: 400
+    margin-bottom: 0
+
+  &__quantity
+    margin-left: auto
+
+  &__aside
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    margin-left: auto
+
+  &__tooltip-btn
+    cursor: pointer
+    position: relative
+    width: 20px
+    height: 20px
+    border: none
+    font-size: 17px
+    font-weight: 500
+    color: #000
+    background-color: rgba(#fff, 0.3)
+    border-radius: 50%
+    padding: 0
+    z-index: 1
+
+    &.is-active
+      z-index: 3
+
+      .product-card__tooltip
+        visibility: visible
+        opacity: 1
+        pointer-events: auto
+
+  &__tooltip
+    backdrop-filter: blur(40px)
+    visibility: hidden
+    pointer-events: none
+    opacity: 0
+    position: absolute
+    top: 32px
+    right: -20px
+    width: 300px
+    padding: 20px
+    font-weight: normal
+    font-size: 12px
+    line-height: 1.15
+    color: #fff
+    background-color: rgba(#000, 0.6)
+    transition-property: visibility, opacity
+    transition-duration: 0.3
+    text-align: left
+    border-radius: 6px
+    z-index: 3
+
+    &::after
+      backdrop-filter: blur(40px)
+      bottom: 100%
+      left: auto
+      right: 20px
+      border: solid transparent
+      content: ''
+      height: 0
+      width: 0
+      position: absolute
+      pointer-events: none
+      border-color: rgba(0, 0, 0, 0)
+      border-bottom-color: rgba(#000, 0.6)
+      border-width: 10px
+
+  &__radio-icon
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='20' height='20' rx='10' fill='white' fill-opacity='0.12'/%3E%3Crect x='0.742115' y='0.742115' width='18.5158' height='18.5158' rx='9.25788' stroke='white' stroke-opacity='0.3' stroke-width='1.48423'/%3E%3C/svg%3E%0A")
+    display: block
+    width: 20px
+    height: 20px
+    border-radius: 50%
+    position: relative
+
+.quantity
 
 .design
   margin-left: auto
@@ -782,3 +1058,184 @@
 
       span
         color: $main_color
+
+.pcm
+  &__image-block
+    height: 276px
+    margin-bottom: 14px
+    margin-left: auto
+    margin-right: auto
+    max-width: 294px
+    position: relative
+    z-index: 1
+
+    &::after
+      bottom: 0
+      border-radius: 21px
+      background-image: radial-gradient(51.84% 58.28% at 42.63% 71.6%,#3a3c59 0%,#0c1117 100%)
+      content: ''
+      left: 0
+      position: absolute
+      right: 0
+      top: 0
+      z-index: 1
+
+  &__image
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    background-size: 100% auto
+    margin-left: auto
+    margin-right: auto
+    max-width: 224px
+    position: relative
+    text-align: center
+    z-index: 2
+
+    &--x
+      background-image: url('../images/backgrounds/conf_sizes/X.png')
+
+    &--s
+      background-image: url('../images/backgrounds/conf_sizes/S.png')
+
+    &--m
+      background-image: url('../images/backgrounds/conf_sizes/M.png')
+
+    &--l
+      background-image: url('../images/backgrounds/conf_sizes/L.png')
+
+    img
+      position: relative
+      z-index: 2
+
+  &__price-wrap
+    align-items: flex-end
+    display: flex
+    max-width: 240px
+    margin: -72px auto 30px
+    justify-content: space-between
+    position: relative
+    z-index: 2
+
+    .btn-buy
+      border: 1px solid rgba(212,60,56,.5)
+      box-shadow: 0 3.9px 3.9px #0c1117
+      color: #fff
+      font-family: $secondary_font
+      font-weight: 900
+      font-size: 16px
+      line-height: 20px
+      min-width: 114px
+      min-height: 42px
+      padding: 10px
+      text-transform: capitalize
+      text-align: center
+      transition: background-color 0.3s
+      text-decoration: none
+
+      &:hover
+        background-color: rgba(212,60,56,.5)
+
+  &__price
+    align-items: flex-end
+    color: #fff
+    display: flex
+    flex-direction: column
+
+    p
+      font-weight: 700
+      font-family: $secondary_font
+      font-size: 21px
+      line-height: 22px
+      margin-bottom: 6px
+
+    small
+      font-size: 9px
+      line-height: 11px
+
+  &__controls
+    position: sticky
+    top: 90px
+    margin: 0 auto 5px
+    width: 100%
+    padding: 10px 25px
+    background: #0c1117
+    -webkit-box-shadow: 0 -.94px 23px rgba(234,28,36,.5)
+    box-shadow: 0 -.94px 23px rgba(234,28,36,.5)
+    border-radius: 40px
+    z-index: 3
+
+    @media(min-width: 375px)
+      width: calc(100% - 16px)
+
+  &__controls-button
+    background-color: transparent
+    border: none
+    cursor: pointer
+    height: 40px
+    padding: 0
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    width: 40px
+    z-index: 1
+
+    &--prev
+      left: -16px
+
+      &::before
+        left: 33px
+        transform: translate(-50%,-50%) rotate(45deg)
+
+    &--next
+      left: auto
+      right: -16px
+
+      &::before
+        left: auto
+        right: 33px
+        transform: translate(50%,-50%) rotate(-135deg)
+
+    &.slick-disabled
+      &::before
+        border-color: rgba(#fff, 0.2)
+
+    &::before
+      content: ''
+      position: absolute
+      top: 50%
+      width: 10px
+      height: 10px
+      border-bottom: 2px solid #fff
+      border-bottom-color: rgb(255, 255, 255)
+      border-left: 2px solid #fff
+      border-left-color: rgb(255, 255, 255)
+      transition: .3s
+
+  &__buttons-wrapper
+    display: flex
+    overflow-x: scroll
+    scrollbar-width: none
+
+  &__btn-action
+    color: #fff
+    margin-right: 10px
+    padding: 12px 18px
+    font-weight: 800
+    font-size: 14px
+    line-height: 17px
+    background-color: rgba(#fff, 0.1)
+    border-radius: 20px
+    text-align: center
+    border: none
+    cursor: pointer
+
+    &:not(:last-child)
+      margin-right: 15px
+
+    &.is-active
+      background-color: rgba($main_color, 0.5)
+
+  &__parts
+    max-width: 295px
+    margin-left: auto
+    margin-right: auto

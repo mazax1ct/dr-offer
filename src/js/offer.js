@@ -45,10 +45,35 @@ $(document).ready(function () {
             slidesToShow: 2,
             slidesToScroll: 2
           }
-        }
+        },
+        {
+          breakpoint: 1023,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 4
+          }
+        },
       ]
     });
   }
+
+  if($('.js-pcm-slider').length) {
+    $('.js-pcm-slider').slick({
+      infinite: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: false,
+      arrows: true,
+      mobileFirst: true,
+      appendArrows: $('.pcm__controls'),
+      prevArrow: '<button class="pcm__controls-button pcm__controls-button--prev" type="button" title="Назад"></button>',
+      nextArrow: '<button class="pcm__controls-button pcm__controls-button--next" type="button" title="Вперёд"></button>'
+    });
+  }
+});
+
+$(window).on( "orientationchange", function( event ) {
+  $('.js-configs-list').slick('setPosition');
 });
 
 /**************************загрузка файла*******************************/
@@ -122,7 +147,6 @@ $(document).on('click', '.js-clear-upload', function () {
 
 //переключение изображения дефолтного дизайна
 $(document).on('click', '.js-design-item', function () {
-  console.log($(this).attr('data-src'));
   $('.js-design-image').attr('src', $(this).attr('data-src'));
 });
 
@@ -145,7 +169,37 @@ $(document).on('click', '.js-conf-back', function () {
     setTimeout(function() {
       $('.conf__section.is-active').prev('.conf__section').fadeIn().css('display', 'flex').addClass('is-active');
       $('.conf__section.is-active').next('.conf__section').removeClass('is-active');
+      setTimeout(function() {
+        $('.js-configs-list').slick('setPosition');
+      },100);
     },300);
   });
+  return false;
+});
+
+//открытие/закрытие блока комлектующего
+$(document).on('click', '.js-part', function () {
+  $(this).toggleClass('is-active');
+  $(this).next('.parts-dropdown').slideToggle();
+  return false;
+});
+
+//переключение табов в блоке комплектующего
+$(document).on('click', '.js-parts-tab', function () {
+  $(this).parent().find('.js-parts-tab').removeClass('is-active');
+  $(this).addClass('is-active');
+  $(this).closest('.parts-dropdown').find('.parts-dropdown__tab').removeClass('is-active');
+  $('.parts-dropdown__tab[data-tab="'+$(this).attr('data-tab')+'"]').addClass('is-active');
+  return false;
+});
+
+//тултип в списке комплектующих
+$(document).on('click', '.js-tooltip', function () {
+  if($(this).hasClass('is-active')) {
+    $(this).removeClass('is-active');
+  } else {
+    $('.js-tooltip').removeClass('is-active');
+    $(this).addClass('is-active');
+  }
   return false;
 });
