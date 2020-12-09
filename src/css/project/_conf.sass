@@ -7,10 +7,15 @@
   &__section
     display: none
     height: auto
+    opacity: 0
+    transition: opacity 0.5s
     width: 100%
 
     &.is-active
       display: flex
+
+    &.visible
+      opacity: 1
 
   &__section-inner
     display: flex
@@ -448,12 +453,14 @@
   &__config-block
     text-align: center
 
-    &:hover
-      .conf-item__config-inner
-        max-height: 500px
+    @media(any-hover: hover)
 
-      .conf-item__config-button
-        transform: rotate(180deg)
+      &:hover
+        .conf-item__config-inner
+          max-height: 500px
+
+        .conf-item__config-button
+          transform: rotate(180deg)
 
   &__config-inner
     max-height: 0
@@ -1090,7 +1097,7 @@
         color: $main_color
 
 .pcm
-  @media(min-width: 768px)
+  //@media(min-width: 768px)
     display: none
 
   &__image-block
@@ -1150,12 +1157,13 @@
     z-index: 2
 
     .btn-buy
-      border: 1px solid rgba(212,60,56,.5)
-      box-shadow: 0 3.9px 3.9px #0c1117
+      background-color: rgba(#EA1C24,0.5)
+      border: 1px solid rgba(#EA1C24,0.5)
+      box-shadow: 0 4px 4px #0c1117
       color: #fff
       font-family: $secondary_font
       font-weight: 900
-      font-size: 16px
+      font-size: 17px
       line-height: 20px
       min-width: 114px
       min-height: 42px
@@ -1166,7 +1174,7 @@
       text-decoration: none
 
       &:hover
-        background-color: rgba(212,60,56,.5)
+        background-color: $main_color
 
   &__price
     align-items: flex-end
@@ -1354,5 +1362,5 @@
 .pcd
   display: none
 
-  @media(min-width: 768px)
+  //@media(min-width: 768px)
     display: block

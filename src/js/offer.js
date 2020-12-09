@@ -12,6 +12,12 @@ function controlsScroll(elem) {
   }, 400);
 }
 
+//подмотка к началу блока
+function scrollToBlockStart() {
+  var confOffset = $('.conf').offset().top;
+  $('html, body').animate({scrollTop:confOffset}, '300');
+}
+
 //переключение конфига
 $(document).on('click', '.conf__list-item', function() {
   $('.conf__list-item').removeClass('slick-current');
@@ -74,8 +80,9 @@ $(document).ready(function () {
   //слайдер блоков конфигурации в мобильной версии
   if($('.js-pcm-slider').length && $('body').width() < 768) {
     $('.js-pcm-slider').slick({
-      draggable: false,
-      swipe: false,
+      adaptiveHeight: true,
+      draggable: true,
+      swipe: true,
       infinite: false,
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -148,55 +155,57 @@ $(document).on('click', '.js-clear-upload', function () {
 $(document).on('click', '.js-design-item', function () {
   $('.js-design-image').attr('src', $(this).attr('data-src'));
   //смена состояния радио дублированных блоков
-  $('.design__radio').attr('checked', '');
   var labelID = $(this).attr('data-id');
-  $('.js-design-item[data-id="'+labelID+'"]').prev('.design__radio').click()/*.attr('checked', 'checked')*/;
+  $('.js-design-item[data-id="'+labelID+'"]').prev('.design__radio').click();
 });
 
 //переключение на следующий шаг конфигуратора
 $(document).on('click', '.js-conf-next', function () {
-  $('.conf__section.is-active').fadeOut( 300, "linear", function() {
-    $('.conf__section.is-active').css('display', 'none');
+  var currentSection = $('.conf__section.is-active');
+  currentSection.removeClass('visible');
+  setTimeout(function() {
+    currentSection.removeClass('is-active');
+    currentSection.next('.conf__section').addClass('is-active');
+    if($('body').width() < 1024) {
+      setTimeout(function() {
+        $('.js-configs-list').slick('setPosition');
+      },200);
+    }
+    if($('body').width() < 769) {
+      setTimeout(function() {
+        $('.js-pcm-slider').slick('setPosition');
+      },200);
+    }
     setTimeout(function() {
-      $('.conf__section.is-active').next('.conf__section').fadeIn().css('display', 'flex').addClass('is-active');
-      $('.conf__section.is-active').prev('.conf__section').removeClass('is-active');
-
-      if($('body').width() < 1024) {
-        setTimeout(function() {
-          $('.js-configs-list').slick('setPosition');
-        },100);
-      }
-      if($('body').width() < 769) {
-        setTimeout(function() {
-          $('.js-pcm-slider').slick('setPosition');
-        },100);
-      }
+      currentSection.next('.conf__section').addClass('visible');
     },300);
-    var confOffset = $('.conf').offset().top;
-    $('html, body').animate({scrollTop:confOffset}, '300');
-  });
+  },300);
+  scrollToBlockStart();
   return false;
 });
 
 //переключение на предыдущий шаг конфигуратора
 $(document).on('click', '.js-conf-back', function () {
-  $('.conf__section.is-active').fadeOut( 300, "linear", function() {
-    $('.conf__section.is-active').css('display', 'none');
+  var currentSection = $('.conf__section.is-active');
+  currentSection.removeClass('visible');
+  setTimeout(function() {
+    currentSection.removeClass('is-active');
+    currentSection.prev('.conf__section').addClass('is-active');
+    if($('body').width() < 1024) {
+      setTimeout(function() {
+        $('.js-configs-list').slick('setPosition');
+      },200);
+    }
+    if($('body').width() < 769) {
+      setTimeout(function() {
+        $('.js-pcm-slider').slick('setPosition');
+      },200);
+    }
     setTimeout(function() {
-      $('.conf__section.is-active').prev('.conf__section').fadeIn().css('display', 'flex').addClass('is-active');
-      $('.conf__section.is-active').next('.conf__section').removeClass('is-active');
-      if($('body').width() < 1024) {
-        setTimeout(function() {
-          $('.js-configs-list').slick('setPosition');
-        },100);
-      }
-      if($('body').width() < 769) {
-        setTimeout(function() {
-          $('.js-pcm-slider').slick('setPosition');
-        },100);
-      }
+      currentSection.prev('.conf__section').addClass('visible');
     },300);
-  });
+  },300);
+  scrollToBlockStart();
   return false;
 });
 
@@ -208,7 +217,7 @@ $(document).on('click', '.js-part', function () {
     $(this).next('.parts-dropdown').slideDown(300, function () {
       //лочим слайдер блоков конфигурации в мобильной версии
       if(sliderLock == false) {
-        $('.js-pcm-slider').slick('slickSetOption', {
+        $('.js-pcm-slider.slick-initialized').slick('slickSetOption', {
            draggable: false,
            swipe: false
         }, true);
@@ -219,7 +228,7 @@ $(document).on('click', '.js-part', function () {
     $(this).next('.parts-dropdown').slideUp(300, function () {
       //снимаем lock со слайдера блоков конфигурации в мобильной версии
       if(!$('.js-part.is-active').length) {
-        $('.js-pcm-slider').slick('slickSetOption', {
+        $('.js-pcm-slider.slick-initialized').slick('slickSetOption', {
            draggable: true,
            swipe: true
         }, true);
@@ -254,18 +263,11 @@ $(document).on('click', '.js-tooltip', function () {
 //переключение слайдера конфигурации в мобильной версии
 $(document).on('click', '.js-pcm-btn', function () {
   controlsScroll($(this));
-  $('.js-pcm-slider').slick('slickGoTo', $(this).index());
+  $('.js-pcm-slider.slick-initialized').slick('slickGoTo', $(this).index());
   return false;
 });
 
-//переключение кнопок по скроллу слайдера
-/*$('.js-pcm-slider').on('afterChange', function(slick, currentSlide, nextSlide) {
-  $('.js-pcm-btn').removeClass('is-active');
-  $('.js-pcm-btn:eq("'+currentSlide.currentSlide+'")').addClass('is-active');
-  controlsScroll($('.js-pcm-btn:eq("'+currentSlide.currentSlide+'")'));
-});*/
-
-$('.js-pcm-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+$(document).on('beforeChange', '.js-pcm-slider.slick-initialized', function(event, slick, currentSlide, nextSlide) {
   $('.js-pcm-btn').removeClass('is-active');
   $('.js-pcm-btn:eq("'+nextSlide+'")').addClass('is-active');
   controlsScroll($('.js-pcm-btn:eq("'+nextSlide+'")'));
