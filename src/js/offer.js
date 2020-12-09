@@ -1,3 +1,17 @@
+//скролл текущей кнопки в область видимости контейнера
+function controlsScroll(elem) {
+  var containerOuterWidth = elem.parent().outerWidth(); // узнаем ширину контейнера (width + padding)
+  var itemOuterWidth = elem.outerWidth(); // узнаем ширину текущего элемента (width + padding)
+  var itemOffsetLeft = elem.offset().left; // узнаем значение отступа слева в контейнере у текущего элемента
+  var containerScrollLeft = elem.parent().scrollLeft(); // узнаем текущее значение скролла
+  var positionCetner = (containerOuterWidth / 2 - itemOuterWidth / 2); // рассчитываем позицию центра
+  var scrollLeftUpd = containerScrollLeft + itemOffsetLeft - positionCetner; // рассчитываем положение скролла относительно разницы отступа элемента и центра контейнера
+  // анимируем
+  elem.parent().animate({
+    scrollLeft: scrollLeftUpd
+  }, 400);
+}
+
 //переключение конфига
 $(document).on('click', '.conf__list-item', function() {
   $('.conf__list-item').removeClass('slick-current');
@@ -13,7 +27,7 @@ $('.js-configs-list').on('afterChange', function(event, slick, currentSlide, nex
   $('.js-conf-size').text(size);
 });
 
-//закрываем описание конфига при перелистывании слайдера
+//закрываем описание конфига при перелистывании слайдера конфигураций
 $('.js-configs-list').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
   $('.js-conf-open').removeClass('is-active');
   $('.conf-item__config-inner').removeClass('is-active');
@@ -57,8 +71,11 @@ $(document).ready(function () {
     });
   }
 
-  if($('.js-pcm-slider').length) {
+  //слайдер блоков конфигурации в мобильной версии
+  if($('.js-pcm-slider').length && $('body').width() < 768) {
     $('.js-pcm-slider').slick({
+      draggable: false,
+      swipe: false,
       infinite: false,
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -72,82 +89,68 @@ $(document).ready(function () {
   }
 });
 
+//update слайдера списка конфигураций и слайдер блоков конфигурации в мобильной версии при смене ориентации
 $(window).on( "orientationchange", function( event ) {
   $('.js-configs-list').slick('setPosition');
+  $('.js-pcm-slider').slick('setPosition');
 });
 
 /**************************загрузка файла*******************************/
-const inputElement = document.getElementById("upload_zone");
-
-inputElement.addEventListener("change", handleFiles, false);
-
-function handleFiles(event) {
+//загрузка файла через проводник
+$(document).on('change', '.js-upload-zone', function (event) {
   const fileList = this.files;
 
   if (fileList[0].type.startsWith('image/')) {
     var reader = new FileReader();
 
     reader.onload = function(event) {
-      var backBlock = document.getElementById("dropbox");
-      backBlock.style.backgroundImage = "url("+event.target.result+")";
-      backBlock.classList.add('uploaded');
+      $('.js-dropbox').css('background-image', 'url("' + event.target.result + '")').addClass('uploaded');
     };
 
     reader.readAsDataURL(fileList[0]);
   }
-}
+});
 
-var dropbox;
-dropbox = document.getElementById("dropbox");
-dropbox.addEventListener("dragenter", dragenter, false);
-dropbox.addEventListener("dragover", dragover, false);
-dropbox.addEventListener("drop", drop, false);
+//отмена стандартных событий
+$(document).on('dragover dragleave', '.js-dropbox', function () {
+  event.preventDefault();
+  event.stopPropagation();
+});
 
-function dragenter(e) {
-  e.stopPropagation();
-  e.preventDefault();
-}
+//дроп файла на область загрузки
+$(document).on('drop', '.js-dropbox', function () {
+  event.preventDefault();
+  event.stopPropagation();
 
-function dragover(e) {
-  e.stopPropagation();
-  e.preventDefault();
-}
+  const inputFile = event.originalTarget.control;
 
-function handleFiles2(files) {
-  if (files[0].type.startsWith('image/')) {
+  inputFile.files = event.dataTransfer.files;
+
+  if (inputFile.files[0].type.startsWith('image/')) {
     var reader = new FileReader();
 
     reader.onload = function(event) {
-      var backBlock = document.getElementById("dropbox");
-      backBlock.style.backgroundImage = "url("+event.target.result+")";
-      backBlock.classList.add('uploaded');
+      $('.js-dropbox').css('background-image', 'url("' + event.target.result + '")').addClass('uploaded');
     };
 
-    reader.readAsDataURL(files[0]);
+    reader.readAsDataURL(inputFile.files[0]);
   }
-}
+});
 
-function drop(e) {
-  e.stopPropagation();
-  e.preventDefault();
-
-  var dt = e.dataTransfer;
-  var files = dt.files;
-
-  handleFiles2(files);
-}
-
+//очистка поля загруженного файла
 $(document).on('click', '.js-clear-upload', function () {
-  $('.upload').css('background-image', '');
-  inputElement.value = '';
-  console.log(inputElement.value);
-  $('.upload').removeClass('uploaded');
+  $('.js-dropbox').css('background-image', '').removeClass('uploaded');
+  $('.js-upload-zone').val('');
 });
 /**************************загрузка файла*******************************/
 
 //переключение изображения дефолтного дизайна
 $(document).on('click', '.js-design-item', function () {
   $('.js-design-image').attr('src', $(this).attr('data-src'));
+  //смена состояния радио дублированных блоков
+  $('.design__radio').attr('checked', '');
+  var labelID = $(this).attr('data-id');
+  $('.js-design-item[data-id="'+labelID+'"]').prev('.design__radio').click()/*.attr('checked', 'checked')*/;
 });
 
 //переключение на следующий шаг конфигуратора
@@ -157,7 +160,20 @@ $(document).on('click', '.js-conf-next', function () {
     setTimeout(function() {
       $('.conf__section.is-active').next('.conf__section').fadeIn().css('display', 'flex').addClass('is-active');
       $('.conf__section.is-active').prev('.conf__section').removeClass('is-active');
+
+      if($('body').width() < 1024) {
+        setTimeout(function() {
+          $('.js-configs-list').slick('setPosition');
+        },100);
+      }
+      if($('body').width() < 769) {
+        setTimeout(function() {
+          $('.js-pcm-slider').slick('setPosition');
+        },100);
+      }
     },300);
+    var confOffset = $('.conf').offset().top;
+    $('html, body').animate({scrollTop:confOffset}, '300');
   });
   return false;
 });
@@ -169,18 +185,48 @@ $(document).on('click', '.js-conf-back', function () {
     setTimeout(function() {
       $('.conf__section.is-active').prev('.conf__section').fadeIn().css('display', 'flex').addClass('is-active');
       $('.conf__section.is-active').next('.conf__section').removeClass('is-active');
-      setTimeout(function() {
-        $('.js-configs-list').slick('setPosition');
-      },100);
+      if($('body').width() < 1024) {
+        setTimeout(function() {
+          $('.js-configs-list').slick('setPosition');
+        },100);
+      }
+      if($('body').width() < 769) {
+        setTimeout(function() {
+          $('.js-pcm-slider').slick('setPosition');
+        },100);
+      }
     },300);
   });
   return false;
 });
 
 //открытие/закрытие блока комлектующего
+var sliderLock = false;
 $(document).on('click', '.js-part', function () {
   $(this).toggleClass('is-active');
-  $(this).next('.parts-dropdown').slideToggle();
+  if($(this).hasClass('is-active')) {
+    $(this).next('.parts-dropdown').slideDown(300, function () {
+      //лочим слайдер блоков конфигурации в мобильной версии
+      if(sliderLock == false) {
+        $('.js-pcm-slider').slick('slickSetOption', {
+           draggable: false,
+           swipe: false
+        }, true);
+        sliderLock = true;
+      }
+    });
+  } else {
+    $(this).next('.parts-dropdown').slideUp(300, function () {
+      //снимаем lock со слайдера блоков конфигурации в мобильной версии
+      if(!$('.js-part.is-active').length) {
+        $('.js-pcm-slider').slick('slickSetOption', {
+           draggable: true,
+           swipe: true
+        }, true);
+        sliderLock = false;
+      }
+    });
+  }
   return false;
 });
 
@@ -190,6 +236,7 @@ $(document).on('click', '.js-parts-tab', function () {
   $(this).addClass('is-active');
   $(this).closest('.parts-dropdown').find('.parts-dropdown__tab').removeClass('is-active');
   $('.parts-dropdown__tab[data-tab="'+$(this).attr('data-tab')+'"]').addClass('is-active');
+  controlsScroll($(this));
   return false;
 });
 
@@ -202,4 +249,33 @@ $(document).on('click', '.js-tooltip', function () {
     $(this).addClass('is-active');
   }
   return false;
+});
+
+//переключение слайдера конфигурации в мобильной версии
+$(document).on('click', '.js-pcm-btn', function () {
+  controlsScroll($(this));
+  $('.js-pcm-slider').slick('slickGoTo', $(this).index());
+  return false;
+});
+
+//переключение кнопок по скроллу слайдера
+/*$('.js-pcm-slider').on('afterChange', function(slick, currentSlide, nextSlide) {
+  $('.js-pcm-btn').removeClass('is-active');
+  $('.js-pcm-btn:eq("'+currentSlide.currentSlide+'")').addClass('is-active');
+  controlsScroll($('.js-pcm-btn:eq("'+currentSlide.currentSlide+'")'));
+});*/
+
+$('.js-pcm-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+  $('.js-pcm-btn').removeClass('is-active');
+  $('.js-pcm-btn:eq("'+nextSlide+'")').addClass('is-active');
+  controlsScroll($('.js-pcm-btn:eq("'+nextSlide+'")'));
+  //закрываем открытые блоки комлектующих и снимаем lock со слайдера блоков конфигурации в мобильной версии
+  $('.js-part').removeClass('is-active');
+  $('.parts-dropdown').slideUp(300, function () {
+    $('.js-pcm-slider').slick('slickSetOption', {
+       draggable: true,
+       swipe: true
+    }, true);
+    sliderLock = false;
+  });
 });

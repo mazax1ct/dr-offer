@@ -26,548 +26,571 @@
     </div>
     <div class="pcm__controls">
       <div class="pcm__buttons-wrapper">
-        <button class="pcm__btn-action is-active" type="button">Комплектующие</button>
-        <button class="pcm__btn-action" type="button">Гарантия</button>
-        <button class="pcm__btn-action" type="button">Тестирование</button>
-        <button class="pcm__btn-action" type="button">Дизайн</button>
+        <button class="js-pcm-btn pcm__btn-action is-active" type="button">Комплектующие</button>
+        <button class="js-pcm-btn pcm__btn-action" type="button">Гарантия</button>
+        <button class="js-pcm-btn pcm__btn-action" type="button">Тестирование</button>
+        <button class="js-pcm-btn pcm__btn-action" type="button">Дизайн</button>
       </div>
     </div>
-    <form action="">
-      <div class="js-pcm-slider pcm__slider">
-        <div class="pcm__slide">
-          <div class="pcm__parts">
-            <div class="part">
-              <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_box" /></svg>
-              <div class="part__info">
-                <p class="part__title">Корпус</p>
-                <p class="part__description">P 300 TG</p>
-              </div>
-            </div>
-            <div class="js-part part part--button">
-              <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_cpu" /></svg>
-              <div class="part__info">
-                <p class="part__title">Процессор</p>
-                <p class="part__description">AMD Ryzen R5 3600 6-и ядерный 3.6 GHz</p>
-              </div>
-            </div>
-            <div class="parts-dropdown">
-              <div class="parts-dropdown__controls">
-                <div class="parts-dropdown__controls-wrap">
-                  <button class="js-parts-tab parts-dropdown__controls-button is-active" type="button" data-tab="cpu_amd">AMD</button>
-                  <button class="js-parts-tab parts-dropdown__controls-button" type="button" data-tab="cpu_intel">INTEL</button>
-                </div>
-              </div>
-              <div class="parts-dropdown__tab is-active" data-tab="cpu_amd">
-                <ul class="products-list">
-                  <li class="products-list__item">
-                    <label class="product-card" for="AMD Ryzen R5 3600X 3800MHz">
-                      <input id="AMD Ryzen R5 3600X 3800MHz" class="product-card__radio" type="radio" name="cpu" value="AMD Ryzen R5 3600X 3800MHz" checked>
-                      <span class="product-card__wrap">
-                        <span class="product-card__img-wrap"><img src="https://place-hold.it/50" alt="" width="50" height="50"></span>
-                        <span class="product-card__description">
-                          <span class="product-card__title">AMD Ryzen R5 3600X 3800MHz</span>
-                          <span class="product-card__prop">6-и ядерный 3.8GHz</span>
-                        </span>
-                        <span class="product-card__aside">
-                          <button class="js-tooltip product-card__tooltip-btn" type="button" aria-label="всплывающая подсказка">i<span class="product-card__tooltip">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></button>
-                          <span class="product-card__radio-icon"></span>
-                        </span>
-                      </span>
-                    </label>
-                  </li>
-                  <li class="products-list__item">
-                    <label class="product-card" for="AMD Ryzen R5 3600 3600MHz">
-                      <input id="AMD Ryzen R5 3600 3600MHz" class="product-card__radio" type="radio" name="cpu" value="AMD Ryzen R5 3600 3600MHz">
-                      <span class="product-card__wrap">
-                        <span class="product-card__img-wrap"><img src="https://place-hold.it/50" alt="" width="50" height="50"></span>
-                        <span class="product-card__description">
-                          <span class="product-card__title">AMD Ryzen R5 3600 3600MHz</span>
-                          <span class="product-card__prop">6-и ядерный 3.6GHz</span>
-                        </span>
-                        <span class="product-card__aside">
-                          <button class="js-tooltip product-card__tooltip-btn" type="button" aria-label="всплывающая подсказка">i<span class="product-card__tooltip">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></button>
-                          <span class="product-card__radio-icon"></span>
-                        </span>
-                      </span>
-                    </label>
-                  </li>
-                </ul>
-              </div>
-              <div class="parts-dropdown__tab" data-tab="cpu_intel">
-                <ul class="products-list">
-                  <li class="products-list__item">
-                    <label class="product-card" for="Intel i7 3800MHz">
-                      <input id="Intel i7 3800MHz" class="product-card__radio" type="radio" name="cpu" value="Intel i7 3800MHz">
-                      <span class="product-card__wrap">
-                        <span class="product-card__img-wrap"><img src="https://place-hold.it/50" alt="" width="50" height="50"></span>
-                        <span class="product-card__description">
-                          <span class="product-card__title">Intel i7 3800MHz</span>
-                          <span class="product-card__prop">6-и ядерный 3.8GHz</span>
-                        </span>
-                        <span class="product-card__aside">
-                          <button class="js-tooltip product-card__tooltip-btn" type="button" aria-label="всплывающая подсказка">i<span class="product-card__tooltip">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></button>
-                          <span class="product-card__radio-icon"></span>
-                        </span>
-                      </span>
-                    </label>
-                  </li>
-                  <li class="products-list__item">
-                    <label class="product-card" for="Intel i5 3.200MHz">
-                      <input id="Intel i5 3.200MHz" class="product-card__radio" type="radio" name="cpu" value="Intel i5 3.200MHz">
-                      <span class="product-card__wrap">
-                        <span class="product-card__img-wrap"><img src="https://place-hold.it/50" alt="" width="50" height="50"></span>
-                        <span class="product-card__description">
-                          <span class="product-card__title">Intel i5 3.200MHz</span>
-                          <span class="product-card__prop">6-и ядерный 3.6GHz</span>
-                        </span>
-                        <span class="product-card__aside">
-                          <button class="js-tooltip product-card__tooltip-btn" type="button" aria-label="всплывающая подсказка">i<span class="product-card__tooltip">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></button>
-                          <span class="product-card__radio-icon"></span>
-                        </span>
-                      </span>
-                    </label>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="part">
-              <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_gpu" /></svg>
-              <div class="part__info">
-                <p class="part__title">Видеокарта</p>
-                <p class="part__description">AMD Radeon 5500XT 8GB</p>
-              </div>
-            </div>
-            <div class="part">
-              <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_mother" /></svg>
-              <div class="part__info">
-                <p class="part__title">Системная плата</p>
-                <p class="part__description">ROG STRIX B550 mITX 2xDDR4 2xM.2 / 1xPCI-E x16 / Sound 7.1</p>
-              </div>
-            </div>
-            <div class="js-part part part--button">
-              <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_ram" /></svg>
-              <div class="part__info">
-                <p class="part__title">Оперативная память</p>
-                <p class="part__description">32GB 3000Mhz 2 x 16Gb DDR4 Black</p>
-              </div>
-            </div>
-            <div class="parts-dropdown">
-              <div class="parts-dropdown__controls">
-                <div class="parts-dropdown__controls-wrap">
-                  <button class="js-parts-tab parts-dropdown__controls-button is-active" type="button" data-tab="ram_rgb">RGB</button>
-                  <button class="js-parts-tab parts-dropdown__controls-button" type="button" data-tab="ram_black">BLACK</button>
-                </div>
-              </div>
-              <div class="parts-dropdown__tab is-active" data-tab="ram_rgb">
-                <ul class="products-list">
-                  <li class="products-list__item">
-                    <label class="product-card" for="8GB 2400Mhz DDR4 RGB">
-                      <input id="8GB 2400Mhz DDR4 RGB" class="product-card__radio" type="radio" name="ram" value="8GB 2400Mhz DDR4 RGB" checked>
-                      <span class="product-card__wrap">
-                        <span class="product-card__img-wrap"><img src="https://place-hold.it/50" alt="" width="50" height="50"></span>
-                        <span class="product-card__description">
-                          <span class="product-card__title">8GB 2400Mhz</span>
-                          <span class="product-card__prop">DDR4 RGB</span>
-                          <span class="product-card__quantity quantity">
-                            <button class="js-quantity-decrease quantity__button" type="button" title="Уменьшить">
-                              <svg class="quantity__button-icon" aria-hidden="true">
-                                <use xlink:href="#q_minus" />
-                              </svg>
-                            </button>
-                            <input class="quantity__input" type="text" value="1" readonly>
-                            <button class="js-quantity-increase quantity__button" type="button" title="Увеличить">
-                              <svg class="quantity__button-icon" aria-hidden="true">
-                                <use xlink:href="#q_plus" />
-                              </svg>
-                            </button>
-                          </span>
-                        </span>
-                        <span class="product-card__aside">
-                          <button class="js-tooltip product-card__tooltip-btn" type="button" aria-label="всплывающая подсказка">i<span class="product-card__tooltip">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></button>
-                          <span class="product-card__radio-icon"></span>
-                        </span>
-                      </span>
-                    </label>
-                  </li>
-                  <li class="products-list__item">
-                    <label class="product-card" for="16GB 2400Mhz DDR4 RGB asrwet">
-                      <input id="16GB 2400Mhz DDR4 RGB asrwet" class="product-card__radio" type="radio" name="ram" value="16GB 2400Mhz DDR4 RGB asrwet">
-                      <span class="product-card__wrap">
-                        <span class="product-card__img-wrap"><img src="https://place-hold.it/50" alt="" width="50" height="50"></span>
-                        <span class="product-card__description">
-                          <span class="product-card__title">16GB 2400Mhz</span>
-                          <span class="product-card__prop">DDR4 RGB asrwet</span>
-                          <span class="product-card__quantity quantity">
-                            <button class="js-quantity-decrease quantity__button" type="button" title="Уменьшить">
-                              <svg class="quantity__button-icon" aria-hidden="true">
-                                <use xlink:href="#q_minus" />
-                              </svg>
-                            </button>
-                            <input class="quantity__input" type="text" value="1" readonly>
-                            <button class="js-quantity-increase quantity__button" type="button" title="Увеличить">
-                              <svg class="quantity__button-icon" aria-hidden="true">
-                                <use xlink:href="#q_plus" />
-                              </svg>
-                            </button>
-                          </span>
-                        </span>
-                        <span class="product-card__aside">
-                          <button class="js-tooltip product-card__tooltip-btn" type="button" aria-label="всплывающая подсказка">i<span class="product-card__tooltip">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></button>
-                          <span class="product-card__radio-icon"></span>
-                        </span>
-                      </span>
-                    </label>
-                  </li>
-                </ul>
-              </div>
-              <div class="parts-dropdown__tab" data-tab="ram_black">
-                <ul class="products-list">
-                  <li class="products-list__item">
-                    <label class="product-card" for="8GB 2400Mhz DDR4 Black">
-                      <input id="8GB 2400Mhz DDR4 Black" class="product-card__radio" type="radio" name="ram" value="8GB 2400Mhz DDR4 Black">
-                      <span class="product-card__wrap">
-                        <span class="product-card__img-wrap"><img src="https://place-hold.it/50" alt="" width="50" height="50"></span>
-                        <span class="product-card__description">
-                          <span class="product-card__title">8GB 2400Mhz</span>
-                          <span class="product-card__prop">DDR4 Black</span>
-                          <span class="product-card__quantity quantity">
-                            <button class="js-quantity-decrease quantity__button" type="button" title="Уменьшить">
-                              <svg class="quantity__button-icon" aria-hidden="true">
-                                <use xlink:href="#q_minus" />
-                              </svg>
-                            </button>
-                            <input class="quantity__input" type="text" value="1" readonly>
-                            <button class="js-quantity-increase quantity__button" type="button" title="Увеличить">
-                              <svg class="quantity__button-icon" aria-hidden="true">
-                                <use xlink:href="#q_plus" />
-                              </svg>
-                            </button>
-                          </span>
-                        </span>
-                        <span class="product-card__aside">
-                          <button class="js-tooltip product-card__tooltip-btn" type="button" aria-label="всплывающая подсказка">i<span class="product-card__tooltip">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></button>
-                          <span class="product-card__radio-icon"></span>
-                        </span>
-                      </span>
-                    </label>
-                  </li>
-                  <li class="products-list__item">
-                    <label class="product-card" for="16GB 2400Mhz DDR4 Black asrwet">
-                      <input id="16GB 2400Mhz DDR4 Black asrwet" class="product-card__radio" type="radio" name="ram" value="16GB 2400Mhz DDR4 Black asrwet">
-                      <span class="product-card__wrap">
-                        <span class="product-card__img-wrap"><img src="https://place-hold.it/50" alt="" width="50" height="50"></span>
-                        <span class="product-card__description">
-                          <span class="product-card__title">16GB 2400Mhz</span>
-                          <span class="product-card__prop">DDR4 Black asrwet</span>
-                          <span class="product-card__quantity quantity">
-                            <button class="js-quantity-decrease quantity__button" type="button" title="Уменьшить">
-                              <svg class="quantity__button-icon" aria-hidden="true">
-                                <use xlink:href="#q_minus" />
-                              </svg>
-                            </button>
-                            <input class="quantity__input" type="text" value="1" readonly>
-                            <button class="js-quantity-increase quantity__button" type="button" title="Увеличить">
-                              <svg class="quantity__button-icon" aria-hidden="true">
-                                <use xlink:href="#q_plus" />
-                              </svg>
-                            </button>
-                          </span>
-                        </span>
-                        <span class="product-card__aside">
-                          <button class="js-tooltip product-card__tooltip-btn" type="button" aria-label="всплывающая подсказка">i<span class="product-card__tooltip">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></button>
-                          <span class="product-card__radio-icon"></span>
-                        </span>
-                      </span>
-                    </label>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="js-part part part--button">
-              <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_ssd" /></svg>
-              <div class="part__info">
-                <p class="part__title">Системный SSD</p>
-                <p class="part__description">240Gb M.2 Скорость W/R: 350/500 Мб/с</p>
-              </div>
-            </div>
-            <div class="parts-dropdown">
-              <div class="parts-dropdown__controls">
-                <div class="parts-dropdown__controls-wrap">
-                  <button class="js-parts-tab parts-dropdown__controls-button is-active" type="button" data-tab="ssd_fast">БЫСТРЫЕ SATA</button>
-                  <button class="js-parts-tab parts-dropdown__controls-button" type="button" data-tab="ssd_rgb">SATA/RGB</button>
-                </div>
-              </div>
-              <div class="parts-dropdown__tab is-active" data-tab="ssd_fast">
-                <ul class="products-list products-list--tile">
-                  <li class="products-list__item">
-                    <label class="product-card" for="Samsung 500GB EVO 860 W/R: 520/550 Мб/с">
-                      <input id="Samsung 500GB EVO 860 W/R: 520/550 Мб/с" class="product-card__radio" type="radio" name="ssd" value="Samsung 500GB EVO 860 W/R: 520/550 Мб/с" checked>
-                      <span class="product-card__wrap">
-                        <span class="product-card__img-wrap"><img src="https://place-hold.it/50" alt="" width="50" height="50"></span>
-                        <span class="product-card__description">
-                          <span class="product-card__title">Samsung 500GB<br> EVO 860<br> W/R: 520/550 Мб/с</span>
-                        </span>
-                        <span class="product-card__aside">
-                          <button class="js-tooltip product-card__tooltip-btn" type="button" aria-label="всплывающая подсказка">i<span class="product-card__tooltip">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></button>
-                          <span class="product-card__radio-icon"></span>
-                        </span>
-                      </span>
-                    </label>
-                  </li>
-                  <li class="products-list__item">
-                    <label class="product-card" for="Kingston 512Gb KC600 W/R: 520/550 Мб/с">
-                      <input id="Kingston 512Gb KC600 W/R: 520/550 Мб/с" class="product-card__radio" type="radio" name="ssd" value="Kingston 512Gb KC600 W/R: 520/550 Мб/с">
-                      <span class="product-card__wrap">
-                        <span class="product-card__img-wrap"><img src="https://place-hold.it/50" alt="" width="50" height="50"></span>
-                        <span class="product-card__description">
-                          <span class="product-card__title">Kingston 512Gb<br> KC600 W/R: 520/550 Мб/с</span>
-                        </span>
-                        <span class="product-card__aside">
-                          <button class="js-tooltip product-card__tooltip-btn" type="button" aria-label="всплывающая подсказка">i<span class="product-card__tooltip">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></button>
-                          <span class="product-card__radio-icon"></span>
-                        </span>
-                      </span>
-                    </label>
-                  </li>
-                  <li class="products-list__item">
-                    <label class="product-card" for="Samsung 250GB EVO 860 W/R: 520/550 Мб/с">
-                      <input id="Samsung 250GB EVO 860 W/R: 520/550 Мб/с" class="product-card__radio" type="radio" name="ssd" value="Samsung 250GB EVO 860 W/R: 520/550 Мб/с">
-                      <span class="product-card__wrap">
-                        <span class="product-card__img-wrap"><img src="https://place-hold.it/50" alt="" width="50" height="50"></span>
-                        <span class="product-card__description">
-                          <span class="product-card__title">Samsung 250GB<br> EVO 860<br> W/R: 520/550 Мб/с</span>
-                        </span>
-                        <span class="product-card__aside">
-                          <button class="js-tooltip product-card__tooltip-btn" type="button" aria-label="всплывающая подсказка">i<span class="product-card__tooltip">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></button>
-                          <span class="product-card__radio-icon"></span>
-                        </span>
-                      </span>
-                    </label>
-                  </li>
-                  <li class="products-list__item">
-                    <label class="product-card" for="Kingston 256Gb KC600 W/R: 500/550 Мб/с">
-                      <input id="Kingston 256Gb KC600 W/R: 500/550 Мб/с" class="product-card__radio" type="radio" name="ssd" value="Kingston 256Gb KC600 W/R: 500/550 Мб/с">
-                      <span class="product-card__wrap">
-                        <span class="product-card__img-wrap"><img src="https://place-hold.it/50" alt="" width="50" height="50"></span>
-                        <span class="product-card__description">
-                          <span class="product-card__title">Kingston 256Gb KC600 W/R: 500/550 Мб/с</span>
-                        </span>
-                        <span class="product-card__aside">
-                          <button class="js-tooltip product-card__tooltip-btn" type="button" aria-label="всплывающая подсказка">i<span class="product-card__tooltip">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></button>
-                          <span class="product-card__radio-icon"></span>
-                        </span>
-                      </span>
-                    </label>
-                  </li>
-                </ul>
-              </div>
-              <div class="parts-dropdown__tab" data-tab="ssd_rgb">
-                <ul class="products-list products-list--tile">
-                  <li class="products-list__item">
-                    <label class="product-card" for="Samsung 250GB EVO 860 W/R: 520/550 Мб/с RGB">
-                      <input id="Samsung 250GB EVO 860 W/R: 520/550 Мб/с RGB" class="product-card__radio" type="radio" name="ssd" value="Samsung 250GB EVO 860 W/R: 520/550 Мб/с RGB">
-                      <span class="product-card__wrap">
-                        <span class="product-card__img-wrap"><img src="https://place-hold.it/50" alt="" width="50" height="50"></span>
-                        <span class="product-card__description">
-                          <span class="product-card__title">Samsung 250GB<br> EVO 860<br> W/R: 520/550 Мб/с RGB</span>
-                        </span>
-                        <span class="product-card__aside">
-                          <button class="js-tooltip product-card__tooltip-btn" type="button" aria-label="всплывающая подсказка">i<span class="product-card__tooltip">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></button>
-                          <span class="product-card__radio-icon"></span>
-                        </span>
-                      </span>
-                    </label>
-                  </li>
-                  <li class="products-list__item">
-                    <label class="product-card" for="Kingston 256Gb KC600 W/R: 500/550 Мб/с RGB">
-                      <input id="Kingston 256Gb KC600 W/R: 500/550 Мб/с RGB" class="product-card__radio" type="radio" name="ssd" value="Kingston 256Gb KC600 W/R: 500/550 Мб/с RGB">
-                      <span class="product-card__wrap">
-                        <span class="product-card__img-wrap"><img src="https://place-hold.it/50" alt="" width="50" height="50"></span>
-                        <span class="product-card__description">
-                          <span class="product-card__title">Kingston 256Gb KC600 W/R: 500/550 Мб/с RGB</span>
-                        </span>
-                        <span class="product-card__aside">
-                          <button class="js-tooltip product-card__tooltip-btn" type="button" aria-label="всплывающая подсказка">i<span class="product-card__tooltip">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></button>
-                          <span class="product-card__radio-icon"></span>
-                        </span>
-                      </span>
-                    </label>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="part">
-              <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_hdd" /></svg>
-              <div class="part__info">
-                <p class="part__title">Накопитель 1</p>
-                <p class="part__description">Не выбран</p>
-              </div>
-            </div>
-            <div class="part">
-              <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_hdd" /></svg>
-              <div class="part__info">
-                <p class="part__title">Накопитель 2</p>
-                <p class="part__description">1TB накопитель HDD</p>
-              </div>
-            </div>
-            <div class="part">
-              <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_cooler" /></svg>
-              <div class="part__info">
-                <p class="part__title">Кулер</p>
-                <p class="part__description">AIR 120 бесшумное воздушное охлаждение</p>
-              </div>
-            </div>
-            <div class="part">
-              <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_dc" /></svg>
-              <div class="part__info">
-                <p class="part__title">Блок питания</p>
-                <p class="part__description">600W Сертификат PLUS</p>
-              </div>
-            </div>
-            <div class="part">
-              <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_wifi" /></svg>
-              <div class="part__info">
-                <p class="part__title">WI-FI / BT</p>
-                <p class="part__description">Wi-Fi USB 2.4 / 5 Ghz 867 Мбит/с</p>
-              </div>
-            </div>
-            <div class="part">
-              <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_cabel" /></svg>
-              <div class="part__info">
-                <p class="part__title">Кабель</p>
-                <p class="part__description">DP - DP Видео кабель 1 метр v1.2</p>
-              </div>
-            </div>
-            <div class="part">
-              <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_design" /></svg>
-              <div class="part__info">
-                <p class="part__title">Дизайн</p>
-                <p class="part__description">Авторский</p>
-              </div>
+    <div class="js-pcm-slider pcm__slider">
+      <div class="pcm__slide">
+        <div class="pcm__parts">
+          <div class="part">
+            <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_box" /></svg>
+            <div class="part__info">
+              <p class="part__title">Корпус</p>
+              <p class="part__description">P 300 TG</p>
             </div>
           </div>
-        </div>
-        <div class="pcm__slide">
-          гарантия
-        </div>
-        <div class="pcm__slide">
-          тестирование
-        </div>
-        <div class="pcm__slide">
-          <div class="conf__design design">
-            <div class="design__block">
-              <div class="design__image"><img class="js-design-image" width="318" height="318" src="images/content/conf/img_5.png" alt=""></div>
+          <div class="js-part part part--button">
+            <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_cpu" /></svg>
+            <div class="part__info">
+              <p class="part__title">Процессор</p>
+              <p class="part__description">AMD Ryzen R5 3600 6-и ядерный 3.6 GHz</p>
             </div>
-            <div class="design__block">
-              <div class="design__list">
-                <div class="design__list-item">
-                  <input id="design_1" class="design__radio" name="design" type="radio" value="1" checked>
-                  <label class="js-design-item design__item" for="design_1" data-src="images/content/conf/img_5.png">
-                    <span><img width="140" height="70" src="images/content/conf/img_6.jpg" alt="alt"></span>
-                  </label>
-                </div>
-                <div class="design__list-item">
-                  <input id="design_2" class="design__radio" name="design" type="radio" value="2">
-                  <label class="js-design-item design__item" for="design_2" data-src="images/content/conf/img_1.png">
-                    <span><img width="140" height="70" src="images/content/conf/img_7.jpg" alt="alt"></span>
-                  </label>
-                </div>
-                <div class="design__list-item">
-                  <input id="design_3" class="design__radio" name="design" type="radio" value="3">
-                  <label class="js-design-item design__item" for="design_3" data-src="images/content/conf/img_2.png">
-                    <span><img width="140" height="70" src="images/content/conf/img_8.jpg" alt="alt"></span>
-                  </label>
-                </div>
-                <div class="design__list-item">
-                  <input id="design_4" class="design__radio" name="design" type="radio" value="4">
-                  <label class="js-design-item design__item" for="design_4" data-src="images/content/conf/img_3.png">
-                    <span><img width="140" height="70" src="images/content/conf/img_9.jpg" alt="alt"></span>
-                  </label>
-                </div>
-                <div class="design__list-item">
-                  <input id="design_5" class="design__radio" name="design" type="radio" value="5">
-                  <label class="js-design-item design__item" for="design_5" data-src="images/content/conf/img_4.png">
-                    <span><img width="140" height="70" src="images/content/conf/img_10.jpg" alt="alt"></span>
-                  </label>
-                </div>
-                <div class="design__list-item">
-                  <input id="design_6" class="design__radio" name="design" type="radio" value="6">
-                  <label class="js-design-item design__item" for="design_6" data-src="images/content/conf/img_1.png">
-                    <span><img width="140" height="70" src="images/content/conf/img_11.jpg" alt="alt"></span>
-                  </label>
-                </div>
-                <div class="design__list-item">
-                  <input id="design_7" class="design__radio" name="design" type="radio" value="7">
-                  <label class="js-design-item design__item" for="design_7" data-src="images/content/conf/img_2.png">
-                    <span><img width="140" height="70" src="images/content/conf/img_12.jpg" alt="alt"></span>
-                  </label>
-                </div>
-                <div class="design__list-item">
-                  <input id="design_8" class="design__radio" name="design" type="radio" value="8">
-                  <label class="js-design-item design__item" for="design_8" data-src="images/content/conf/img_3.png">
-                    <span><img width="140" height="70" src="images/content/conf/img_13.jpg" alt="alt"></span>
-                  </label>
-                </div>
-                <div class="design__list-item">
-                  <input id="design_9" class="design__radio" name="design" type="radio" value="9">
-                  <label class="js-design-item design__item" for="design_9" data-src="images/content/conf/img_4.png">
-                    <span><img width="140" height="70" src="images/content/conf/img_14.jpg" alt="alt"></span>
-                  </label>
-                </div>
-                <div class="design__list-item">
-                  <input id="design_10" class="design__radio" name="design" type="radio" value="10">
-                  <label class="js-design-item design__item" for="design_10" data-src="images/content/conf/img_1.png">
-                    <span><img width="140" height="70" src="images/content/conf/img_15.jpg" alt="alt"></span>
-                  </label>
-                </div>
-                <div class="design__list-item">
-                  <input id="design_11" class="design__radio" name="design" type="radio" value="11">
-                  <label class="js-design-item design__item" for="design_11" data-src="images/content/conf/img_2.png">
-                    <span><img width="140" height="70" src="images/content/conf/img_16.jpg" alt="alt"></span>
-                  </label>
-                </div>
-                <div class="design__list-item">
-                  <input id="design_12" class="design__radio" name="design" type="radio" value="12">
-                  <label class="js-design-item design__item" for="design_12" data-src="images/content/conf/img_3.png">
-                    <span><img width="140" height="70" src="images/content/conf/img_17.jpg" alt="alt"></span>
-                  </label>
-                </div>
+          </div>
+          <div class="parts-dropdown">
+            <div class="parts-dropdown__controls">
+              <div class="parts-dropdown__controls-wrap">
+                <button class="js-parts-tab parts-dropdown__controls-button is-active" type="button" data-tab="cpu_amd">AMD</button>
+                <button class="js-parts-tab parts-dropdown__controls-button" type="button" data-tab="cpu_intel">INTEL</button>
               </div>
             </div>
-            <div class="design__block">
-              <div id="dropbox" class="upload">
-                <button class="js-clear-upload upload__clear" type="button" title="Удалить изображение">
-                  <svg class="upload__clear-icon" aria-hidden="true">
-                    <use xlink:href="#menu_close" />
-                  </svg>
-                </button>
-                <label class="upload__label" for="upload_zone">
-                  <input id="upload_zone" class="upload__input-file" type="file">
-                  <span class="upload__mobile-text">
-                    <svg class="upload__mobile-icon" aria-hidden="true">
-                      <use xlink:href="#upload_icon" />
-                    </svg><br>
-                    <span>Загрузить</span><br>
-                    <small>одно изображение<br> в высоком разрешении<br> (Ultra 4K | 3840 : 2400)</small>
-                  </span>
-                  <span class="upload__desktop-note">Одно изображение<br> в высоком разрешении<br> (Ultra 4K | 3840 : 2400)</span>
-                  <span class="upload__desktop-text">
-                    <svg class="upload__icon" aria-hidden="true">
-                      <use xlink:href="#upload_icon" />
-                    </svg><br>
-                    <span>перетащи сюда файл</span><br>
-                    <small>или <span>загрузи</span> с компьютера</small>
-                  </span>
-                </label>
+            <div class="parts-dropdown__tab is-active" data-tab="cpu_amd">
+              <ul class="products-list">
+                <li class="products-list__item">
+                  <label class="product-card" for="AMD Ryzen R5 3600X 3800MHz">
+                    <input id="AMD Ryzen R5 3600X 3800MHz" class="product-card__radio" type="radio" name="cpu" value="AMD Ryzen R5 3600X 3800MHz" checked>
+                    <span class="product-card__wrap">
+                      <span class="product-card__img-wrap"><img src="https://place-hold.it/50" alt="" width="50" height="50"></span>
+                      <span class="product-card__description">
+                        <span class="product-card__title">AMD Ryzen R5 3600X 3800MHz</span>
+                        <span class="product-card__prop">6-и ядерный 3.8GHz</span>
+                      </span>
+                      <span class="product-card__aside">
+                        <button class="js-tooltip product-card__tooltip-btn" type="button" aria-label="всплывающая подсказка">i<span class="product-card__tooltip">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></button>
+                        <span class="product-card__radio-icon"></span>
+                      </span>
+                    </span>
+                  </label>
+                </li>
+                <li class="products-list__item">
+                  <label class="product-card" for="AMD Ryzen R5 3600 3600MHz">
+                    <input id="AMD Ryzen R5 3600 3600MHz" class="product-card__radio" type="radio" name="cpu" value="AMD Ryzen R5 3600 3600MHz">
+                    <span class="product-card__wrap">
+                      <span class="product-card__img-wrap"><img src="https://place-hold.it/50" alt="" width="50" height="50"></span>
+                      <span class="product-card__description">
+                        <span class="product-card__title">AMD Ryzen R5 3600 3600MHz</span>
+                        <span class="product-card__prop">6-и ядерный 3.6GHz</span>
+                      </span>
+                      <span class="product-card__aside">
+                        <button class="js-tooltip product-card__tooltip-btn" type="button" aria-label="всплывающая подсказка">i<span class="product-card__tooltip">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></button>
+                        <span class="product-card__radio-icon"></span>
+                      </span>
+                    </span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <div class="parts-dropdown__tab" data-tab="cpu_intel">
+              <ul class="products-list">
+                <li class="products-list__item">
+                  <label class="product-card" for="Intel i7 3800MHz">
+                    <input id="Intel i7 3800MHz" class="product-card__radio" type="radio" name="cpu" value="Intel i7 3800MHz">
+                    <span class="product-card__wrap">
+                      <span class="product-card__img-wrap"><img src="https://place-hold.it/50" alt="" width="50" height="50"></span>
+                      <span class="product-card__description">
+                        <span class="product-card__title">Intel i7 3800MHz</span>
+                        <span class="product-card__prop">6-и ядерный 3.8GHz</span>
+                      </span>
+                      <span class="product-card__aside">
+                        <button class="js-tooltip product-card__tooltip-btn" type="button" aria-label="всплывающая подсказка">i<span class="product-card__tooltip">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></button>
+                        <span class="product-card__radio-icon"></span>
+                      </span>
+                    </span>
+                  </label>
+                </li>
+                <li class="products-list__item">
+                  <label class="product-card" for="Intel i5 3.200MHz">
+                    <input id="Intel i5 3.200MHz" class="product-card__radio" type="radio" name="cpu" value="Intel i5 3.200MHz">
+                    <span class="product-card__wrap">
+                      <span class="product-card__img-wrap"><img src="https://place-hold.it/50" alt="" width="50" height="50"></span>
+                      <span class="product-card__description">
+                        <span class="product-card__title">Intel i5 3.200MHz</span>
+                        <span class="product-card__prop">6-и ядерный 3.6GHz</span>
+                      </span>
+                      <span class="product-card__aside">
+                        <button class="js-tooltip product-card__tooltip-btn" type="button" aria-label="всплывающая подсказка">i<span class="product-card__tooltip">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></button>
+                        <span class="product-card__radio-icon"></span>
+                      </span>
+                    </span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="part">
+            <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_gpu" /></svg>
+            <div class="part__info">
+              <p class="part__title">Видеокарта</p>
+              <p class="part__description">AMD Radeon 5500XT 8GB</p>
+            </div>
+          </div>
+          <div class="part">
+            <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_mother" /></svg>
+            <div class="part__info">
+              <p class="part__title">Системная плата</p>
+              <p class="part__description">ROG STRIX B550 mITX 2xDDR4 2xM.2 / 1xPCI-E x16 / Sound 7.1</p>
+            </div>
+          </div>
+          <div class="js-part part part--button">
+            <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_ram" /></svg>
+            <div class="part__info">
+              <p class="part__title">Оперативная память</p>
+              <p class="part__description">32GB 3000Mhz 2 x 16Gb DDR4 Black</p>
+            </div>
+          </div>
+          <div class="parts-dropdown">
+            <div class="parts-dropdown__controls">
+              <div class="parts-dropdown__controls-wrap">
+                <button class="js-parts-tab parts-dropdown__controls-button is-active" type="button" data-tab="ram_rgb">RGB</button>
+                <button class="js-parts-tab parts-dropdown__controls-button" type="button" data-tab="ram_black">BLACK</button>
               </div>
-
+            </div>
+            <div class="parts-dropdown__tab is-active" data-tab="ram_rgb">
+              <ul class="products-list">
+                <li class="products-list__item">
+                  <label class="product-card" for="8GB 2400Mhz DDR4 RGB">
+                    <input id="8GB 2400Mhz DDR4 RGB" class="product-card__radio" type="radio" name="ram" value="8GB 2400Mhz DDR4 RGB" checked>
+                    <span class="product-card__wrap">
+                      <span class="product-card__img-wrap"><img src="https://place-hold.it/50" alt="" width="50" height="50"></span>
+                      <span class="product-card__description">
+                        <span class="product-card__title">8GB 2400Mhz</span>
+                        <span class="product-card__prop">DDR4 RGB</span>
+                        <span class="product-card__quantity quantity">
+                          <button class="js-quantity-decrease quantity__button" type="button" title="Уменьшить">
+                            <svg class="quantity__button-icon" aria-hidden="true">
+                              <use xlink:href="#q_minus" />
+                            </svg>
+                          </button>
+                          <input class="quantity__input" type="text" value="1" readonly>
+                          <button class="js-quantity-increase quantity__button" type="button" title="Увеличить">
+                            <svg class="quantity__button-icon" aria-hidden="true">
+                              <use xlink:href="#q_plus" />
+                            </svg>
+                          </button>
+                        </span>
+                      </span>
+                      <span class="product-card__aside">
+                        <button class="js-tooltip product-card__tooltip-btn" type="button" aria-label="всплывающая подсказка">i<span class="product-card__tooltip">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></button>
+                        <span class="product-card__radio-icon"></span>
+                      </span>
+                    </span>
+                  </label>
+                </li>
+                <li class="products-list__item">
+                  <label class="product-card" for="16GB 2400Mhz DDR4 RGB asrwet">
+                    <input id="16GB 2400Mhz DDR4 RGB asrwet" class="product-card__radio" type="radio" name="ram" value="16GB 2400Mhz DDR4 RGB asrwet">
+                    <span class="product-card__wrap">
+                      <span class="product-card__img-wrap"><img src="https://place-hold.it/50" alt="" width="50" height="50"></span>
+                      <span class="product-card__description">
+                        <span class="product-card__title">16GB 2400Mhz</span>
+                        <span class="product-card__prop">DDR4 RGB asrwet</span>
+                        <span class="product-card__quantity quantity">
+                          <button class="js-quantity-decrease quantity__button" type="button" title="Уменьшить">
+                            <svg class="quantity__button-icon" aria-hidden="true">
+                              <use xlink:href="#q_minus" />
+                            </svg>
+                          </button>
+                          <input class="quantity__input" type="text" value="1" readonly>
+                          <button class="js-quantity-increase quantity__button" type="button" title="Увеличить">
+                            <svg class="quantity__button-icon" aria-hidden="true">
+                              <use xlink:href="#q_plus" />
+                            </svg>
+                          </button>
+                        </span>
+                      </span>
+                      <span class="product-card__aside">
+                        <button class="js-tooltip product-card__tooltip-btn" type="button" aria-label="всплывающая подсказка">i<span class="product-card__tooltip">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></button>
+                        <span class="product-card__radio-icon"></span>
+                      </span>
+                    </span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <div class="parts-dropdown__tab" data-tab="ram_black">
+              <ul class="products-list">
+                <li class="products-list__item">
+                  <label class="product-card" for="8GB 2400Mhz DDR4 Black">
+                    <input id="8GB 2400Mhz DDR4 Black" class="product-card__radio" type="radio" name="ram" value="8GB 2400Mhz DDR4 Black">
+                    <span class="product-card__wrap">
+                      <span class="product-card__img-wrap"><img src="https://place-hold.it/50" alt="" width="50" height="50"></span>
+                      <span class="product-card__description">
+                        <span class="product-card__title">8GB 2400Mhz</span>
+                        <span class="product-card__prop">DDR4 Black</span>
+                        <span class="product-card__quantity quantity">
+                          <button class="js-quantity-decrease quantity__button" type="button" title="Уменьшить">
+                            <svg class="quantity__button-icon" aria-hidden="true">
+                              <use xlink:href="#q_minus" />
+                            </svg>
+                          </button>
+                          <input class="quantity__input" type="text" value="1" readonly>
+                          <button class="js-quantity-increase quantity__button" type="button" title="Увеличить">
+                            <svg class="quantity__button-icon" aria-hidden="true">
+                              <use xlink:href="#q_plus" />
+                            </svg>
+                          </button>
+                        </span>
+                      </span>
+                      <span class="product-card__aside">
+                        <button class="js-tooltip product-card__tooltip-btn" type="button" aria-label="всплывающая подсказка">i<span class="product-card__tooltip">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></button>
+                        <span class="product-card__radio-icon"></span>
+                      </span>
+                    </span>
+                  </label>
+                </li>
+                <li class="products-list__item">
+                  <label class="product-card" for="16GB 2400Mhz DDR4 Black asrwet">
+                    <input id="16GB 2400Mhz DDR4 Black asrwet" class="product-card__radio" type="radio" name="ram" value="16GB 2400Mhz DDR4 Black asrwet">
+                    <span class="product-card__wrap">
+                      <span class="product-card__img-wrap"><img src="https://place-hold.it/50" alt="" width="50" height="50"></span>
+                      <span class="product-card__description">
+                        <span class="product-card__title">16GB 2400Mhz</span>
+                        <span class="product-card__prop">DDR4 Black asrwet</span>
+                        <span class="product-card__quantity quantity">
+                          <button class="js-quantity-decrease quantity__button" type="button" title="Уменьшить">
+                            <svg class="quantity__button-icon" aria-hidden="true">
+                              <use xlink:href="#q_minus" />
+                            </svg>
+                          </button>
+                          <input class="quantity__input" type="text" value="1" readonly>
+                          <button class="js-quantity-increase quantity__button" type="button" title="Увеличить">
+                            <svg class="quantity__button-icon" aria-hidden="true">
+                              <use xlink:href="#q_plus" />
+                            </svg>
+                          </button>
+                        </span>
+                      </span>
+                      <span class="product-card__aside">
+                        <button class="js-tooltip product-card__tooltip-btn" type="button" aria-label="всплывающая подсказка">i<span class="product-card__tooltip">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></button>
+                        <span class="product-card__radio-icon"></span>
+                      </span>
+                    </span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="js-part part part--button">
+            <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_ssd" /></svg>
+            <div class="part__info">
+              <p class="part__title">Системный SSD</p>
+              <p class="part__description">240Gb M.2 Скорость W/R: 350/500 Мб/с</p>
+            </div>
+          </div>
+          <div class="parts-dropdown">
+            <div class="parts-dropdown__controls">
+              <div class="parts-dropdown__controls-wrap">
+                <button class="js-parts-tab parts-dropdown__controls-button is-active" type="button" data-tab="ssd_fast">БЫСТРЫЕ SATA</button>
+                <button class="js-parts-tab parts-dropdown__controls-button" type="button" data-tab="ssd_rgb">SATA/RGB</button>
+              </div>
+            </div>
+            <div class="parts-dropdown__tab is-active" data-tab="ssd_fast">
+              <ul class="products-list products-list--tile">
+                <li class="products-list__item">
+                  <label class="product-card" for="Samsung 500GB EVO 860 W/R: 520/550 Мб/с">
+                    <input id="Samsung 500GB EVO 860 W/R: 520/550 Мб/с" class="product-card__radio" type="radio" name="ssd" value="Samsung 500GB EVO 860 W/R: 520/550 Мб/с" checked>
+                    <span class="product-card__wrap">
+                      <span class="product-card__img-wrap"><img src="https://place-hold.it/50" alt="" width="50" height="50"></span>
+                      <span class="product-card__description">
+                        <span class="product-card__title">Samsung 500GB<br> EVO 860<br> W/R: 520/550 Мб/с</span>
+                      </span>
+                      <span class="product-card__aside">
+                        <button class="js-tooltip product-card__tooltip-btn" type="button" aria-label="всплывающая подсказка">i<span class="product-card__tooltip">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></button>
+                        <span class="product-card__radio-icon"></span>
+                      </span>
+                    </span>
+                  </label>
+                </li>
+                <li class="products-list__item">
+                  <label class="product-card" for="Kingston 512Gb KC600 W/R: 520/550 Мб/с">
+                    <input id="Kingston 512Gb KC600 W/R: 520/550 Мб/с" class="product-card__radio" type="radio" name="ssd" value="Kingston 512Gb KC600 W/R: 520/550 Мб/с">
+                    <span class="product-card__wrap">
+                      <span class="product-card__img-wrap"><img src="https://place-hold.it/50" alt="" width="50" height="50"></span>
+                      <span class="product-card__description">
+                        <span class="product-card__title">Kingston 512Gb<br> KC600 W/R: 520/550 Мб/с</span>
+                      </span>
+                      <span class="product-card__aside">
+                        <button class="js-tooltip product-card__tooltip-btn" type="button" aria-label="всплывающая подсказка">i<span class="product-card__tooltip">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></button>
+                        <span class="product-card__radio-icon"></span>
+                      </span>
+                    </span>
+                  </label>
+                </li>
+                <li class="products-list__item">
+                  <label class="product-card" for="Samsung 250GB EVO 860 W/R: 520/550 Мб/с">
+                    <input id="Samsung 250GB EVO 860 W/R: 520/550 Мб/с" class="product-card__radio" type="radio" name="ssd" value="Samsung 250GB EVO 860 W/R: 520/550 Мб/с">
+                    <span class="product-card__wrap">
+                      <span class="product-card__img-wrap"><img src="https://place-hold.it/50" alt="" width="50" height="50"></span>
+                      <span class="product-card__description">
+                        <span class="product-card__title">Samsung 250GB<br> EVO 860<br> W/R: 520/550 Мб/с</span>
+                      </span>
+                      <span class="product-card__aside">
+                        <button class="js-tooltip product-card__tooltip-btn" type="button" aria-label="всплывающая подсказка">i<span class="product-card__tooltip">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></button>
+                        <span class="product-card__radio-icon"></span>
+                      </span>
+                    </span>
+                  </label>
+                </li>
+                <li class="products-list__item">
+                  <label class="product-card" for="Kingston 256Gb KC600 W/R: 500/550 Мб/с">
+                    <input id="Kingston 256Gb KC600 W/R: 500/550 Мб/с" class="product-card__radio" type="radio" name="ssd" value="Kingston 256Gb KC600 W/R: 500/550 Мб/с">
+                    <span class="product-card__wrap">
+                      <span class="product-card__img-wrap"><img src="https://place-hold.it/50" alt="" width="50" height="50"></span>
+                      <span class="product-card__description">
+                        <span class="product-card__title">Kingston 256Gb KC600 W/R: 500/550 Мб/с</span>
+                      </span>
+                      <span class="product-card__aside">
+                        <button class="js-tooltip product-card__tooltip-btn" type="button" aria-label="всплывающая подсказка">i<span class="product-card__tooltip">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></button>
+                        <span class="product-card__radio-icon"></span>
+                      </span>
+                    </span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <div class="parts-dropdown__tab" data-tab="ssd_rgb">
+              <ul class="products-list products-list--tile">
+                <li class="products-list__item">
+                  <label class="product-card" for="Samsung 250GB EVO 860 W/R: 520/550 Мб/с RGB">
+                    <input id="Samsung 250GB EVO 860 W/R: 520/550 Мб/с RGB" class="product-card__radio" type="radio" name="ssd" value="Samsung 250GB EVO 860 W/R: 520/550 Мб/с RGB">
+                    <span class="product-card__wrap">
+                      <span class="product-card__img-wrap"><img src="https://place-hold.it/50" alt="" width="50" height="50"></span>
+                      <span class="product-card__description">
+                        <span class="product-card__title">Samsung 250GB<br> EVO 860<br> W/R: 520/550 Мб/с RGB</span>
+                      </span>
+                      <span class="product-card__aside">
+                        <button class="js-tooltip product-card__tooltip-btn" type="button" aria-label="всплывающая подсказка">i<span class="product-card__tooltip">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></button>
+                        <span class="product-card__radio-icon"></span>
+                      </span>
+                    </span>
+                  </label>
+                </li>
+                <li class="products-list__item">
+                  <label class="product-card" for="Kingston 256Gb KC600 W/R: 500/550 Мб/с RGB">
+                    <input id="Kingston 256Gb KC600 W/R: 500/550 Мб/с RGB" class="product-card__radio" type="radio" name="ssd" value="Kingston 256Gb KC600 W/R: 500/550 Мб/с RGB">
+                    <span class="product-card__wrap">
+                      <span class="product-card__img-wrap"><img src="https://place-hold.it/50" alt="" width="50" height="50"></span>
+                      <span class="product-card__description">
+                        <span class="product-card__title">Kingston 256Gb KC600 W/R: 500/550 Мб/с RGB</span>
+                      </span>
+                      <span class="product-card__aside">
+                        <button class="js-tooltip product-card__tooltip-btn" type="button" aria-label="всплывающая подсказка">i<span class="product-card__tooltip">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></button>
+                        <span class="product-card__radio-icon"></span>
+                      </span>
+                    </span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="part">
+            <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_hdd" /></svg>
+            <div class="part__info">
+              <p class="part__title">Накопитель 1</p>
+              <p class="part__description">Не выбран</p>
+            </div>
+          </div>
+          <div class="part">
+            <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_hdd" /></svg>
+            <div class="part__info">
+              <p class="part__title">Накопитель 2</p>
+              <p class="part__description">1TB накопитель HDD</p>
+            </div>
+          </div>
+          <div class="part">
+            <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_cooler" /></svg>
+            <div class="part__info">
+              <p class="part__title">Кулер</p>
+              <p class="part__description">AIR 120 бесшумное воздушное охлаждение</p>
+            </div>
+          </div>
+          <div class="part">
+            <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_dc" /></svg>
+            <div class="part__info">
+              <p class="part__title">Блок питания</p>
+              <p class="part__description">600W Сертификат PLUS</p>
+            </div>
+          </div>
+          <div class="part">
+            <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_wifi" /></svg>
+            <div class="part__info">
+              <p class="part__title">WI-FI / BT</p>
+              <p class="part__description">Wi-Fi USB 2.4 / 5 Ghz 867 Мбит/с</p>
+            </div>
+          </div>
+          <div class="part">
+            <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_cabel" /></svg>
+            <div class="part__info">
+              <p class="part__title">Кабель</p>
+              <p class="part__description">DP - DP Видео кабель 1 метр v1.2</p>
+            </div>
+          </div>
+          <div class="part">
+            <svg class="part__icon" aria-hidden="true"><use xlink:href="#p_design" /></svg>
+            <div class="part__info">
+              <p class="part__title">Дизайн</p>
+              <p class="part__description">Авторский</p>
             </div>
           </div>
         </div>
       </div>
-    </form>
+      <div class="pcm__slide">
+        <div class="extra-service">
+          <div class="extra-service__title-block">
+            <svg class="extra-service__icon" aria-hidden="true">
+              <use xlink:href="#p_guarantee" />
+            </svg>
+            <p class="extra-service__title"><b>Гарантия</b><br> <small>24 месяца</small></p>
+          </div>
+          <ul class="extra-service__list">
+            <li>Бесплатный гарантийный ремонт</li>
+            <li>Удаленная диагностика неисправности</li>
+            <li>Горячая замена неисправных комплектующих</li>
+            <li>Компенсация 50% стоимости до СЦ и обратно</li>
+          </ul>
+        </div>
+      </div>
+      <div class="pcm__slide">
+        <div class="extra-service">
+          <div class="extra-service__title-block">
+            <svg class="extra-service__icon" aria-hidden="true">
+              <use xlink:href="#p_test" />
+            </svg>
+            <p class="extra-service__title"><b>Тестирование</b><br> <small>Стандартный стресс-тест 8 часов</small></p>
+          </div>
+          <ul class="extra-service__list">
+            <li>Стресс тестирование (синтетика)</li>
+            <li>Оценка стабильности и производительности системы</li>
+            <li>Обновление BIOS</li>
+            <li>Установка актуальных драйверов</li>
+            <li>Настройка операционной системы</li>
+          </ul>
+        </div>
+      </div>
+      <div class="pcm__slide">
+        <div class="design">
+          <div class="design__block">
+            <div class="design__image"><img class="js-design-image" width="318" height="318" src="images/content/conf/img_5.png" alt=""></div>
+          </div>
+          <div class="design__block">
+            <div class="design__list">
+              <div class="design__list-item">
+                <input id="design_1_1" class="design__radio" name="design" type="radio" value="1" checked>
+                <label class="js-design-item design__item" for="design_1_1" data-src="images/content/conf/img_5.png" data-id="design_1">
+                  <span><img width="140" height="70" src="images/content/conf/img_6.jpg" alt="alt"></span>
+                </label>
+              </div>
+              <div class="design__list-item">
+                <input id="design_2_1" class="design__radio" name="design" type="radio" value="2">
+                <label class="js-design-item design__item" for="design_2_1" data-src="images/content/conf/img_1.png" data-id="design_2">
+                  <span><img width="140" height="70" src="images/content/conf/img_7.jpg" alt="alt"></span>
+                </label>
+              </div>
+              <div class="design__list-item">
+                <input id="design_3_1" class="design__radio" name="design" type="radio" value="3">
+                <label class="js-design-item design__item" for="design_3_1" data-src="images/content/conf/img_2.png" data-id="design_3">
+                  <span><img width="140" height="70" src="images/content/conf/img_8.jpg" alt="alt"></span>
+                </label>
+              </div>
+              <div class="design__list-item">
+                <input id="design_4_1" class="design__radio" name="design" type="radio" value="4">
+                <label class="js-design-item design__item" for="design_4_1" data-src="images/content/conf/img_3.png" data-id="design_4">
+                  <span><img width="140" height="70" src="images/content/conf/img_9.jpg" alt="alt"></span>
+                </label>
+              </div>
+              <div class="design__list-item">
+                <input id="design_5_1" class="design__radio" name="design" type="radio" value="5">
+                <label class="js-design-item design__item" for="design_5_1" data-src="images/content/conf/img_4.png" data-id="design_5">
+                  <span><img width="140" height="70" src="images/content/conf/img_10.jpg" alt="alt"></span>
+                </label>
+              </div>
+              <div class="design__list-item">
+                <input id="design_6_1" class="design__radio" name="design" type="radio" value="6">
+                <label class="js-design-item design__item" for="design_6_1" data-src="images/content/conf/img_1.png" data-id="design_6">
+                  <span><img width="140" height="70" src="images/content/conf/img_11.jpg" alt="alt"></span>
+                </label>
+              </div>
+              <div class="design__list-item">
+                <input id="design_7_1" class="design__radio" name="design" type="radio" value="7">
+                <label class="js-design-item design__item" for="design_7_1" data-src="images/content/conf/img_2.png" data-id="design_7">
+                  <span><img width="140" height="70" src="images/content/conf/img_12.jpg" alt="alt"></span>
+                </label>
+              </div>
+              <div class="design__list-item">
+                <input id="design_8_1" class="design__radio" name="design" type="radio" value="8">
+                <label class="js-design-item design__item" for="design_8_1" data-src="images/content/conf/img_3.png" data-id="design_8">
+                  <span><img width="140" height="70" src="images/content/conf/img_13.jpg" alt="alt"></span>
+                </label>
+              </div>
+              <div class="design__list-item">
+                <input id="design_9_1" class="design__radio" name="design" type="radio" value="9">
+                <label class="js-design-item design__item" for="design_9_1" data-src="images/content/conf/img_4.png" data-id="design_9">
+                  <span><img width="140" height="70" src="images/content/conf/img_14.jpg" alt="alt"></span>
+                </label>
+              </div>
+              <div class="design__list-item">
+                <input id="design_10_1" class="design__radio" name="design" type="radio" value="10">
+                <label class="js-design-item design__item" for="design_10_1" data-src="images/content/conf/img_1.png" data-id="design_10">
+                  <span><img width="140" height="70" src="images/content/conf/img_15.jpg" alt="alt"></span>
+                </label>
+              </div>
+              <div class="design__list-item">
+                <input id="design_11_1" class="design__radio" name="design" type="radio" value="11">
+                <label class="js-design-item design__item" for="design_11_1" data-src="images/content/conf/img_2.png" data-id="design_11">
+                  <span><img width="140" height="70" src="images/content/conf/img_16.jpg" alt="alt"></span>
+                </label>
+              </div>
+              <div class="design__list-item">
+                <input id="design_12_1" class="design__radio" name="design" type="radio" value="12">
+                <label class="js-design-item design__item" for="design_12_1" data-src="images/content/conf/img_3.png" data-id="design_12">
+                  <span><img width="140" height="70" src="images/content/conf/img_17.jpg" alt="alt"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="design__block">
+            <div class="js-dropbox upload">
+              <button class="js-clear-upload upload__clear" type="button" title="Удалить изображение">
+                <svg class="upload__clear-icon" aria-hidden="true">
+                  <use xlink:href="#menu_close" />
+                </svg>
+              </button>
+              <label class="upload__label" for="upload_zone"></label>
+              <span class="upload__mobile-text">
+                <svg class="upload__mobile-icon" aria-hidden="true">
+                  <use xlink:href="#upload_icon" />
+                </svg><br>
+                <span>Загрузить</span><br>
+                <small>одно изображение<br> в высоком разрешении<br> (Ultra 4K | 3840 : 2400)</small>
+              </span>
+              <span class="upload__desktop-note">Одно изображение<br> в высоком разрешении<br> (Ultra 4K | 3840 : 2400)</span>
+              <span class="upload__desktop-text">
+                <svg class="upload__icon" aria-hidden="true">
+                  <use xlink:href="#upload_icon" />
+                </svg><br>
+                <span>перетащи сюда файл</span><br>
+                <small>или <span>загрузи</span> с компьютера</small>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="pcd"></div>
+  <div class="pcd">
+
+  </div>
 </div>
