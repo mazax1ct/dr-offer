@@ -1,0 +1,157 @@
+.design
+  margin-left: auto
+  margin-right: auto
+  margin-bottom: 65px
+  max-width: 243px
+
+  @media(min-width: 768px)
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    margin-left: -10px
+    margin-right: -10px
+    max-width: 100%
+
+  @media(min-width: 1900px)
+    margin-left: -20px
+    margin-right: -20px
+
+  &__block
+    @media(min-width: 768px)
+      display: flex
+      padding-left: 10px
+      padding-right: 10px
+      width: 50%
+
+    @media(min-width: 992px)
+      width: 33.33333%
+
+    @media(min-width: 1900px)
+      padding-left: 20px
+      padding-right: 20px
+
+    &:not(:last-child)
+      margin-bottom: 13px
+
+      @media(min-width: 992px)
+        margin-bottom: 0
+
+    &:nth-child(1)
+      @media(min-width: 768px)
+        order: 2
+
+      @media(min-width: 992px)
+        max-width: 465px
+        order: 3
+
+    &:nth-child(2)
+      @media(min-width: 768px)
+        order: 1
+
+      @media(min-width: 992px)
+        max-width: 496px
+
+    &:nth-child(3)
+      @media(min-width: 768px)
+        order: 3
+        width: 100%
+
+      @media(min-width: 992px)
+        max-width: 550px
+        order: 2
+        width: 33.33333%
+
+    & > *
+      @media(min-width: 768px)
+        min-width: 100%
+
+  &__image
+    align-items: center
+    border-radius: 6px
+    box-shadow: 0 0 6px 0 $main_color
+    background-image: radial-gradient(11em, #2F4258, #0C1117)
+    display: flex
+    justify-content: center
+    min-height: 174px
+    overflow: hidden
+    position: relative
+
+    @media(min-width: 768px)
+      border-radius: 10px
+      box-shadow: 0 0 10px 0 $main_color
+
+    @media(min-width: 1200px)
+      min-height: 330px
+      width: 425px
+
+    img
+      height: calc(100% - 12px)
+      left: 50%
+      position: absolute
+      top: 50%
+      transform: translate(-50%, -50%)
+      width: auto
+
+  &__list
+    align-content: flex-start
+    display: flex
+    flex-wrap: wrap
+    max-width: 478px
+    margin-left: -5px
+    margin-right: -5px
+    margin-bottom: -8px
+
+    @media(min-width: 1900px)
+      margin-bottom: -16px
+      margin-left: -10px
+      margin-right: -10px
+
+  &__list-item
+    margin-bottom: 8px
+    position: relative
+    padding-left: 5px
+    padding-right: 5px
+    width: 33.33333%
+
+    @media(min-width: 1900px)
+      margin-bottom: 16px
+      padding-left: 10px
+      padding-right: 10px
+
+  &__radio
+    position: absolute
+    height: 1px
+    overflow: hidden
+    clip: rect(0 0 0 0)
+    width: 1px
+
+    &:checked + .design__item
+      &::after
+        border-color: $main_color
+        box-shadow: 0 0 4px 0 $main_color
+
+  &__item
+    border-radius: 3px
+    cursor: pointer
+    display: block
+    position: relative
+
+    &:hover
+      &::after
+        box-shadow: 0 0 4px 0 $main_color
+        border-color: rgba($main_color, 0.8)
+
+    &::after
+      bottom: 0
+      border: 2px solid rgba(#fff, 0.6)
+      border-radius: 3px
+      content: ''
+      left: 0
+      position: absolute
+      right: 0
+      top: 0
+      transition: border-color 0.3s, box-shadow 0.3s
+      z-index: 1
+
+    img
+      border-radius: 3px

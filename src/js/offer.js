@@ -24,6 +24,7 @@ $(document).on('click', '.conf__list-item', function() {
   $(this).addClass('slick-current');
   var size = $(this).attr('data-size');
   $('.js-conf-size').text(size);
+  $('.pcr__image').removeClass('size_s size_m size_l size_x').addClass('size_'+ size);
   return false;
 });
 
@@ -78,8 +79,8 @@ $(document).ready(function () {
   }
 
   //слайдер блоков конфигурации в мобильной версии
-  if($('.js-pcm-slider').length && $('body').width() < 768) {
-    $('.js-pcm-slider').slick({
+  if($('.js-pcr-slider').length && $('body').width() < 768) {
+    $('.js-pcr-slider').slick({
       adaptiveHeight: true,
       draggable: true,
       swipe: true,
@@ -89,9 +90,9 @@ $(document).ready(function () {
       dots: false,
       arrows: true,
       mobileFirst: true,
-      appendArrows: $('.pcm__controls'),
-      prevArrow: '<button class="pcm__controls-button pcm__controls-button--prev" type="button" title="Назад"></button>',
-      nextArrow: '<button class="pcm__controls-button pcm__controls-button--next" type="button" title="Вперёд"></button>'
+      appendArrows: $('.pcr__controls'),
+      prevArrow: '<button class="pcr__controls-button pcr__controls-button--prev" type="button" title="Назад"></button>',
+      nextArrow: '<button class="pcr__controls-button pcr__controls-button--next" type="button" title="Вперёд"></button>'
     });
   }
 });
@@ -99,7 +100,7 @@ $(document).ready(function () {
 //update слайдера списка конфигураций и слайдер блоков конфигурации в мобильной версии при смене ориентации
 $(window).on( "orientationchange", function( event ) {
   $('.js-configs-list').slick('setPosition');
-  $('.js-pcm-slider').slick('setPosition');
+  $('.js-pcr-slider').slick('setPosition');
 });
 
 /**************************загрузка файла*******************************/
@@ -173,7 +174,7 @@ $(document).on('click', '.js-conf-next', function () {
     }
     if($('body').width() < 769) {
       setTimeout(function() {
-        $('.js-pcm-slider').slick('setPosition');
+        $('.js-pcr-slider').slick('setPosition');
       },200);
     }
     setTimeout(function() {
@@ -198,7 +199,7 @@ $(document).on('click', '.js-conf-back', function () {
     }
     if($('body').width() < 769) {
       setTimeout(function() {
-        $('.js-pcm-slider').slick('setPosition');
+        $('.js-pcr-slider').slick('setPosition');
       },200);
     }
     setTimeout(function() {
@@ -217,7 +218,7 @@ $(document).on('click', '.js-part', function () {
     $(this).next('.parts-dropdown').slideDown(300, function () {
       //лочим слайдер блоков конфигурации в мобильной версии
       if(sliderLock == false) {
-        $('.js-pcm-slider.slick-initialized').slick('slickSetOption', {
+        $('.js-pcr-slider.slick-initialized').slick('slickSetOption', {
            draggable: false,
            swipe: false
         }, true);
@@ -228,7 +229,7 @@ $(document).on('click', '.js-part', function () {
     $(this).next('.parts-dropdown').slideUp(300, function () {
       //снимаем lock со слайдера блоков конфигурации в мобильной версии
       if(!$('.js-part.is-active').length) {
-        $('.js-pcm-slider.slick-initialized').slick('slickSetOption', {
+        $('.js-pcr-slider.slick-initialized').slick('slickSetOption', {
            draggable: true,
            swipe: true
         }, true);
@@ -261,20 +262,20 @@ $(document).on('click', '.js-tooltip', function () {
 });
 
 //переключение слайдера конфигурации в мобильной версии
-$(document).on('click', '.js-pcm-btn', function () {
+$(document).on('click', '.js-pcr-btn', function () {
   controlsScroll($(this));
-  $('.js-pcm-slider.slick-initialized').slick('slickGoTo', $(this).index());
+  $('.js-pcr-slider.slick-initialized').slick('slickGoTo', $(this).index());
   return false;
 });
 
-$(document).on('beforeChange', '.js-pcm-slider.slick-initialized', function(event, slick, currentSlide, nextSlide) {
-  $('.js-pcm-btn').removeClass('is-active');
-  $('.js-pcm-btn:eq("'+nextSlide+'")').addClass('is-active');
-  controlsScroll($('.js-pcm-btn:eq("'+nextSlide+'")'));
+$(document).on('beforeChange', '.js-pcr-slider.slick-initialized', function(event, slick, currentSlide, nextSlide) {
+  $('.js-pcr-btn').removeClass('is-active');
+  $('.js-pcr-btn:eq("'+nextSlide+'")').addClass('is-active');
+  controlsScroll($('.js-pcr-btn:eq("'+nextSlide+'")'));
   //закрываем открытые блоки комлектующих и снимаем lock со слайдера блоков конфигурации в мобильной версии
   $('.js-part').removeClass('is-active');
   $('.parts-dropdown').slideUp(300, function () {
-    $('.js-pcm-slider').slick('slickSetOption', {
+    $('.js-pcr-slider').slick('slickSetOption', {
        draggable: true,
        swipe: true
     }, true);
