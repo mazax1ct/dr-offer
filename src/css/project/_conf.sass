@@ -1,3 +1,11 @@
+@keyframes colorAnim
+  0%
+    color: #fff
+    fill: #fff
+  50%
+    color: $main_color
+    fill: $main_color
+
 .conf
   display: flex
   min-height: 100vh
@@ -266,6 +274,7 @@
     padding: 0
     transition: color 0.3s
     text-transform: uppercase
+    animation: colorAnim 1.2s linear infinite
 
     @media(min-width: 768px)
       font-size: 21px
@@ -283,6 +292,7 @@
     margin-left: 12px
     transition: fill 0.3s
     width: 30px
+    animation: colorAnim 1.2s linear infinite
 
     @media(min-width: 768px)
       width: 45px
@@ -349,8 +359,9 @@
   cursor: pointer
   margin-left: auto
   margin-right: auto
-  max-width: 224px
-  padding: 9px
+  max-width: 230px
+  min-width: 230px
+  padding: 9px 12px
   transition: border-color 0.3s
 
   @media(min-width: 375px) and (max-width: 1023px)
@@ -369,6 +380,15 @@
 
   &:hover
     border-color: rgba($main_color, 0.6)
+
+  //@media(any-hover: hover)
+
+    //&:hover
+      .conf-item__config-inner
+        max-height: 500px
+
+      //.conf-item__config-button
+        transform: rotate(180deg)
 
   &__image-block
     margin-bottom: 14px
@@ -461,15 +481,6 @@
 
   &__config-block
     text-align: center
-
-    @media(any-hover: hover)
-
-      &:hover
-        .conf-item__config-inner
-          max-height: 500px
-
-        .conf-item__config-button
-          transform: rotate(180deg)
 
   &__config-inner
     max-height: 0
@@ -821,6 +832,9 @@
     display: flex
     overflow-x: scroll
     scrollbar-width: none
+
+    &::-webkit-scrollbar
+      display: none
 
   &__btn-action
     color: #fff

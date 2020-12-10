@@ -32,6 +32,7 @@ $(document).on('click', '.conf__list-item', function() {
 $('.js-configs-list').on('afterChange', function(event, slick, currentSlide, nextSlide) {
   var size = $(".conf__list-item:eq("+currentSlide+")").attr('data-size');
   $('.js-conf-size').text(size);
+  $('.pcr__image').removeClass('size_s size_m size_l size_x').addClass('size_'+ size);
 });
 
 //закрываем описание конфига при перелистывании слайдера конфигураций
@@ -45,6 +46,11 @@ $(document).on('click', '.js-conf-open', function() {
   $(this).toggleClass('is-active');
   $(this).prev('.conf-item__config-inner').toggleClass('is-active');
   return false;
+});
+
+$(document).on('mouseleave', '.conf-item', function() {
+  $(this).find('.js-conf-open').removeClass('is-active');
+  $(this).find('.conf-item__config-inner').removeClass('is-active');
 });
 
 $(document).ready(function () {
