@@ -25,6 +25,9 @@ $(document).on('click', '.conf__list-item', function() {
   var size = $(this).attr('data-size');
   $('.js-conf-size').text(size);
   $('.pcr__image').removeClass('size_s size_m size_l size_x').addClass('size_'+ size);
+
+  $(this).find('.js-conf-open').toggleClass('is-active');
+  $(this).find('.conf-item__config-inner').toggleClass('is-active');
   return false;
 });
 
@@ -42,11 +45,11 @@ $('.js-configs-list').on('beforeChange', function(event, slick, currentSlide, ne
 });
 
 //открытие/закрытие описания конфигурации
-$(document).on('click', '.js-conf-open', function() {
+/*$(document).on('click', '.js-conf-open', function() {
   $(this).toggleClass('is-active');
   $(this).prev('.conf-item__config-inner').toggleClass('is-active');
   return false;
-});
+});*/
 
 $(document).on('mouseleave', '.conf-item', function() {
   $(this).find('.js-conf-open').removeClass('is-active');
