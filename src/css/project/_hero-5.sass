@@ -1,0 +1,212 @@
+.hero-5
+  background-image: linear-gradient(#213347, #0C1117)
+  background-color: #213347
+  overflow: hidden
+
+  &__inner
+    padding-top: 110px
+    padding-bottom: 100px
+
+    @media(min-width: 768px)
+      padding-top: 100px
+      padding-bottom: 100px
+
+    @media(min-width: 992px)
+      padding-top: 160px
+
+    @media(min-width: 1900px)
+      padding-top: 270px
+      padding-bottom: 0
+
+  &__container
+    max-width: 1360px
+    margin-left: auto
+    margin-right: auto
+    padding-left: 20px
+    padding-right: 20px
+
+    @media(min-width: 1900px)
+      max-width: 1710px
+      padding-left: 35px
+      padding-right: 35px
+
+  &__content
+    @media(min-width: 768px)
+      display: flex
+
+    &::after
+      @media(min-width: 768px)
+        content: ''
+        display: block
+        height: 0
+        padding-bottom: 53%
+
+      @media(min-width: 1900px)
+        padding-bottom: 46.4%
+
+  &__content-inner
+    min-width: 100%
+    position: relative
+
+    @media(min-width: 768px)
+      padding-right: 47%
+      padding-top: 40px
+
+  &__title
+    margin-bottom: 0.85em
+    position: relative
+    z-index: 2
+
+  &__title-1
+    color: transparent
+    display: block
+    filter: drop-shadow(0.5px 0.5px 3px #FF1A00)
+    -webkit-text-stroke: 1px #E4341E
+    text-stroke: 1px #E4341E
+    font-family: $secondary_font
+    font-size: 50px
+    font-weight: 900
+    line-height: 1
+
+    @media(min-width: 768px)
+      font-size: 65px
+      position: relative
+      z-index: 1
+
+    @media(min-width: 1900px)
+      font-size: 100px
+
+  &__title-2
+    color: #fff
+    display: block
+    font-family: $secondary_font
+    font-size: 50px
+    font-weight: 900
+    line-height: 1
+
+    @media(min-width: 768px)
+      font-size: 65px
+
+    @media(min-width: 1900px)
+      font-size: 100px
+
+  &__title-3
+    display: block
+    font-family: $secondary_font
+    font-size: 18px
+    font-weight: 300
+    letter-spacing: 12px
+
+    @media(min-width: 1900px)
+      font-size: 36px
+
+  &__image
+    margin-left: -20px
+    margin-right: -20px
+    margin-top: -20px
+    max-width: 1480px
+
+    @media(min-width: 768px)
+      left: auto
+      margin-bottom: 0
+      position: absolute
+      right: 0
+      top: 0
+      width: 82%
+      z-index: 1
+
+    @media(min-width: 1024px)
+      top: -10%
+
+    @media(min-width: 1350px)
+      top: -15%
+
+    @media(min-width: 1900px)
+      right: -95px
+      top: -36%
+
+    img
+      display: block
+      width: 100%
+
+  &__text
+    color: #fff
+    font-family: $secondary_font
+    font-size: 14px
+    line-height: 1.35
+    margin-bottom: 1.125em
+    margin-left: auto
+    margin-right: auto
+    max-width: 335px
+    text-align: center
+
+    @media(min-width: 414px)
+      font-size: 16px
+
+    @media(min-width: 768px)
+      line-height: 1.5
+      position: relative
+      margin-left: 0
+      margin-right: 0
+      text-align: left
+      z-index: 1
+
+    @media(min-width: 1200px)
+      font-size: 18px
+      line-height: 1.35416
+      margin-bottom: 3.04166em
+      max-width: 500px
+
+    @media(min-width: 1900px)
+      font-size: 24px
+      line-height: 1.54166
+      max-width: 600px
+
+    p
+      &:not(:last-child)
+        margin-bottom: 1.5em
+
+  &__button
+    align-items: center
+    background-color: rgba(#0C1117, 0.1)
+    backdrop-filter: blur(60px)
+    border: 1px solid $main_color
+    border-radius: 4px
+    box-shadow: 0 0 4px 0 $main_color
+    color: $main_color
+    cursor: pointer
+    display: flex
+    font-family: $secondary_font
+    font-size: 16px
+    font-weight: 800
+    height: 48px
+    justify-content: center
+    margin-top: 16px
+    margin-left: auto
+    margin-right: auto
+    max-width: 335px
+    position: relative
+    text-align: center
+    text-transform: uppercase
+    text-decoration: none
+    transition: background-color 0.3s, color 0.3s
+    width: 100%
+    z-index: 1
+
+    @media(min-width: 768px)
+      margin-left: 0
+      margin-right: 0
+
+    &:hover
+      background-color: rgba($main_color, 0.5)
+      color: #fff
+
+    &:active
+      background-color: $main_color
+      color: #fff
+
+    @media(min-width: 1900px)
+      font-size: 24px
+      height: 72px
+      margin-top: 23px
+      max-width: 490px
