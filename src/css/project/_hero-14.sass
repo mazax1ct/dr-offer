@@ -1,0 +1,247 @@
+.hero-14
+  overflow: hidden
+  padding-top: 70px
+  padding-bottom: 70px
+
+  @media(min-width: 768px)
+    padding-top: 110px
+    padding-bottom: 110px
+
+  @media(min-width: 1024px)
+    padding-bottom: 0
+
+  @media(min-width: 1900px)
+    padding-top: 95px
+
+  &__title
+    color: $main_color
+    font-size: 30px
+    font-weight: 600
+    line-height: 1.1
+    margin-bottom: 30px
+    max-width: 1360px
+    margin-left: auto
+    margin-right: auto
+    padding-left: 20px
+    padding-right: 20px
+    text-transform: uppercase
+    text-align: center
+
+    @media(min-width: 414px)
+      padding-left: 40px
+      padding-right: 40px
+
+    @media(min-width: 768px)
+      font-size: 40px
+      margin-bottom: 35px
+      padding-left: 40px
+      padding-right: 40px
+
+    @media(min-width: 1024px)
+      text-align: left
+
+    @media(min-width: 1900px)
+      font-size: 55px
+      max-width: 1800px
+
+    span
+      color: #fff
+      display: block
+
+  &__container
+    max-width: 1360px
+    margin-left: auto
+    margin-right: auto
+    padding-left: 20px
+    padding-right: 20px
+
+    @media(min-width: 414px)
+      padding-left: 40px
+      padding-right: 40px
+
+    @media(min-width: 1900px)
+      max-width: 1800px
+
+  &__content
+    @media(min-width: 1024px)
+      display: flex
+
+    &::after
+      @media(min-width: 1024px)
+        content: ''
+        display: block
+        height: 0
+        padding-bottom: 46.1%
+
+      @media(min-width: 1900px)
+        padding-bottom: 51.35%
+
+  &__content-inner
+    min-width: 100%
+    text-align: center
+
+    @media(min-width: 1024px)
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      padding-right: 44.2%
+      position: relative
+      text-align: left
+
+    @media(min-width: 1200px)
+      padding-right: 51%
+
+  &__tabs-nav
+    color: rgba(#fff, 0.4)
+    font-size: 30px
+    font-weight: 400
+    text-transform: uppercase
+    text-align: center
+
+    @media(min-width: 768px)
+      font-size: 26px
+
+    @media(min-width: 1024px)
+      margin-bottom: 15px
+      text-align: left
+
+    @media(min-width: 1900px)
+      font-size: 38px
+
+  &__tabs-button
+    background-color: transparent
+    border: none
+    color: rgba(#fff, 0.4)
+    cursor: pointer
+    font-family: $secondary_font
+    font-weight: 500
+    padding: 0
+    text-transform: uppercase
+
+    &.is-active
+      background: linear-gradient(#FD503D, #5723CD)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+      font-weight: 700
+
+    &:nth-child(2).is-active
+      background: linear-gradient(#E31375, #481CBB)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+
+    &:nth-child(3).is-active
+      background: linear-gradient(#FCC63E, #FF003C)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+
+    span
+      display: none
+
+      @media(min-width: 768px)
+        display: inline
+
+  &__image
+    margin-left: auto
+    margin-right: auto
+    max-width: 600px
+
+    @media(min-width: 1024px)
+      left: auto
+      margin-bottom: 0
+      max-width: 985px
+      position: absolute
+      right: -40px
+      top: 50%
+      transform: translateY(-50%)
+      width: 50%
+      z-index: 1
+
+    @media(min-width: 1900px)
+      right: 0
+      top: 40%
+      width: 58%
+
+  &__text
+    color: #fff
+    font-family: $secondary_font
+    font-size: 12px
+    line-height: 1.375
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 35px
+    max-width: 370px
+
+    @media(min-width: 768px)
+      font-size: 14px
+      max-width: 600px
+
+    @media(min-width: 1024px)
+      position: relative
+      margin-left: 0
+      margin-right: 0
+      max-width: 765px
+      z-index: 1
+
+    @media(min-width: 1200px)
+      font-size: 16px
+
+    @media(min-width: 1900px)
+      font-size: 24px
+      line-height: 28px
+      margin-bottom: 50px
+
+    p
+      &:not(:last-child)
+        margin-bottom: 1.5em
+
+  &__features
+    display: flex
+    flex-wrap: wrap
+    margin-left: -5px
+    margin-right: -5px
+    margin-bottom: -15px
+    max-width: 750px
+
+    @media(min-width: 1200px)
+      margin-left: -25px
+
+    @media(min-width: 1900px)
+      margin-bottom: -35px
+
+  &__feature
+    margin-bottom: 15px
+    text-align: center
+    padding-left: 5px
+    padding-right: 5px
+    text-transform: uppercase
+    width: 33.33333%
+
+    @media(min-width: 768px)
+      width: 20%
+
+    @media(min-width: 1900px)
+      margin-bottom: 35px
+
+    img
+      max-width: 75px
+      margin-bottom: 10px
+
+      @media(min-width: 1200px)
+        max-width: 110px
+
+  &__feature-text
+    color: #fff
+    font-family: $secondary_font
+    font-size: 9px
+    line-height: 1.5
+    margin-bottom: 0
+
+    @media(min-width: 414px)
+      font-size: 10px
+
+    @media(min-width: 1200px)
+      font-size: 12px
+
+    @media(min-width: 1900px)
+      font-size: 14px
+      text-transform: uppercase

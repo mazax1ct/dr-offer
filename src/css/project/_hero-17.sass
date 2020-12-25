@@ -1,0 +1,263 @@
+.hero-17
+  background-image: linear-gradient(#3A3C59, #0C1117)
+  padding-top: 70px
+  padding-bottom: 70px
+
+  @media(min-width: 1900px)
+    padding-top: 100px
+    padding-bottom: 150px
+
+  &__top-container
+    margin-left: auto
+    margin-right: auto
+    padding-left: 30px
+    padding-right: 30px
+    margin-bottom: 45px
+
+    @media(min-width: 1900px)
+      margin-bottom: 85px
+
+  &__title
+    color: $main_color
+    font-size: 24px
+    font-weight: 900
+    line-height: 1.1
+    margin-bottom: 15px
+    text-transform: uppercase
+    text-align: center
+
+    @media(min-width: 768px)
+      font-size: 40px
+      letter-spacing: 5px
+      margin-bottom: 0
+
+    @media(min-width: 1900px)
+      font-size: 55px
+      letter-spacing: 10px
+      position: relative
+      z-index: 1
+
+    small
+      color: #fff
+      display: block
+      font-size: 14px
+      font-weight: 500
+      letter-spacing: 0
+
+      @media(min-width: 768px)
+        font-size: 24px
+        font-weight: 500
+
+      @media(min-width: 1900px)
+        font-size: 35px
+
+  &__image
+    text-align: center
+
+    @media(min-width: 1900px)
+      margin-top: -100px
+      margin-bottom: -150px
+
+  &__text
+    color: #fff
+    font-family: $secondary_font
+    font-size: 14px
+    line-height: 1.14285
+    margin-left: auto
+    margin-right: auto
+    max-width: 340px
+    text-align: center
+
+    @media(min-width: 768px)
+      line-height: 1.54166
+      position: relative
+      max-width: 860px
+      width: 90%
+      z-index: 1
+
+    @media(min-width: 1200px)
+      font-size: 18px
+
+    @media(min-width: 1900px)
+      font-size: 20px
+
+    p
+      &:not(:last-child)
+        margin-bottom: 1.5em
+
+  &__bottom-container
+    max-width: 1360px
+    margin-left: auto
+    margin-right: auto
+    padding-left: 20px
+    padding-right: 20px
+
+    @media(min-width: 414px)
+      padding-left: 30px
+      padding-right: 30px
+
+    @media(min-width: 1900px)
+      max-width: 1840px
+
+  &__tabs-nav
+    color: rgba(#fff, 0.4)
+    font-size: 30px
+    font-weight: 400
+    margin-bottom: 30px
+    text-transform: uppercase
+    text-align: center
+
+    @media(min-width: 768px)
+      font-size: 26px
+
+    @media(min-width: 1024px)
+      text-align: left
+
+    @media(min-width: 1900px)
+      font-size: 38px
+      margin-bottom: 40px
+
+  &__tabs-button
+    background-color: transparent
+    border: none
+    color: rgba(#fff, 0.4)
+    cursor: pointer
+    font-family: $secondary_font
+    font-weight: 500
+    padding: 0
+    text-transform: uppercase
+
+    &.is-active
+      background: linear-gradient(#DF9D4F, #FF007A)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+      font-weight: 700
+
+    &:nth-child(2).is-active
+      background: linear-gradient(#0034E6, #93FFF9)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+
+    &:nth-child(3).is-active
+      background: linear-gradient(#0034E6, #93FFF9)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+
+    &:nth-child(4).is-active
+      background: linear-gradient(#FFBF45, #6035DA)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+
+    &:nth-child(5).is-active
+      background: linear-gradient(#009FFF, #EC2F4B)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+
+    span
+      display: none
+
+      @media(min-width: 768px)
+        display: inline
+
+  &__tab
+    @media(min-width: 1024px)
+      display: flex
+
+  &__tab-left
+    margin-bottom: 45px
+
+    @media(min-width: 1024px)
+      margin-bottom: 0
+      min-width: 38%
+      width: 38%
+
+  &__tab-right
+    @media(min-width: 1200px)
+      display: flex
+      min-width: 62%
+      padding-left: 30px
+      width: 62%
+
+  &__tab-image
+    text-align: center
+
+  &__tab-text
+    color: #fff
+    font-family: $secondary_font
+    font-size: 14px
+    text-align: center
+
+    @media(min-width: 1200px)
+      font-size: 16px
+
+  &__tab-features
+    color: #fff
+    font-family: $secondary_font
+    display: flex
+    flex-wrap: wrap
+    font-size: 12px
+    margin-left: -15px
+    margin-right: -15px
+    text-align: center
+    text-transform: uppercase
+
+    @media(min-width: 1024px)
+      margin-bottom: -35px
+
+    @media(min-width: 1200px)
+      flex-direction: column
+      margin-bottom: -35px
+
+    @media(min-width: 1900px)
+      font-size: 16px
+
+  &__tab-feature
+    margin-bottom: 30px
+    padding-left: 15px
+    padding-right: 15px
+    width: 50%
+
+    @media(min-width: 600px)
+      width: 25%
+
+    @media(min-width: 1200px)
+      align-items: center
+      display: flex
+
+    img
+      max-width: 75px
+      margin-bottom: 10px
+
+      @media(min-width: 1200px)
+        margin-bottom: 0
+        margin-right: 20px
+
+      @media(min-width: 1900px)
+        max-width: 110px
+
+  &__tab-info
+    color: #fff
+    font-family: $secondary_font
+    font-size: 12px
+    text-transform: uppercase
+
+    @media(min-width: 1024px)
+      padding-left: 30px
+
+    @media(min-width: 1200px)
+      font-size: 14px
+
+    @media(min-width: 1900px)
+      padding-left: 60px
+
+    ul:not([class]) > li
+      margin-bottom: 10px
+      padding-left: 15px
+
+      &::before
+        background-image: url("data:image/svg+xml,%3Csvg width='7' height='13' viewBox='0 0 7 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.00009 12L5.85303 6.5L1.00009 1' stroke='white' stroke-width='0.693277' stroke-linecap='round'/%3E%3C/svg%3E%0A")
+        background-repeat: no-repeat
+        content: ''
+        height: 13px
+        top: 2px
+        width: 7px
