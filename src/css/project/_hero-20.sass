@@ -1,0 +1,106 @@
+.hero-20
+  background-color: #020814
+  position: relative
+  padding-top: 30px
+  padding-bottom: 30px
+
+  @media(min-width: 768px)
+    padding-top: 60px
+    padding-bottom: 60px
+
+  @media(min-width: 1900px)
+    padding-top: 80px
+    padding-bottom: 220px
+
+  &__container
+    max-width: 1360px
+    margin-left: auto
+    margin-right: auto
+    padding-left: 15px
+    padding-right: 15px
+
+    @media(min-width: 1900px)
+      max-width: 1760px
+
+  &__title
+    color: #fff
+    font-size: 24px
+    font-weight: 700
+    line-height: 1.20833
+    letter-spacing: 3px
+    margin-bottom: 75px
+    text-transform: uppercase
+    text-align: center
+
+    @media(min-width: 768px)
+      font-size: 36px
+
+    @media(min-width: 1900px)
+      font-size: 48px
+      margin-bottom: 45px
+
+    small
+      display: block
+      font-size: 16px
+      font-weight: 400
+
+      @media(min-width: 768px)
+        font-size: 26px
+
+      @media(min-width: 1900px)
+        font-size: 36px
+        letter-spacing: 12px
+        margin-bottom: 100px
+        word-spacing: 10px
+
+  &__table
+    border-collapse: collapse
+    color: #fff
+    font-family: $secondary_font
+    font-size: 10px
+    font-weight: 500
+    text-align: center
+    width: 100%
+
+    @media(min-width: 768px)
+      font-size: 16px
+      text-align: left
+
+    th,
+    td
+      &:first-child
+        @media(min-width: 768px)
+          border-left: 24px solid #1b1d24
+
+      &:last-child
+        @media(min-width: 768px)
+          border-right: 24px solid #1b1d24
+
+      &:not(:first-child)
+        @media(min-width: 1900px)
+          width: 280px
+
+    th
+      background-color: #1b1d24
+      padding: 15px 5px
+
+      @media(min-width: 768px)
+        padding: 20px 10px
+
+      @media(min-width: 1900px)
+        font-size: 24px
+        padding: 50px 20px
+
+    td
+      background-color: #11161d
+      border: none
+      border-bottom: 24px solid #1b1d24
+      padding: 10px 5px
+
+      @media(min-width: 768px)
+        padding: 20px 10px
+
+      @media(min-width: 1900px)
+        font-size: 18px
+        border-bottom-width: 36px
+        padding: 30px 20px

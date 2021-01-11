@@ -1,0 +1,143 @@
+.hero-19
+  background-color: #020814
+  position: relative
+  padding-top: 30px
+  padding-bottom: 30px
+
+  @media(min-width: 768px)
+    padding-top: 60px
+    padding-bottom: 60px
+
+  &__container
+    max-width: 1360px
+    margin-left: auto
+    margin-right: auto
+    padding-left: 15px
+    padding-right: 15px
+
+    @media(min-width: 1900px)
+      max-width: 1580px
+
+  &__title
+    color: #fff
+    font-size: 24px
+    font-weight: 700
+    line-height: 1.20833
+    letter-spacing: 3px
+    margin-bottom: 25px
+    text-transform: uppercase
+    text-align: center
+
+    @media(min-width: 768px)
+      font-size: 36px
+
+    @media(min-width: 1900px)
+      font-size: 48px
+      margin-bottom: 45px
+
+  &__content
+    position: relative
+    text-align: center
+
+  &__image
+    @media(min-width: 768px)
+      margin-left: auto
+      margin-right: auto
+      margin-bottom: 45px
+      max-width: 840px
+      width: 80%
+
+  &__features
+    display: flex
+    justify-content: space-between
+    margin-bottom: 30px
+
+  &__feature
+    color: #fff
+    font-family: $secondary_font
+    font-size: 32px
+    font-weight: 700
+    line-height: 1.375
+    padding-left: 5px
+    padding-right: 5px
+    text-align: center
+    text-transform: uppercase
+    width: 50%
+
+    @media(min-width: 768px)
+      padding: 0
+      position: absolute
+      width: auto
+
+    @media(min-width: 1200px)
+      font-size: 48px
+
+    @media(min-width: 1900px)
+      font-size: 64px
+      min-width: 202px
+
+    &:nth-child(1)
+      @media(min-width: 768px)
+        left: 0
+        top: 15%
+
+    &:nth-child(2)
+      @media(min-width: 768px)
+        left: 0
+        top: 40%
+
+    &:nth-child(3)
+      @media(min-width: 768px)
+        left: auto
+        right: 0
+        top: 15%
+
+    &:nth-child(4)
+      @media(min-width: 768px)
+        left: auto
+        right: 0
+        top: 40%
+
+    small
+      display: block
+      font-size: 8px
+      font-weight: 300
+
+      @media(min-width: 768px)
+        font-size: 16px
+
+    span
+      font-size: 16px
+      font-weight: 400
+
+      @media(min-width: 768px)
+        font-size: 26px
+
+      @media(min-width: 1900px)
+        font-size: 36px
+
+  &__text
+    color: #fff
+    font-family: $secondary_font
+    font-size: 14px
+    font-weight: 300
+    line-height: 1.25
+    margin-left: auto
+    margin-right: auto
+
+    @media(min-width: 375px)
+      font-size: 16px
+
+    @media(min-width: 768px)
+      position: relative
+      max-width: 1010px
+      width: 90%
+      z-index: 1
+
+    @media(min-width: 1900px)
+      font-size: 24px
+      line-height: 1.66666
+
+    p
+      &:not(:last-child)
+        margin-bottom: 1.5em

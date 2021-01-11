@@ -1,0 +1,80 @@
+.hero-22
+  background-color: #0C1117
+  text-align: center
+
+  @media(min-width: 768px)
+    text-align: left
+
+  &__inner
+    max-width: 1920px
+    margin-left: auto
+    margin-right: auto
+    padding-top: 50px
+    padding-bottom: 100px
+
+    @media(min-width: 768px)
+      background: url('../images/content/hero-22/back.jpg') no-repeat 50% 50% / 100% auto
+      padding-top: 100px
+      padding-bottom: 100px
+
+    @media(min-width: 1900px)
+      padding-top: 160px
+      padding-bottom: 240px
+
+  &__container
+    max-width: 1360px
+    margin-left: auto
+    margin-right: auto
+    padding-left: 35px
+    padding-right: 35px
+
+    @media(min-width: 1900px)
+      max-width: 1740px
+
+  &__title
+    color: $main_color
+    font-size: 24px
+    font-weight: 700
+    margin-bottom: 0
+
+    @media(min-width: 768px)
+      font-size: 36px
+      margin-bottom: 40px
+
+    @media(min-width: 1900px)
+      font-size: 48px
+
+  &__image
+    margin-left: -35px
+    margin-right: -35px
+
+    @media(min-width: 768px)
+      display: none
+
+  &__text
+    color: #fff
+    font-family: $secondary_font
+    font-size: 16px
+    line-height: 1.25
+    letter-spacing: 1px
+    margin-bottom: 45px
+
+    @media(min-width: 768px)
+      max-width: 540px
+      width: 70%
+
+    @media(min-width: 1900px)
+      font-size: 24px
+      line-height: 1.66666
+      max-width: 780px
+      margin-bottom: 60px
+
+    p
+      &:not(:last-child)
+        margin-bottom: 1.5em
+
+  &__logo
+    max-width: 133px
+
+    @media(min-width: 768px)
+      max-width: 200px
