@@ -7,12 +7,18 @@
     padding-bottom: 80px
 
   &__container
+    margin-left: auto
+    margin-right: auto
+    max-width: 1360px
     padding-left: 15px
     padding-right: 15px
 
     @media(min-width: 375px)
       padding-left: 25px
       padding-right: 25px
+
+    @media(min-width: 1900px)
+      max-width: 1630px
 
   &__title
     color: #fff
@@ -34,7 +40,7 @@
     color: #fff
     font-family: $secondary_font
     font-size: 16px
-    line-height: 1.125
+    line-height: 1.33333
     letter-spacing: 1px
     margin-bottom: 30px
     max-width: 1060px
@@ -48,7 +54,6 @@
 
     @media(min-width: 1900px)
       font-size: 24px
-      line-height: 1.33333
       letter-spacing: 3px
       margin-bottom: 80px
 
@@ -109,3 +114,125 @@
     @media(min-width: 1900px)
       font-size: 48px
       letter-spacing: 6px
+
+  &__graphs
+    margin-left: auto
+    margin-right: auto
+    max-width: 1400px
+
+  &__graphs-title
+    color: #fff
+    font-family: $secondary_font
+    font-size: 14px
+    font-weight: 700
+    margin-top: 10px
+    margin-bottom: 10px
+    text-transform: uppercase
+
+    @media(min-width: 1900px)
+      font-size: 24px
+
+  &__graph
+    background-image: linear-gradient(to right, #66788C, rgba(#66788C, 0))
+    border: 1px solid #2C3640
+    font-family: $secondary_font
+    font-weight: 700
+    height: 30px
+    position: relative
+    z-index: 2
+
+    @media(min-width: 768px)
+      height: 46px
+
+    @media(min-width: 1200px)
+      height: 60px
+
+  &__graph-title
+    color: #fff
+    font-size: 16px
+    left: 20px
+    margin-bottom: 0
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    z-index: 1
+
+    @media(min-width: 1900px)
+      font-size: 20px
+
+  &__graph-value
+    background-image: linear-gradient(to right, #8F1317, #EA1C24)
+    color: #fff
+    height: 28px
+    font-size: 16px
+    left: 0
+    line-height: 28px
+    position: absolute
+    padding-right: 10px
+    top: 0
+    text-align: right
+
+    @media(min-width: 768px)
+      height: 44px
+      line-height: 44px
+
+    @media(min-width: 1200px)
+      height: 58px
+      line-height: 58px
+
+    @media(min-width: 1900px)
+      font-size: 24px
+
+    &--grey
+      background-image: linear-gradient(to right, #444444, #989898)
+
+  &__legends
+    align-items: center
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin-left: auto
+    margin-right: auto
+    margin-top: 40px
+
+    @media(min-width: 1900px)
+      margin-top: 80px
+
+  &__legend
+    align-items: center
+    color: #fff
+    display: flex
+    font-family: $secondary_font
+    font-size: 16px
+    font-weight: 700
+    margin-bottom: 20px
+    text-transform: uppercase
+
+    @media(min-width: 1900px)
+      font-size: 24px
+
+    &:last-child
+      margin-bottom: 20px
+
+    &::before
+      border-radius: 50%
+      content: ''
+      display: block
+      height: 40px
+      margin-right: 10px
+      min-width: 40px
+      width: 40px
+
+      @media(min-width: 1900px)
+        height: 50px
+        min-width: 50px
+        width: 50px
+
+    &--type_1
+
+      &::before
+        background-image: linear-gradient(to right, #8F1317, #EA1C24)
+
+    &--type_2
+      &::before
+        background-image: linear-gradient(to right, #444444, #989898)

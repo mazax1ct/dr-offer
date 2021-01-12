@@ -7,6 +7,8 @@
     padding-bottom: 150px
 
   &__container
+    padding-left: 35px
+    padding-right: 35px
 
   &__title
     color: #fff
@@ -24,3 +26,171 @@
     @media(min-width: 1900px)
       font-size: 48px
       margin-bottom: 50px
+
+  &__graphs
+    margin-left: auto
+    margin-right: auto
+    padding-left: 5px
+    padding-right: 5px
+    max-width: 1400px
+
+  &__graph
+    background-image: linear-gradient(to right, #66788C, rgba(#66788C, 0))
+    border: 1px solid #2C3640
+    font-family: $secondary_font
+    font-size: 10px
+    font-weight: 700
+    height: 30px
+    position: relative
+    text-transform: uppercase
+    z-index: 2
+
+    &:not(:last-child)
+      margin-bottom: 20px
+
+      @media(min-width: 1200px)
+        margin-bottom: 40px
+
+    @media(min-width: 768px)
+      height: 46px
+
+    @media(min-width: 1200px)
+      height: 60px
+      font-size: 20px
+
+  &__graph-title
+    color: #fff
+    left: 20px
+    margin-bottom: 0
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    z-index: 1
+
+  &__graph-value
+    background-image: linear-gradient(to right, #8F1317, #EA1C24)
+    color: #fff
+    height: 28px
+    left: 0
+    line-height: 28px
+    position: absolute
+    padding-right: 20px
+    top: 0
+    text-align: right
+    transition: width 0.8s
+
+    @media(min-width: 768px)
+      height: 44px
+      line-height: 44px
+
+    @media(min-width: 1200px)
+      height: 58px
+      line-height: 58px
+
+    &--grey
+      background-image: linear-gradient(to right, #444444, #989898)
+
+  &__games
+    margin: 0 auto 35px
+    width: 100%
+    padding: 10px 28px
+    background: #0c1117
+    box-shadow: 0 -.94px 23px rgba(234,28,36,.5)
+    border-radius: 40px
+    z-index: 3
+    position: relative
+
+    @media(min-width: 1024px)
+      padding-left: 60px
+      padding-right: 60px
+
+    @media(min-width: 1200px)
+      background-color: rgba(#fff, 0.1)
+      border-radius: 5px
+
+    @media(min-width: 1900px)
+      box-shadow: none
+      max-width: 1730px
+      padding: 17px 155px
+
+  &__games-control
+    background-color: transparent
+    border: none
+    cursor: pointer
+    height: 40px
+    padding: 0
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    width: 40px
+    z-index: 1
+
+    @media(min-width: 1024px)
+      display: none
+
+    &--prev
+      left: -16px
+
+      &::before
+        left: 33px
+        transform: translate(-50%,-50%) rotate(45deg)
+
+    &--next
+      left: auto
+      right: -16px
+
+      &::before
+        left: auto
+        right: 33px
+        transform: translate(50%,-50%) rotate(-135deg)
+
+    &::before
+      content: ''
+      position: absolute
+      top: 50%
+      width: 10px
+      height: 10px
+      border-bottom: 2px solid #fff
+      border-bottom-color: rgb(255, 255, 255)
+      border-left: 2px solid #fff
+      border-left-color: rgb(255, 255, 255)
+      transition: .3s
+
+  &__games-wrapper
+    display: flex
+    overflow-x: scroll
+    scrollbar-width: none
+
+    &::-webkit-scrollbar
+      display: none
+
+  &__game
+    background-color: transparent
+    color: #fff
+    padding: 0
+    flex-grow: 1
+    font-weight: 800
+    font-size: 14px
+    line-height: 17px
+    border-radius: 3px
+    text-align: center
+    border: 2px solid rgba(#fff, 0.6)
+    cursor: pointer
+    min-width: 77px
+    width: 77px
+
+    @media(min-width: 1200px)
+      width: 120px
+
+    &:not(:last-child)
+      margin-right: 8px
+
+      @media(min-width: 1200px)
+        margin-right: 24px
+
+    &.is-active
+      border-color: $main_color
+      box-shadow: 0 0 20px 0 rgba($main_color, 0.5)
+
+    img
+      border-radius: 3px
