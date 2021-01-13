@@ -1,0 +1,149 @@
+.hero-27
+  background-color: #0C1117
+  overflow: hidden
+  position: relative
+  padding-top: 70px
+  padding-bottom: 70px
+
+  @media(min-width: 1900px)
+    padding-top: 0
+    padding-bottom: 0
+
+  &__container
+    max-width: 1360px
+    margin-left: auto
+    margin-right: auto
+    padding-left: 20px
+    padding-right: 20px
+
+    @media(min-width: 1900px)
+      max-width: 1760px
+
+  &__content
+    @media(min-width: 768px)
+      display: flex
+
+    &::after
+      @media(min-width: 768px)
+        content: ''
+        display: block
+        height: 0
+        padding-bottom: 59.43%
+
+      @media(min-width: 1200px)
+        padding-bottom: 62.8%
+
+  &__content-inner
+    min-width: 100%
+    text-align: center
+
+    @media(min-width: 768px)
+      display: flex
+      flex-direction: column
+      justify-content: center
+      padding-right: 40%
+      position: relative
+      text-align: left
+
+    @media(min-width: 1900px)
+      padding-right: 58%
+
+  &__title
+    color: #fff
+    font-family: $secondary_font
+    margin-bottom: 0
+    position: relative
+    text-align: center
+    z-index: 2
+
+    @media(min-width: 768px)
+      letter-spacing: 2px
+      margin-bottom: 40px
+      text-align: left
+
+    @media(min-width: 1900px)
+      margin-bottom: 80px
+      margin-top: -400px
+
+  &__title-1
+    font-size: 24px
+    font-weight: 700
+    display: block
+    margin-bottom: 10px
+
+    @media(min-width: 768px)
+      margin-bottom: 0
+
+    @media(min-width: 1024px)
+      font-size: 40px
+      margin-bottom: 0
+
+    @media(min-width: 1200px)
+      font-size: 48px
+
+  &__title-2
+    display: block
+    font-size: 16px
+    font-weight: 400
+    line-height: 1
+
+    @media(min-width: 1024px)
+      font-size: 24px
+
+    @media(min-width: 1200px)
+      font-size: 32px
+
+  &__image
+    margin: -20px -20px -40px
+    max-width: 1237px
+
+    @media(min-width: 768px)
+      left: auto
+      margin: 0
+      position: absolute
+      right: 0
+      top: 50%
+      transform: translateY(-50%)
+      width: 60%
+      z-index: 1
+
+    @media(min-width: 1024px)
+      right: -80px
+      width: 68%
+
+    @media(min-width: 1200px)
+      width: 72%
+
+    @media(min-width: 1900px)
+      right: -160px
+
+  &__text
+    color: #fff
+    font-family: $secondary_font
+    font-size: 16px
+    font-weight: 300
+    line-height: 1.625
+    margin-left: auto
+    margin-right: auto
+    max-width: 370px
+    letter-spacing: 2px
+
+    @media(min-width: 768px)
+      line-height: 1.5
+      position: relative
+      margin-left: 0
+      margin-right: 0
+      max-width: 540px
+      z-index: 1
+
+    @media(min-width: 1200px)
+      font-size: 18px
+
+    @media(min-width: 1900px)
+      font-size: 24px
+      line-height: 1.66666
+      max-width: 750px
+
+    p
+      &:not(:last-child)
+        margin-bottom: 1.5em

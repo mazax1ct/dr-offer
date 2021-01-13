@@ -1,0 +1,71 @@
+.hero-26
+  padding-top: 80px
+  padding-bottom: 100px
+
+  @media(min-width: 1900px)
+    padding-bottom: 150px
+
+  &__container
+    padding-left: 15px
+    padding-right: 15px
+    margin-left: auto
+    margin-right: auto
+    max-width: 1360px
+
+  &__title
+    font-size: 24px
+    font-weight: 700
+    letter-spacing: 2px
+    margin-bottom: 40px
+    text-align: center
+
+    @media(min-width: 1200px)
+      font-size: 48px
+
+  &__logos
+    margin-bottom: 40px
+    margin-left: auto
+    margin-right: auto
+    text-align: center
+    width: 70%
+
+  &__video
+    max-width: 1056px
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 25px
+
+    @media(min-width: 1200px)
+      margin-bottom: 40px
+
+  &__video-inner
+    position: relative
+    overflow: hidden
+    padding-top: 56.25%
+
+    iframe
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      border: 0
+
+  &__text
+    color: #fff
+    font-family: $secondary_font
+    font-size: 16px
+    line-height: 1.5
+    margin-left: auto
+    margin-right: auto
+    max-width: 560px
+    text-align: center
+
+    @media(min-width: 1900px)
+      font-size: 24px
+      line-height: 1.66666
+      max-width: 960px
+
+    p
+      &:not(:last-child)
+        margin-bottom: 1.5em
