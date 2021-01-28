@@ -69,6 +69,92 @@
         display: inline
         font-weight: 700
 
+  &__tabs-nav
+    align-items: flex-start
+    display: flex
+    justify-content: center
+    margin-bottom: 50px
+
+    @media(min-width: 1200px)
+      display: flex
+      margin-bottom: 110px
+      margin-top: -70px
+
+  &__buttons-block
+    display: inline-flex
+    justify-content: center
+    margin-right: auto
+    margin-left: auto
+    text-align: center
+
+    @media(min-width: 768px)
+      border-bottom: 1px solid rgba(#fff, 0.2)
+
+  &__button
+    background-color: transparent
+    border: 1px solid rgba(#fff, 0.2)
+    border-radius: 3px
+    color: #fff
+    cursor: pointer
+    font-family: $secondary_font
+    font-size: 10px
+    font-weight: 600
+    margin-left: 10px
+    margin-right: 10px
+    padding: 15px 20px
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s
+    text-transform: uppercase
+
+    @media(min-width: 768px)
+      border: none
+      font-size: 32px
+      font-weight: 700
+      margin-left: 25px
+      margin-right: 25px
+      padding: 0 0 10px
+      position: relative
+
+    &:first-child
+      @media(min-width: 768px)
+        margin-left: 0
+
+    &:last-child
+      @media(min-width: 768px)
+        margin-right: 0
+
+    &.is-active
+      background-color: $main_color
+      border-color: $main_color
+      box-shadow: 0 0 4px 0 $main_color
+      color: #fff
+
+      @media(min-width: 768px)
+        box-shadow: none
+        background-color: transparent
+
+      &::after
+        @media(min-width: 768px)
+          background-color: $main_color
+          box-shadow: 0 0 6px 0 $main_color
+          bottom: -2px
+          content: ''
+          height: 4px
+          left: 0
+          position: absolute
+          top: auto
+          width: 100%
+          z-index: 1
+
+  &__tab
+    display: none
+    opacity: 0
+
+    &.is-active
+      display: block
+
+    &.is-visible
+      opacity: 1
+
   &__title-block
     margin-bottom: 35px
     position: relative
@@ -171,7 +257,7 @@
       &::after
         @media(min-width: 768px)
           background-color: $main_color
-          bottom: 0
+          bottom: -2px
           box-shadow: 0 0 6px 0 $main_color
           content: ''
           height: 4px
@@ -382,6 +468,9 @@
   &.slick-initialized
     margin-bottom: 0
 
+    .slick-list
+      width: 100%
+
     .cfg-slider__slide
       margin-bottom: 0
 
@@ -444,6 +533,19 @@
       right: 0
       top: 0
       z-index: 1
+
+    &--type_2
+
+      &::before
+        background: url('../images/icons/form-factor-lines.svg') no-repeat 50% 50% transparent
+        background-size: 100% auto
+        content: ''
+        height: 100%
+        left: 5%
+        position: absolute
+        top: 0
+        width: 90%
+        z-index: 2
 
   &__title
     font-size: 28px
