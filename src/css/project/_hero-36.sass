@@ -1,0 +1,140 @@
+.hero-36
+  overflow: hidden
+  position: relative
+  padding-top: 50px
+  padding-bottom: 70px
+
+  @media(min-width: 1900px)
+    padding-bottom: 0
+
+  &__container
+    max-width: 1360px
+    margin-left: auto
+    margin-right: auto
+    padding-left: 20px
+    padding-right: 20px
+
+    @media(min-width: 1900px)
+      max-width: 1760px
+
+  &__content
+    @media(min-width: 768px)
+      display: flex
+
+    &::after
+      @media(min-width: 768px)
+        content: ''
+        display: block
+        height: 0
+        padding-bottom: 56.1%
+
+      @media(min-width: 1200px)
+        padding-bottom: 67.35%
+
+      @media(min-width: 1900px)
+        padding-bottom: 59.6%
+
+  &__content-inner
+    min-width: 100%
+    text-align: center
+
+    @media(min-width: 768px)
+      display: flex
+      flex-direction: column
+      justify-content: center
+      padding-right: 50%
+      position: relative
+      text-align: left
+
+    @media(min-width: 1900px)
+      padding-right: 56%
+
+  &__title
+    color: #fff
+    font-family: $secondary_font
+    font-size: 24px
+    margin-left: -20px
+    margin-right: -20px
+    margin-bottom: 0
+    text-transform: uppercase
+    text-align: center
+
+    @media(min-width: 768px)
+      margin-bottom: 30px
+      margin-left: 0
+      margin-right: 0
+      text-align: left
+
+    @media(min-width: 1200px)
+      font-size: 36px
+
+    @media(min-width: 1900px)
+      font-size: 48px
+      margin-bottom: 80px
+      margin-top: -240px
+
+    span
+      display: block
+      font-weight: 900
+
+    small
+      filter: drop-shadow(0 0 9px #40BEEF)
+      font-weight: 300
+      font-size: 100%
+
+      @media(min-width: 1200px)
+        font-size: 30px
+
+      @media(min-width: 1900px)
+        font-size: 36px
+
+  &__image
+    margin-left: -20px
+    margin-right: -20px
+    margin-bottom: -10px
+    max-width: 1096px
+
+    @media(min-width: 768px)
+      left: auto
+      margin: 0
+      position: absolute
+      right: 0
+      top: 50%
+      transform: translateY(-50%)
+      width: 60%
+      z-index: 1
+
+    @media(min-width: 1200px)
+      right: -80px
+      width: 72%
+
+  &__text
+    color: #fff
+    font-family: $secondary_font
+    font-size: 14px
+    font-weight: 300
+    line-height: 1.625
+    margin-left: auto
+    margin-right: auto
+    max-width: 370px
+    letter-spacing: 1px
+
+    @media(min-width: 768px)
+      line-height: 1.5
+      position: relative
+      margin-left: 0
+      margin-right: 0
+      max-width: 540px
+      z-index: 1
+
+    @media(min-width: 1200px)
+      font-size: 18px
+
+    @media(min-width: 1900px)
+      font-size: 24px
+      line-height: 1.5
+      max-width: 805px
+
+    p
+      &:not(:last-child)
+        margin-bottom: 1.5em
