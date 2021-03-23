@@ -1,0 +1,709 @@
+.hero-45
+  padding-top: 30px
+  padding-bottom: 30px
+
+  @media(min-width: 1900px)
+    padding-top: 60px
+    padding-bottom: 60px
+
+  &__container
+    max-width: 1380px
+    margin-left: auto
+    margin-right: auto
+    padding-left: 20px
+    padding-right: 20px
+
+  &__title
+    font-weight: 700
+    font-size: 20px
+    line-height: 22px
+    margin-bottom: 20px
+    text-align: center
+    text-transform: uppercase
+
+    @media(min-width: 768px)
+      font-size: 28px
+      line-height: 30px
+
+    @media(min-width: 1200px)
+      font-size: 36px
+      line-height: 40px
+
+    @media(min-width: 1900px)
+      font-size: 42px
+      line-height: 56px
+      margin-bottom: 40px
+
+.design-block
+  margin-bottom: 30px
+
+  @media(min-width: 768px)
+    display: flex
+
+  @media(min-width: 1200px)
+    margin-bottom: 70px
+
+  &__left
+    margin-bottom: 30px
+
+    @media(min-width: 768px)
+      background-repeat: no-repeat
+      background-position: 50% 50%
+      background-size: cover
+      margin-bottom: 0
+      width: calc(100% - 110px)
+
+    @media(min-width: 1200px)
+      width: calc(100% - 140px)
+
+    @media(max-width: 767px)
+      background: none !important
+
+  &__right
+    @media(min-width: 768px)
+      display: flex
+      flex-direction: column
+      justify-content: center
+      min-width: 110px
+      padding-left: 20px
+      width: 110px
+
+    @media(min-width: 1200px)
+      min-width: 140px
+      padding-left: 30px
+      width: 140px
+
+.box-block
+  @media(min-width: 768px)
+    align-items: center
+    display: flex
+    flex-direction: row-reverse
+
+  &__left,
+  &__right
+    @media(min-width: 768px)
+      width: 50%
+
+  &__left
+    display: none
+    padding: 30px 20px
+    text-align: center
+
+    @media(min-width: 768px)
+      align-items: center
+      display: flex
+      flex-direction: column
+      justify-content: center
+      text-align: left
+
+  &__right
+    max-width: 295px
+    margin-left: auto
+    margin-right: auto
+    position: relative
+    padding-bottom: 20px
+    padding-top: 20px
+    text-align: center
+
+    @media(min-width: 768px)
+      max-width: 100%
+      margin-left: 0
+      margin-right: 0
+      padding-top: 0
+      padding-bottom: 0
+
+    img
+      max-width: 214px
+      position: relative
+      z-index: 2
+
+      @media(min-width: 768px)
+        max-width: 100%
+
+    &::after
+      bottom: 0
+      border-radius: 18px
+      background-image: radial-gradient(51.84% 58.28% at 42.63% 71.6%,#3a3c59 0%,#0c1117 100%)
+      content: ''
+      left: 0
+      position: absolute
+      right: 0
+      top: 0
+      z-index: 1
+
+      @media(min-width: 768px)
+        display: none
+
+  &__right-title
+    color: #fff
+    font-family: $secondary_font
+    font-size: 18px
+    font-weight: 500
+    line-height: 20px
+    text-align: center
+    text-transform: uppercase
+    position: relative
+    z-index: 2
+
+    @media(min-width: 768px)
+      display: none
+
+    span
+      display: block
+      font-weight: 900
+      font-size: 24px
+      line-height: 27px
+
+  &__left-title
+    color: #fff
+    font-family: $secondary_font
+    font-size: 18px
+    font-weight: 500
+    line-height: 20px
+    text-transform: uppercase
+    position: relative
+    z-index: 2
+
+    @media(min-width: 1200px)
+      font-size: 26px
+      line-height: 30px
+
+    @media(min-width: 1900px)
+      font-size: 32px
+      line-height: 34px
+
+    span
+      display: block
+      font-weight: 900
+      font-size: 24px
+      line-height: 27px
+
+      @media(min-width: 1200px)
+        font-size: 36px
+        line-height: 40px
+
+      @media(min-width: 1900px)
+        font-size: 48px
+        line-height: 58px
+
+  &__buttons
+    align-items: center
+    display: flex
+    flex-wrap: wrap
+    margin-top: 30px
+
+    @media(min-width: 1900px)
+      margin-top: 60px
+
+  &__buy-button
+    align-items: center
+    border: 1px solid $main_color
+    box-shadow: 0 0 22px 0 rgba($main_color, 0.5)
+    background-color: rgba($main_color, 0.8)
+    color: #fff
+    display: inline-flex
+    font-size: 20px
+    font-family: $secondary_font
+    font-weight: 800
+    height: 49px
+    justify-content: center
+    min-width: 160px
+    margin-right: 15px
+    margin-bottom: 10px
+    text-align: center
+    text-decoration: none
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, border-color 0.3s
+
+    @media(min-width: 1900px)
+      font-size: 24px
+      height: 60px
+
+    &:hover
+      background-color: rgba($main_color, 0.5)
+      box-shadow: 0 7px 7px 0 rgba(#0C1117, 0.5)
+      color: #fff
+
+    &:active
+      background-color: $main_color
+      color: #fff
+
+  &__upload-button
+    align-items: center
+    border: 1px solid $main_color
+    background-color: transparent
+    color: $main_color
+    cursor: pointer
+    display: inline-flex
+    font-size: 18px
+    font-family: $secondary_font
+    font-weight: 700
+    height: 49px
+    justify-content: center
+    min-width: 190px
+    margin-bottom: 10px
+    padding-left: 20px
+    padding-right: 20px
+    text-align: center
+    text-decoration: none
+    text-transform: uppercase
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, border-color 0.3s
+
+    @media(min-width: 1900px)
+      height: 60px
+
+    &:hover
+      background-color: rgba($main_color, 0.5)
+      box-shadow: 0 7px 7px 0 rgba(#0C1117, 0.5)
+      color: #fff
+
+      svg
+        stroke: #fff
+
+    &:active
+      background-color: $main_color
+      color: #fff
+
+    svg
+      height: 20px
+      margin-right: 10px
+      stroke: $main_color
+      transition: stroke 0.3s
+      width: 18px
+
+.box-main-slider
+  position: relative
+  z-index: 2
+
+  &__slide
+    img
+      margin-left: auto
+      margin-right: auto
+
+  .slick-arrow
+    background-color: transparent
+    border: none
+    cursor: pointer
+    height: 40px
+    position: absolute
+    padding: 0
+    top: 50%
+    transform: translateY(-50%)
+    width: 40px
+    z-index: 1
+
+    &:hover
+      .slick-arrow__arrow
+        fill: rgba(#fff, 1)
+
+  .slick-prev
+    left: 0
+
+  .slick-next
+    right: 0
+
+  .slick-arrow__arrow
+    fill: rgba(#fff, 0.3)
+    height: 40px
+    transition: fill 0.3s
+    width: 40px
+
+.box-slider
+  padding-left: 15px
+  padding-right: 15px
+
+  @media(min-width: 768px)
+    padding-left: 0
+    padding-right: 0
+
+  &__item
+    padding-left: 7px
+    padding-right: 7px
+
+    @media(min-width: 768px)
+      padding-left: 0
+      padding-right: 0
+
+    img
+      border: 2px solid transparent
+      cursor: pointer
+
+    &.slick-current
+      img
+        border-color: $main_color
+
+  .slick-arrow
+    background-color: transparent
+    border: none
+    cursor: pointer
+    height: 40px
+    position: absolute
+    padding: 0
+    top: 50%
+    transform: translateY(-50%)
+    width: 40px
+    z-index: 1
+
+    &:hover
+      .slick-arrow__arrow
+        fill: rgba(#fff, 1)
+
+    &::before
+      content: ''
+      position: absolute
+      top: 50%
+      width: 10px
+      height: 10px
+      border-bottom: 2px solid #fff
+      border-bottom-color: rgb(255, 255, 255)
+      border-left: 2px solid #fff
+      border-left-color: rgb(255, 255, 255)
+      transition: .3s
+
+  .slick-prev
+    left: -20px
+
+    @media(min-width: 768px)
+      top: -44px
+      left: 50%
+      transform: rotate(90deg)
+      transform-origin: 25% 25% 0
+
+    &::before
+      left: 22px
+      transform: translate(-50%,-50%) rotate(45deg)
+
+  .slick-next
+    right: -20px
+
+    @media(min-width: 768px)
+      bottom: -44px
+      left: 50%
+      right: auto
+      top: auto
+      transform: rotate(90deg)
+      transform-origin: 25% 25% 0
+
+    &::before
+      left: 8px
+      transform: translate(50%,-50%) rotate(-135deg)
+
+  .slick-arrow__arrow
+    display: none
+
+    @media(min-width: 768px)
+      fill: rgba(#fff, 0.3)
+      height: 40px
+      transition: fill 0.3s
+      width: 40px
+
+.designs
+  margin-bottom: 20px
+  text-align: center
+
+  @media(min-width: 600px)
+    padding-left: 40px
+    padding-right: 40px
+
+  @media(min-width: 768px)
+    margin-bottom: 0
+    padding-left: 60px
+    padding-right: 60px
+
+.designs-list-wrapper
+  margin-bottom: 20px
+  position: relative
+  padding-left: 10px
+  padding-right: 10px
+
+  @media(min-width: 768px)
+    margin-bottom: 30px
+    margin-left: 0
+    margin-right: 0
+    padding-left: 0
+    padding-right: 0
+
+  &::before,
+  &::after
+    content: ''
+    position: absolute
+    top: 50%
+    width: 10px
+    height: 10px
+    border-bottom: 2px solid #fff
+    border-bottom-color: rgb(255, 255, 255)
+    border-left: 2px solid #fff
+    border-left-color: rgb(255, 255, 255)
+
+    @media(min-width: 768px)
+      display: none
+
+  &::before
+    left: -2px
+    transform: translate(-50%,-50%) rotate(45deg)
+
+  &::after
+    left: auto
+    right: -2px
+    transform: translate(50%,-50%) rotate(-135deg)
+
+.designs-list
+  display: flex
+  overflow-x: scroll
+  scrollbar-width: none
+
+  &::-webkit-scrollbar
+    display: none
+
+  @media(min-width: 768px)
+    border-bottom: 1px solid rgba(#4F5966, 0.3)
+    justify-content: space-between
+
+  &__button
+    color: #fff
+    padding: 12px 18px
+    flex-grow: 1
+    font-weight: 700
+    font-size: 14px
+    line-height: 17px
+    background-color: rgba(#fff, 0.1)
+    border-radius: 20px
+    text-align: center
+    border: none
+    cursor: pointer
+
+    &:not(:last-child)
+      margin-right: 18px
+
+      @media(min-width: 768px)
+        margin-right: 40px
+
+    @media(min-width: 768px)
+      background-color: transparent
+      border: none
+      border-radius: 0
+      color: rgba(#fff, 0.5)
+      cursor: pointer
+      font-family: $secondary_font
+      font-size: 18px
+      font-weight: 500
+      flex-grow: 0
+      padding-left: 0
+      padding-right: 0
+      padding-top: 0
+      padding-bottom: 20px
+      position: relative
+      text-transform: uppercase
+      transition: color 0.3s, border-bottom-color 0.3s
+
+    @media(min-width: 1200px)
+      font-size: 24px
+
+    &::after
+      @media(min-width: 768px)
+        bottom: 0
+        content: ''
+        filter: none
+        height: 4px
+        left: 0
+        position: absolute
+        top: auto
+        transition: background-color 0.3s, filter 0.3s
+        width: 100%
+
+    &.is-active
+      background-color: rgba($main_color, 0.5)
+      color: #fff
+
+      @media(min-width: 768px)
+        background-color: transparent
+
+      &::after
+        background-color: $main_color
+        filter: drop-shadow(0 0 4px $main_color)
+
+    &:hover
+      color: #fff
+
+.designs-slider
+  display: flex
+  flex-wrap: wrap
+  margin-left: -5px
+  margin-right: -5px
+
+  @media(min-width: 768px)
+    margin-bottom: 20px
+
+  &.slick-initialized
+    .designs-slider__item
+      @media(min-width: 768px)
+        margin-bottom: 0
+
+  &__item
+    cursor: pointer
+    margin-bottom: 13px
+    padding-left: 8px
+    padding-right: 8px
+    position: relative
+    width: 33.33333%
+
+    @media(min-width: 768px)
+      padding-left: 5px
+      padding-right: 5px
+      width: 16.66666%
+
+    img
+      border: 1px solid transparent
+      opacity: 0.3
+      transition: opacity 0.3s
+
+    &:hover
+      img
+        opacity: 0.6
+
+    &.is-active
+      img
+        border: 1px solid $main_color
+        opacity: 1
+
+  .slick-list
+    min-width: 100%
+
+  .slick-arrow
+    background-color: transparent
+    border: 1px solid rgba(#fff, 0.5)
+    border-radius: 50%
+    cursor: pointer
+    filter: none
+    height: 32px
+    position: absolute
+    padding: 0
+    top: 50%
+    transform: translateY(-50%)
+    transition: border-color 0.3s, filter 0.3s
+    width: 32px
+    z-index: 1
+
+    &:hover
+      border-color: rgba(#fff, 1)
+      filter: drop-shadow(0 0 2px #fff)
+
+      .slick-arrow__arrow
+        fill: rgba(#fff, 1)
+
+  .slick-prev
+    left: -35px
+
+    @media(min-width: 768px)
+      left: -60px
+
+  .slick-next
+    right: -35px
+
+    @media(min-width: 768px)
+      right: -60px
+
+  .slick-arrow__arrow
+    fill: rgba(#fff, 0.5)
+    height: 30px
+    transition: fill 0.3s
+    width: 30px
+
+.show-all-designs
+  align-items: center
+  background-color: transparent
+  border: none
+  color: #919FAE
+  cursor: pointer
+  display: inline-flex
+  font-size: 18px
+  font-family: $secondary_font
+  padding: 10px
+
+  &.hidden
+    display: none
+
+  &:hover
+    span
+      border-bottom-color: #919FAE
+
+  svg
+    fill: #919FAE
+    height: 17px
+    margin-right: 10px
+    width: 17px
+
+  span
+    border-bottom: 1px dashed transparent
+    transition: border-bottom-color 0.3s
+
+.designs-buttons
+  @media(min-width: 768px)
+    display: none
+
+  &__buy-button
+    align-items: center
+    border: 1px solid $main_color
+    box-shadow: 0 0 22px 0 rgba($main_color, 0.5)
+    background-color: rgba($main_color, 0.8)
+    color: #fff
+    display: flex
+    font-size: 16px
+    font-family: $secondary_font
+    font-weight: 800
+    height: 48px
+    justify-content: center
+    letter-spacing: 2px
+    text-align: center
+    text-decoration: none
+    text-transform: uppercase
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, border-color 0.3s
+
+    &:hover
+      background-color: rgba($main_color, 0.5)
+      box-shadow: 0 7px 7px 0 rgba(#0C1117, 0.5)
+      color: #fff
+
+    &:active
+      background-color: $main_color
+      color: #fff
+
+  &__upload-button
+    align-items: center
+    border: 1px solid $main_color
+    background-color: transparent
+    border-radius: 4px
+    color: $main_color
+    cursor: pointer
+    display: flex
+    font-size: 18px
+    font-family: $secondary_font
+    font-weight: 700
+    height: 48px
+    justify-content: center
+    margin-bottom: 14px
+    padding-left: 20px
+    padding-right: 20px
+    text-align: center
+    text-decoration: none
+    text-transform: uppercase
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, border-color 0.3s
+    width: 100%
+
+    &:hover
+      background-color: rgba($main_color, 0.5)
+      box-shadow: 0 7px 7px 0 rgba(#0C1117, 0.5)
+      color: #fff
+
+      svg
+        stroke: #fff
+
+    &:active
+      background-color: $main_color
+      color: #fff
+
+    svg
+      height: 20px
+      margin-right: 10px
+      stroke: $main_color
+      transition: stroke 0.3s
+      width: 20px
