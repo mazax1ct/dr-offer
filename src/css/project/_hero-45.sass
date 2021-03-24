@@ -201,6 +201,7 @@
     box-shadow: 0 0 22px 0 rgba($main_color, 0.5)
     background-color: rgba($main_color, 0.8)
     color: #fff
+    cursor: pointer
     display: inline-flex
     font-size: 20px
     font-family: $secondary_font
@@ -657,6 +658,7 @@
     text-decoration: none
     text-transform: uppercase
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, border-color 0.3s
+    width: 100%
 
     &:hover
       background-color: rgba($main_color, 0.5)
@@ -707,3 +709,134 @@
       stroke: $main_color
       transition: stroke 0.3s
       width: 20px
+
+.design-save
+  display: none
+  width: 100%
+
+  &.fancybox-content
+    background-color: #171F29
+    max-width: 554px
+    padding: 60px 20px
+
+    @media(min-width: 1200px)
+      padding: 60px
+
+  &__form
+    margin-top: 30px
+
+  &__form-label
+    display: block
+    margin-bottom: 20px
+
+  &__input
+    background-color: transparent
+    border: 1px solid rgba(#66788C, 0.5)
+    color: #fff
+    padding: 15px
+    transition: border-color 0.3s
+    width: 100%
+
+    &:focus
+      border-color: #66788C
+
+    &.error
+      border-color: $main_color
+      color: $main_color
+
+  &__button-block
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    margin-top: 30px
+
+    @media(min-width: 560px)
+      justify-content: space-between
+
+  &__button
+    align-items: center
+    cursor: pointer
+    display: flex
+    justify-content: center
+    font-family: $secondary_font
+    font-size: 16px
+    font-weight: 800
+    height: 48px
+    letter-spacing: 2px
+    margin-bottom: 10px
+    padding-left: 20px
+    padding-right: 20px
+    text-decoration: none
+    text-transform: uppercase
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, border-color 0.3s
+
+    @media(min-width: 560px)
+      min-width: 210px
+
+    &--order
+      border: 1px solid $main_color
+      box-shadow: 0 0 22px 0 rgba($main_color, 0.5)
+      background-color: rgba($main_color, 0.8)
+      color: #fff
+
+      &:hover
+        background-color: rgba($main_color, 0.5)
+        box-shadow: 0 7px 7px 0 rgba(#0C1117, 0.5)
+        color: #fff
+
+      &:active
+        background-color: $main_color
+        color: #fff
+
+    &--save
+      border: 1px solid $main_color
+      background-color: transparent
+      color: $main_color
+
+      &:hover
+        background-color: rgba($main_color, 0.5)
+        box-shadow: 0 7px 7px 0 rgba(#0C1117, 0.5)
+        color: #fff
+
+      &:active
+        background-color: $main_color
+        color: #fff
+
+  &__close
+    align-items: center
+    background-color: #171F29
+    border: none
+    cursor: pointer
+    height: 50px
+    justify-content: center
+    left: auto
+    position: absolute
+    padding: 0
+    right: 0
+    top: 0
+    width: 50px
+
+  &__close-svg
+    fill: #fff
+    height: 13px
+    width: 13px
+
+  &__title
+    color: #fff
+    font-family: $secondary_font
+    font-size: 26px
+    font-weight: 700
+    line-height: 1.33333
+    margin-bottom: 17px
+    text-transform: uppercase
+
+    @media(min-width: 375px)
+      font-size: 30px
+
+  &__text
+    color: #66788C
+    font-size: 13px
+    margin-bottom: 15px
+
+  .fancybox-button
+    display: none

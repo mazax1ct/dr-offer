@@ -13,6 +13,7 @@
   //= template/favicon.html
 
   //= template/style.html
+  <link rel="stylesheet" href="css/jquery.fancybox.css" />
 </head>
 
 <body id="top">
@@ -92,7 +93,7 @@
                 <div class="box-block__left-inner">
                   <p class="box-block__left-title"><span>Perfomance</span> Cooler Master SL600M</p>
                   <p class="box-block__buttons">
-                    <a class="box-block__buy-button" href="#">Купить</a>
+                    <button class="box-block__buy-button" type="button" data-src="#design_order" data-fancybox="design_order">Купить</button>
                     <button class="box-block__upload-button" type="button"><svg aria-hidden="true"><use xlink:href="#upload" /></svg> Загрузить</button>
                   </p>
                 </div>
@@ -142,7 +143,33 @@
         </div>
         <div class="designs-buttons">
           <button class="designs-buttons__upload-button" type="button"><svg aria-hidden="true"><use xlink:href="#upload" /></svg> Загрузить</button>
-          <a class="designs-buttons__buy-button" href="#">Купить</a>
+          <button class="designs-buttons__buy-button" type="button" data-src="#design_order" data-fancybox="design_order_2">Купить</button>
+        </div>
+
+        <div id="design_order" class="design-save">
+          <button class="js-popup-close design-save__close" type="button" title="Закрыть">
+            <svg class="design-save__close-svg" aria-hidden="true">
+              <use xlink:href="#menu_close" />
+            </svg>
+          </button>
+          <p class="design-save__title">Сохранение дизайна</p>
+          <p class="design-save__text">Сохраните Ваш дизайн, чтобы нанести его на выбранную конфигурацию.</p>
+          <p class="design-save__text">Вы можете указать ссылку на выбранную конфигурацию игрового компьютера или заказать подбор системы под выбранный дизайн. Для этого укажите контакты для связи</p>
+          <form class="design-save__form" action="" method="post">
+            <label class="design-save__form-label" for="number">
+              <input id="number" class="design-save__input error" name="number" type="text" placeholder="Ссылка на конфигурацию компьютера">
+            </label>
+            <label class="design-save__form-label" for="email">
+              <input id="email" class="design-save__input" name="email" type="text" placeholder="Электронная почта*">
+            </label>
+            <label class="design-save__form-label" for="phone">
+              <input id="phone" class="design-save__input" name="phone" type="text" placeholder="Номер телефона">
+            </label>
+            <div class="design-save__button-block">
+              <button class="design-save__button design-save__button--order" type="submit">Заказать</button>
+              <button class="design-save__button design-save__button--save" type="submit">Сохранить</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -1112,6 +1139,7 @@
   <script src="js/info-popover.js"></script>
   <script src="js/cfg-slider.js"></script>
   <script src="js/hero-45.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
 </body>
 
 </html>

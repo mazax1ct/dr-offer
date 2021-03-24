@@ -158,3 +158,9 @@ $(document).on('click', '.js-show-all-designs', function () {
   },300);
   $(this).addClass('hidden');
 });
+
+//закрытие попапа
+$(document).on('click', '.js-popup-close', function () {
+  $.fancybox.close();
+  return false;
+});
